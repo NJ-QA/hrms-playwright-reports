@@ -1,0 +1,193 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: organization/onboarding.spec.js >> Organization > Onboarding Module >> PIN_97 Invite a Preboarding candidate to the candidate portal from their profile
+- Location: tests/organization/onboarding.spec.js:34:5
+
+# Error details
+
+```
+Error: Candidate profile should expose its action menu
+
+expect(locator).toBeVisible() failed
+
+Locator: locator('button:has(svg[data-testid="MoreVertIcon"])').or(locator('button[aria-label*="more" i], button[aria-label*="action" i]')).last()
+Expected: visible
+Timeout: 10000ms
+Error: element(s) not found
+
+Call log:
+  - Candidate profile should expose its action menu with timeout 10000ms
+  - waiting for locator('button:has(svg[data-testid="MoreVertIcon"])').or(locator('button[aria-label*="more" i], button[aria-label*="action" i]')).last()
+
+```
+
+# Test source
+
+```ts
+  225 |         const rowActionMenu = candidateRow.locator('button.MuiIconButton-root, button:has(svg)').last();
+  226 |         await rowActionMenu.click({ force: true });
+  227 | 
+  228 |         const generateOfferOption = this.page.getByRole('menuitem', { name: /Generate Offer/i });
+  229 |         await expect(generateOfferOption).toBeVisible({ timeout: 5_000 });
+  230 |         await generateOfferOption.click();
+  231 | 
+  232 |         if (await this.legalEntitySelect.isVisible({ timeout: 5_000 }).catch(() => false)) {
+  233 |             await this.legalEntitySelect.click();
+  234 |             await this.page.getByRole('option').first().click();
+  235 |         }
+  236 | 
+  237 |         if (await this.jobPositionSelect.isVisible({ timeout: 3_000 }).catch(() => false)) {
+  238 |             await this.jobPositionSelect.click();
+  239 |             await this.page.getByRole('option').first().click();
+  240 |         }
+  241 | 
+  242 |         await this.fillDatePicker('Offer Valid Upto');
+  243 |         await this.fillDatePicker('Expected Joining Date');
+  244 | 
+  245 |         if (await this.basicSalaryInput.isVisible({ timeout: 3_000 }).catch(() => false)) {
+  246 |             await this.basicSalaryInput.fill('50000');
+  247 |         }
+  248 | 
+  249 |         // Step 1: Click Next to move to Offer Details / Template step
+  250 |         const nextBtn = this.page.getByRole('button', { name: /Next/i });
+  251 |         if (await nextBtn.isVisible({ timeout: 3_000 }).catch(() => false)) {
+  252 |             await nextBtn.click();
+  253 |             await this.page.waitForTimeout(700);
+  254 |         }
+  255 | 
+  256 |         // Step 2: Select Offer Letter Template
+  257 |         const templateInput = this.page.locator('input[name="offerLetterTemplateId"]').locator('..').locator('input')
+  258 |             .or(this.page.locator('.basic-single').filter({ hasText: /Select|Template/i }).locator('input'))
+  259 |             .or(this.page.locator('#react-select-2-input'));
+  260 |         if (await templateInput.first().isVisible({ timeout: 3_000 }).catch(() => false)) {
+  261 |             await templateInput.first().click();
+  262 |             await this.page.waitForTimeout(300);
+  263 |             await this.page.keyboard.press('ArrowDown');
+  264 |             await this.page.keyboard.press('Enter');
+  265 |             await this.page.waitForTimeout(500);
+  266 |         }
+  267 | 
+  268 |         // Step 2: Click Next to move to Review & Release
+  269 |         if (await nextBtn.isVisible({ timeout: 3_000 }).catch(() => false)) {
+  270 |             await nextBtn.click();
+  271 |             await this.page.waitForTimeout(700);
+  272 |         }
+  273 | 
+  274 |         // Step 3: Click Release / Generate Offer button
+  275 |         const releaseBtn = this.page.getByRole('button', { name: /Release Offer|Generate Offer|Submit/i })
+  276 |             .or(this.page.locator('button').filter({ hasText: /Release|Generate/i })).last();
+  277 |         if (await releaseBtn.isVisible({ timeout: 5_000 }).catch(() => false)) {
+  278 |             await releaseBtn.click();
+  279 |             await expect(this.offerDialog, 'Offer dialog should close after submission').toBeHidden({ timeout: 15_000 }).catch(() => {});
+  280 |             await this.page.waitForTimeout(1_500);
+  281 |         }
+  282 |     }
+  283 | 
+  284 |     async updateOfferStatus(candidateName, status = 'Accepted') {
+  285 |         if (await this.preboardingSearchInput.isVisible({ timeout: 2_000 }).catch(() => false)) {
+  286 |             await this.preboardingSearchInput.fill(candidateName);
+  287 |             await this.page.waitForTimeout(500);
+  288 |         }
+  289 | 
+  290 |         const candidateRow = this.tableRows.filter({ hasText: candidateName }).first()
+  291 |             .or(this.tableRows.first());
+  292 |         await candidateRow.locator('button.MuiIconButton-root, button:has(svg)').last().click({ force: true });
+  293 | 
+  294 |         const updateStatusOption = this.page.getByRole('menuitem', { name: /Update Offer Status/i });
+  295 |         if (await updateStatusOption.isVisible({ timeout: 5_000 }).catch(() => false)) {
+  296 |             await updateStatusOption.click();
+  297 |             const statusSelect = this.page.locator('div[role="combobox"]').last();
+  298 |             if (await statusSelect.isVisible({ timeout: 3_000 }).catch(() => false)) {
+  299 |                 await statusSelect.click();
+  300 |                 await this.page.getByRole('option', { name: new RegExp(status, 'i') }).first().click();
+  301 |             }
+  302 |             const saveStatusBtn = this.page.getByRole('button', { name: /Save|Update|Submit/i }).last();
+  303 |             if (await saveStatusBtn.isVisible({ timeout: 3_000 }).catch(() => false)) {
+  304 |                 await saveStatusBtn.click();
+  305 |                 await this.page.waitForTimeout(1_500);
+  306 |             }
+  307 |         }
+  308 |     }
+  309 | 
+  310 |     async inviteCandidateToPortal(candidate) {
+  311 |         await this.goToPreboarding();
+  312 |         if (await this.preboardingSearchInput.isVisible({ timeout: 2_000 }).catch(() => false)) {
+  313 |             await this.preboardingSearchInput.fill(candidate.fullName);
+  314 |         }
+  315 | 
+  316 |         const candidateRow = this.tableRows.filter({ hasText: candidate.fullName }).first();
+  317 |         await expect(candidateRow, 'Candidate should be listed in Preboarding').toBeVisible({ timeout: 15_000 });
+  318 |         await candidateRow.getByText(candidate.fullName, { exact: true }).click();
+  319 |         await expect(this.page.getByRole('heading', { name: candidate.fullName, exact: true }))
+  320 |             .toBeVisible({ timeout: 15_000 });
+  321 | 
+  322 |         const profileMenu = this.page.locator('button:has(svg[data-testid="MoreVertIcon"])')
+  323 |             .or(this.page.locator('button[aria-label*="more" i], button[aria-label*="action" i]'))
+  324 |             .last();
+> 325 |         await expect(profileMenu, 'Candidate profile should expose its action menu').toBeVisible({ timeout: 10_000 });
+      |                                                                                      ^ Error: Candidate profile should expose its action menu
+  326 |         await profileMenu.click();
+  327 | 
+  328 |         const inviteAction = this.page.getByText(/^(?:Re-)?Invite to candidate portal$/i).last();
+  329 |         await expect(inviteAction).toBeVisible({ timeout: 10_000 });
+  330 |         await inviteAction.click();
+  331 |         await profileMenu.click();
+  332 |         await expect(this.page.getByText(/^Re-invite to candidate portal$/i).last())
+  333 |             .toBeVisible({ timeout: 30_000 });
+  334 |     }
+  335 | 
+  336 |     async ensureCandidateInNewJoiners() {
+  337 |         await this.goToNewJoiners();
+  338 |         await this.selectNewJoinersSubTab('All');
+  339 | 
+  340 |         const isPresent = await this.isCandidateAvailableInNewJoiners();
+  341 |         if (!isPresent) {
+  342 |             const candidate = await this.addNewCandidate();
+  343 |             await this.generateOffer(candidate.fullName);
+  344 |             await this.updateOfferStatus(candidate.fullName, 'Accepted');
+  345 |             await this.goToNewJoiners();
+  346 |             await this.selectNewJoinersSubTab('All');
+  347 |         }
+  348 |     }
+  349 | 
+  350 |     async addCandidateAsEmployee() {
+  351 |         const candidateRow = this.tableRows.filter({ hasNotText: /New Joiners Not Found/i }).first();
+  352 |         await expect(candidateRow, 'Candidate should be visible in New Joiners').toBeVisible({ timeout: 15_000 });
+  353 | 
+  354 |         const rowCheckbox = candidateRow.locator('input[type="checkbox"], .table-view-row-checkbox').first();
+  355 |         if (await rowCheckbox.isVisible().catch(() => false)) {
+  356 |             await rowCheckbox.click({ force: true });
+  357 |         }
+  358 | 
+  359 |         if (await this.addAsEmployeeToolbarBtn.isEnabled().catch(() => false)) {
+  360 |             await this.addAsEmployeeToolbarBtn.click();
+  361 |         } else {
+  362 |             const actionMenuButton = candidateRow.locator('button.MuiIconButton-root, button:has(svg)').last();
+  363 |             await actionMenuButton.click({ force: true });
+  364 | 
+  365 |             const addAsEmployeeOption = this.page.getByRole('menuitem', { name: /Add as Employee/i })
+  366 |                 .or(this.page.getByText(/Add as Employee/i));
+  367 |             await expect(addAsEmployeeOption).toBeVisible({ timeout: 5_000 });
+  368 |             await addAsEmployeeOption.click();
+  369 |         }
+  370 | 
+  371 |         if (await this.confirmDialogBtn.last().isVisible({ timeout: 3_000 }).catch(() => false)) {
+  372 |             await this.confirmDialogBtn.last().click();
+  373 |         }
+  374 |     }
+  375 | 
+  376 |     async verifyEmployeeCreationWithoutError() {
+  377 |         await expect(this.errorToast).toHaveCount(0);
+  378 |         await expect(this.successToast.first()).toBeVisible({ timeout: 15_000 });
+  379 |     }
+  380 | }
+  381 | 
+  382 | module.exports = OnboardingPage;
+  383 | 
+```
