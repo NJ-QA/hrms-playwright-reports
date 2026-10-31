@@ -1,0 +1,6373 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: timeTracking/attendanceRegularisation.spec.js >> Attendance Regularisation configuration(PIN-103) >> PIN_103_01 PIN_103_02 PIN_103_03 PIN_103_04 PIN_103_06 Defaults, enable/reveal, disable/hide, and unchecked inputs are disabled
+- Location: tests/timeTracking/attendanceRegularisation.spec.js:41:5
+
+# Error details
+
+```
+Error: expect(locator).toContainText(expected) failed
+
+Locator: locator('[role="dialog"], .MuiDialog-paper, .modal-container').filter({ has: locator('.channels-list, input[name="name"], .policy-config-panel') }).first().locator('.policy-config-panel').locator('.remote-config-toggle-container').filter({ has: getByText('Attendance regularisation', { exact: true }) }).locator('[id="mui-component-select-regularizationLimitPeriod"]')
+Expected substring: "Week"
+Received string:    "Select undefined"
+Timeout: 9000ms
+
+Call log:
+  - Expect "toContainText" with timeout 9000ms
+  - waiting for locator('[role="dialog"], .MuiDialog-paper, .modal-container').filter({ has: locator('.channels-list, input[name="name"], .policy-config-panel') }).first().locator('.policy-config-panel').locator('.remote-config-toggle-container').filter({ has: getByText('Attendance regularisation', { exact: true }) }).locator('[id="mui-component-select-regularizationLimitPeriod"]')
+    12 × locator resolved to <div role="combobox" aria-disabled="true" aria-expanded="false" aria-haspopup="listbox" id="mui-component-select-regularizationLimitPeriod" aria-labelledby="mui-component-select-regularizationLimitPeriod" class="MuiSelect-select MuiSelect-outlined Mui-disabled MuiInputBase-input MuiOutlinedInput-input Mui-disabled css-mp9f0v">…</div>
+       - unexpected value "Select undefined"
+
+```
+
+# Page snapshot
+
+```yaml
+- generic:
+  - generic [ref=e1]:
+    - generic [ref=e3]:
+      - generic [ref=e4]:
+        - link [ref=e5] [cursor=pointer]:
+          - /url: /global/setting/general
+          - img [ref=e6]
+          - heading [level=2] [ref=e7]: xperts
+        - button [ref=e8] [cursor=pointer]:
+          - img [ref=e9]
+      - separator [ref=e11]
+      - list [ref=e13]:
+        - listitem [ref=e14]:
+          - button [ref=e15] [cursor=pointer]:
+            - img [ref=e17]
+            - generic [ref=e20]: Home
+        - listitem [ref=e21]:
+          - button [ref=e22] [cursor=pointer]:
+            - img [ref=e24]
+            - generic [ref=e28]: Me
+            - img [ref=e29]
+        - listitem [ref=e31]:
+          - button [ref=e32] [cursor=pointer]:
+            - img [ref=e34]
+            - generic [ref=e36]:
+              - generic [ref=e37]: Messages
+              - generic [ref=e38]: "137"
+        - listitem [ref=e39]:
+          - button [ref=e40] [cursor=pointer]:
+            - img [ref=e42]
+            - generic [ref=e45]: Organization
+            - img [ref=e46]
+        - listitem [ref=e48]:
+          - button [ref=e49] [cursor=pointer]:
+            - img [ref=e51]
+            - generic [ref=e54]: Schedule
+        - listitem [ref=e55]:
+          - button [ref=e56] [cursor=pointer]:
+            - img [ref=e58]
+            - generic [ref=e61]: Projects
+        - separator [ref=e62]
+        - listitem [ref=e63]:
+          - button [ref=e64] [cursor=pointer]:
+            - img [ref=e66]
+            - generic [ref=e69]: Attendance
+            - img [ref=e70]
+        - listitem [ref=e72]:
+          - button [ref=e73] [cursor=pointer]:
+            - img [ref=e75]
+            - generic [ref=e78]: Time Tracking
+            - img [ref=e79]
+        - listitem [ref=e81]:
+          - button [ref=e82] [cursor=pointer]:
+            - img [ref=e84]
+            - generic [ref=e87]: Hiring
+            - img [ref=e88]
+        - listitem [ref=e90]:
+          - button [ref=e91] [cursor=pointer]:
+            - img [ref=e93]
+            - generic [ref=e96]: Reports
+        - listitem [ref=e97]:
+          - button [ref=e98] [cursor=pointer]:
+            - img [ref=e100]
+            - generic [ref=e103]: Communication
+        - listitem [ref=e104]:
+          - button [ref=e105] [cursor=pointer]:
+            - img [ref=e107]
+            - generic [ref=e110]: Benefits
+        - listitem [ref=e111]:
+          - button [ref=e112] [cursor=pointer]:
+            - img [ref=e114]
+            - generic [ref=e117]: Recruit
+        - listitem [ref=e118]:
+          - button [ref=e119] [cursor=pointer]:
+            - img [ref=e121]
+            - generic [ref=e125]: Candidate
+        - listitem [ref=e126]:
+          - button [ref=e127] [cursor=pointer]:
+            - img [ref=e129]
+            - generic [ref=e132]: Payment
+        - listitem [ref=e133]:
+          - button [ref=e134] [cursor=pointer]:
+            - img [ref=e136]
+            - generic [ref=e139]: Chats
+    - generic [ref=e140]:
+      - generic [ref=e142]:
+        - generic [ref=e144]: Good Evening Neeraj !
+        - generic [ref=e145]:
+          - img [ref=e146]
+          - textbox [ref=e148]:
+            - /placeholder: Search employee and action (Ex., leave, exit)
+        - generic [ref=e149]:
+          - button [ref=e151] [cursor=pointer]:
+            - img [ref=e152]
+          - button [ref=e155] [cursor=pointer]:
+            - img [ref=e156]
+          - button [ref=e159] [cursor=pointer]:
+            - generic [ref=e160]:
+              - img [ref=e161]
+              - generic [ref=e163]: "1"
+          - button [ref=e165] [cursor=pointer]:
+            - img [ref=e166]
+          - button [ref=e169] [cursor=pointer]:
+            - img [ref=e171]
+            - generic [ref=e178]: EN
+            - img [ref=e179]
+          - generic [ref=e182] [cursor=pointer]:
+            - img [ref=e184]
+            - generic [ref=e185]:
+              - generic [ref=e186]: Neeraj
+              - generic [ref=e187]: xperts_imaging@yopmail.com
+      - generic [ref=e189]:
+        - generic [ref=e190]:
+          - tablist [ref=e191]:
+            - tab [ref=e192] [cursor=pointer]:
+              - generic [ref=e193]: Shifts/Weekly Offs & Holidays
+            - tab [selected] [ref=e194] [cursor=pointer]:
+              - generic [ref=e195]: Attendance Tracking
+            - tab [ref=e196] [cursor=pointer]:
+              - generic [ref=e197]: Leave Management
+            - tab [ref=e198] [cursor=pointer]:
+              - generic [ref=e199]: Settings
+          - separator [ref=e200]
+        - generic [ref=e202]:
+          - tablist [ref=e203]:
+            - tab [ref=e204] [cursor=pointer]:
+              - generic [ref=e205]: Regularize & Cancel Penalties
+            - tab [ref=e206] [cursor=pointer]:
+              - generic [ref=e207]: Penalization Policy
+            - tab [ref=e208] [cursor=pointer]:
+              - generic [ref=e209]: Penalization Policy Allocation
+            - tab [selected] [ref=e210] [cursor=pointer]:
+              - generic [ref=e211]: Time Tracking Policy
+            - tab [ref=e212] [cursor=pointer]:
+              - generic [ref=e213]: Time Tracking Policy Allocation
+          - tabpanel [ref=e214]:
+            - generic [ref=e216]:
+              - generic [ref=e217]:
+                - generic [ref=e218]:
+                  - generic [ref=e219]:
+                    - img [ref=e220]
+                    - paragraph [ref=e223]: Policies
+                  - button [ref=e225] [cursor=pointer]: + Add Policy
+                - generic [ref=e228]:
+                  - img [ref=e230]
+                  - textbox [ref=e232]:
+                    - /placeholder: Search policies by name...
+                  - group
+                - generic [ref=e233]:
+                  - generic [ref=e234] [cursor=pointer]:
+                    - generic [ref=e235]:
+                      - paragraph [ref=e236]:
+                        - paragraph [ref=e237]: QA Adjustment 6daff78f
+                      - generic [ref=e239]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e240] [cursor=pointer]:
+                    - generic [ref=e241]:
+                      - paragraph [ref=e242]:
+                        - paragraph [ref=e243]: QA Adjustment 592f5640
+                      - generic [ref=e245]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e246] [cursor=pointer]:
+                    - generic [ref=e247]:
+                      - paragraph [ref=e248]:
+                        - paragraph [ref=e249]: QA WFH 44b429d3
+                      - generic [ref=e251]: 2 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e252] [cursor=pointer]:
+                    - generic [ref=e253]:
+                      - paragraph [ref=e254]:
+                        - paragraph [ref=e255]: QA WFH af738c96
+                      - generic [ref=e257]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e258] [cursor=pointer]:
+                    - generic [ref=e259]:
+                      - paragraph [ref=e260]:
+                        - paragraph [ref=e261]: QA WFH dce16869
+                      - generic [ref=e263]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e264] [cursor=pointer]:
+                    - generic [ref=e265]:
+                      - paragraph [ref=e266]:
+                        - paragraph [ref=e267]: QA WFH c4c7d25e
+                      - generic [ref=e269]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e270] [cursor=pointer]:
+                    - generic [ref=e271]:
+                      - paragraph [ref=e272]:
+                        - paragraph [ref=e273]: QA Summary 4112a11b
+                      - generic [ref=e275]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e276] [cursor=pointer]:
+                    - generic [ref=e277]:
+                      - paragraph [ref=e278]:
+                        - paragraph [ref=e279]: QA Summary fba9219f
+                      - generic [ref=e281]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e282] [cursor=pointer]:
+                    - generic [ref=e283]:
+                      - paragraph [ref=e284]:
+                        - paragraph [ref=e285]: QA Web Clock-in 27d06b87
+                      - generic [ref=e287]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e288] [cursor=pointer]:
+                    - generic [ref=e289]:
+                      - paragraph [ref=e290]:
+                        - paragraph [ref=e291]: QA Web Clock-in 9d4f7bb3
+                      - generic [ref=e293]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e294] [cursor=pointer]:
+                    - generic [ref=e295]:
+                      - paragraph [ref=e296]:
+                        - paragraph [ref=e297]: QA Regularisation c402f31...
+                      - generic [ref=e299]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e300] [cursor=pointer]:
+                    - generic [ref=e301]:
+                      - paragraph [ref=e302]:
+                        - paragraph [ref=e303]: QA On Duty 98eea9f7
+                      - generic [ref=e305]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e306] [cursor=pointer]:
+                    - generic [ref=e307]:
+                      - paragraph [ref=e308]:
+                        - paragraph [ref=e309]: QA On Duty 3fc1c589
+                      - generic [ref=e311]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e312] [cursor=pointer]:
+                    - generic [ref=e313]:
+                      - paragraph [ref=e314]:
+                        - paragraph [ref=e315]: QA Regularisation b8f9cad...
+                      - generic [ref=e317]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e318] [cursor=pointer]:
+                    - generic [ref=e319]:
+                      - paragraph [ref=e320]:
+                        - paragraph [ref=e321]: QA Adjustment 4be411ba
+                      - generic [ref=e323]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e324] [cursor=pointer]:
+                    - generic [ref=e325]:
+                      - paragraph [ref=e326]:
+                        - paragraph [ref=e327]: QA Adjustment b533f0db
+                      - generic [ref=e329]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e330] [cursor=pointer]:
+                    - generic [ref=e331]:
+                      - paragraph [ref=e332]:
+                        - paragraph [ref=e333]: QA WFH 6ef4e2c6
+                      - generic [ref=e335]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e336] [cursor=pointer]:
+                    - generic [ref=e337]:
+                      - paragraph [ref=e338]:
+                        - paragraph [ref=e339]: QA WFH 3b6eeb7d
+                      - generic [ref=e341]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e342] [cursor=pointer]:
+                    - generic [ref=e343]:
+                      - paragraph [ref=e344]:
+                        - paragraph [ref=e345]: QA WFH a017e868
+                      - generic [ref=e347]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e348] [cursor=pointer]:
+                    - generic [ref=e349]:
+                      - paragraph [ref=e350]:
+                        - paragraph [ref=e351]: QA WFH 228364fa
+                      - generic [ref=e353]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e354] [cursor=pointer]:
+                    - generic [ref=e355]:
+                      - paragraph [ref=e356]:
+                        - paragraph [ref=e357]: QA Summary 18eb1345
+                      - generic [ref=e359]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e360] [cursor=pointer]:
+                    - generic [ref=e361]:
+                      - paragraph [ref=e362]:
+                        - paragraph [ref=e363]: QA Summary 6e46221d
+                      - generic [ref=e365]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e366] [cursor=pointer]:
+                    - generic [ref=e367]:
+                      - paragraph [ref=e368]:
+                        - paragraph [ref=e369]: QA Web Clock-in 800b0797
+                      - generic [ref=e371]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e372] [cursor=pointer]:
+                    - generic [ref=e373]:
+                      - paragraph [ref=e374]:
+                        - paragraph [ref=e375]: QA Web Clock-in df9c5f78
+                      - generic [ref=e377]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e378] [cursor=pointer]:
+                    - generic [ref=e379]:
+                      - paragraph [ref=e380]:
+                        - paragraph [ref=e381]: QA Regularisation 246961d...
+                      - generic [ref=e383]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e384] [cursor=pointer]:
+                    - generic [ref=e385]:
+                      - paragraph [ref=e386]:
+                        - paragraph [ref=e387]: QA On Duty c4c435bd
+                      - generic [ref=e389]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e390] [cursor=pointer]:
+                    - generic [ref=e391]:
+                      - paragraph [ref=e392]:
+                        - paragraph [ref=e393]: QA On Duty 0758ba38
+                      - generic [ref=e395]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e396] [cursor=pointer]:
+                    - generic [ref=e397]:
+                      - paragraph [ref=e398]:
+                        - paragraph [ref=e399]: QA Regularisation 7484d80...
+                      - generic [ref=e401]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e402] [cursor=pointer]:
+                    - generic [ref=e403]:
+                      - paragraph [ref=e404]:
+                        - paragraph [ref=e405]: QA Adjustment ca4ff716
+                      - generic [ref=e407]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e408] [cursor=pointer]:
+                    - generic [ref=e409]:
+                      - paragraph [ref=e410]:
+                        - paragraph [ref=e411]: QA Adjustment b672dd5d
+                      - generic [ref=e413]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e414] [cursor=pointer]:
+                    - generic [ref=e415]:
+                      - paragraph [ref=e416]:
+                        - paragraph [ref=e417]: QA WFH fdb5a2ee
+                      - generic [ref=e419]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e420] [cursor=pointer]:
+                    - generic [ref=e421]:
+                      - paragraph [ref=e422]:
+                        - paragraph [ref=e423]: QA WFH 14921c58
+                      - generic [ref=e425]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e426] [cursor=pointer]:
+                    - generic [ref=e427]:
+                      - paragraph [ref=e428]:
+                        - paragraph [ref=e429]: QA WFH 3933b100
+                      - generic [ref=e431]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e432] [cursor=pointer]:
+                    - generic [ref=e433]:
+                      - paragraph [ref=e434]:
+                        - paragraph [ref=e435]: QA WFH 4a162401
+                      - generic [ref=e437]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e438] [cursor=pointer]:
+                    - generic [ref=e439]:
+                      - paragraph [ref=e440]:
+                        - paragraph [ref=e441]: QA WFH f4ce37fe
+                      - generic [ref=e443]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e444] [cursor=pointer]:
+                    - generic [ref=e445]:
+                      - paragraph [ref=e446]:
+                        - paragraph [ref=e447]: QA WFH e2e7e8ab
+                      - generic [ref=e449]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e450] [cursor=pointer]:
+                    - generic [ref=e451]:
+                      - paragraph [ref=e452]:
+                        - paragraph [ref=e453]: QA Web Clock-in 6029e340
+                      - generic [ref=e455]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e456] [cursor=pointer]:
+                    - generic [ref=e457]:
+                      - paragraph [ref=e458]:
+                        - paragraph [ref=e459]: QA Web Clock-in 231de294
+                      - generic [ref=e461]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e462] [cursor=pointer]:
+                    - generic [ref=e463]:
+                      - paragraph [ref=e464]:
+                        - paragraph [ref=e465]: QA Regularisation 393caa0...
+                      - generic [ref=e467]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e468] [cursor=pointer]:
+                    - generic [ref=e469]:
+                      - paragraph [ref=e470]:
+                        - paragraph [ref=e471]: QA On Duty 6e08e80b
+                      - generic [ref=e473]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e474] [cursor=pointer]:
+                    - generic [ref=e475]:
+                      - paragraph [ref=e476]:
+                        - paragraph [ref=e477]: QA On Duty 788057ba
+                      - generic [ref=e479]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e480] [cursor=pointer]:
+                    - generic [ref=e481]:
+                      - paragraph [ref=e482]:
+                        - paragraph [ref=e483]: QA Adjustment ea7f60cc
+                      - generic [ref=e485]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e486] [cursor=pointer]:
+                    - generic [ref=e487]:
+                      - paragraph [ref=e488]:
+                        - paragraph [ref=e489]: QA Adjustment 7fb253e5
+                      - generic [ref=e491]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e492] [cursor=pointer]:
+                    - generic [ref=e493]:
+                      - paragraph [ref=e494]:
+                        - paragraph [ref=e495]: QA Adjustment 52eaba81
+                      - generic [ref=e497]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e498] [cursor=pointer]:
+                    - generic [ref=e499]:
+                      - paragraph [ref=e500]:
+                        - paragraph [ref=e501]: QA WFH 8add3daf
+                      - generic [ref=e503]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e504] [cursor=pointer]:
+                    - generic [ref=e505]:
+                      - paragraph [ref=e506]:
+                        - paragraph [ref=e507]: QA WFH d4cca3f2
+                      - generic [ref=e509]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e510] [cursor=pointer]:
+                    - generic [ref=e511]:
+                      - paragraph [ref=e512]:
+                        - paragraph [ref=e513]: QA WFH dac38852
+                      - generic [ref=e515]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e516] [cursor=pointer]:
+                    - generic [ref=e517]:
+                      - paragraph [ref=e518]:
+                        - paragraph [ref=e519]: QA Web Clock-in ad25c9ae
+                      - generic [ref=e521]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e522] [cursor=pointer]:
+                    - generic [ref=e523]:
+                      - paragraph [ref=e524]:
+                        - paragraph [ref=e525]: QA WFH 21e06391
+                      - generic [ref=e527]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e528] [cursor=pointer]:
+                    - generic [ref=e529]:
+                      - paragraph [ref=e530]:
+                        - paragraph [ref=e531]: QA WFH ae759406
+                      - generic [ref=e533]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e534] [cursor=pointer]:
+                    - generic [ref=e535]:
+                      - paragraph [ref=e536]:
+                        - paragraph [ref=e537]: QA WFH aa4881d3
+                      - generic [ref=e539]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e540] [cursor=pointer]:
+                    - generic [ref=e541]:
+                      - paragraph [ref=e542]:
+                        - paragraph [ref=e543]: QA Web Clock-in cd0b65d6
+                      - generic [ref=e545]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e546] [cursor=pointer]:
+                    - generic [ref=e547]:
+                      - paragraph [ref=e548]:
+                        - paragraph [ref=e549]: QA Regularisation 9385f49...
+                      - generic [ref=e551]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e552] [cursor=pointer]:
+                    - generic [ref=e553]:
+                      - paragraph [ref=e554]:
+                        - paragraph [ref=e555]: QA On Duty 1008c034
+                      - generic [ref=e557]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e558] [cursor=pointer]:
+                    - generic [ref=e559]:
+                      - paragraph [ref=e560]:
+                        - paragraph [ref=e561]: QA On Duty 74936da4
+                      - generic [ref=e563]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e564] [cursor=pointer]:
+                    - generic [ref=e565]:
+                      - paragraph [ref=e566]:
+                        - paragraph [ref=e567]: QA Regularisation 40dcacb...
+                      - generic [ref=e569]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e570] [cursor=pointer]:
+                    - generic [ref=e571]:
+                      - paragraph [ref=e572]:
+                        - paragraph [ref=e573]: QA Regularisation 9464b7e...
+                      - generic [ref=e575]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e576] [cursor=pointer]:
+                    - generic [ref=e577]:
+                      - paragraph [ref=e578]:
+                        - paragraph [ref=e579]: QA Adjustment ed1cb857
+                      - generic [ref=e581]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e582] [cursor=pointer]:
+                    - generic [ref=e583]:
+                      - paragraph [ref=e584]:
+                        - paragraph [ref=e585]: QA Regularisation a61f7b2...
+                      - generic [ref=e587]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e588] [cursor=pointer]:
+                    - generic [ref=e589]:
+                      - paragraph [ref=e590]:
+                        - paragraph [ref=e591]: QA Adjustment 27d0b827
+                      - generic [ref=e593]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e594] [cursor=pointer]:
+                    - generic [ref=e595]:
+                      - paragraph [ref=e596]:
+                        - paragraph [ref=e597]: QA Adjustment 2bd029f2
+                      - generic [ref=e599]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e600] [cursor=pointer]:
+                    - generic [ref=e601]:
+                      - paragraph [ref=e602]:
+                        - paragraph [ref=e603]: QA WFH afc85fd7
+                      - generic [ref=e605]: 2 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e606] [cursor=pointer]:
+                    - generic [ref=e607]:
+                      - paragraph [ref=e608]:
+                        - paragraph [ref=e609]: QA On Duty faae3200
+                      - generic [ref=e611]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e612] [cursor=pointer]:
+                    - generic [ref=e613]:
+                      - paragraph [ref=e614]:
+                        - paragraph [ref=e615]: QA Adjustment b526f95a
+                      - generic [ref=e617]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e618] [cursor=pointer]:
+                    - generic [ref=e619]:
+                      - paragraph [ref=e620]:
+                        - paragraph [ref=e621]: QA WFH bdae9586
+                      - generic [ref=e623]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e624] [cursor=pointer]:
+                    - generic [ref=e625]:
+                      - paragraph [ref=e626]:
+                        - paragraph [ref=e627]: QA WFH eb2c890f
+                      - generic [ref=e629]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e630] [cursor=pointer]:
+                    - generic [ref=e631]:
+                      - paragraph [ref=e632]:
+                        - paragraph [ref=e633]: QA WFH caacda13
+                      - generic [ref=e635]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e636] [cursor=pointer]:
+                    - generic [ref=e637]:
+                      - paragraph [ref=e638]:
+                        - paragraph [ref=e639]: QA WFH c4eee67a
+                      - generic [ref=e641]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e642] [cursor=pointer]:
+                    - generic [ref=e643]:
+                      - paragraph [ref=e644]:
+                        - paragraph [ref=e645]: QA WFH 3dfb6969
+                      - generic [ref=e647]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e648] [cursor=pointer]:
+                    - generic [ref=e649]:
+                      - paragraph [ref=e650]:
+                        - paragraph [ref=e651]: QA Web Clock-in df8ae9e4
+                      - generic [ref=e653]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e654] [cursor=pointer]:
+                    - generic [ref=e655]:
+                      - paragraph [ref=e656]:
+                        - paragraph [ref=e657]: QA WFH a7791c82
+                      - generic [ref=e659]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e660] [cursor=pointer]:
+                    - generic [ref=e661]:
+                      - paragraph [ref=e662]:
+                        - paragraph [ref=e663]: QA Web Clock-in b60a8d94
+                      - generic [ref=e665]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e666] [cursor=pointer]:
+                    - generic [ref=e667]:
+                      - paragraph [ref=e668]:
+                        - paragraph [ref=e669]: QA Regularisation dc5ced8...
+                      - generic [ref=e671]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e672] [cursor=pointer]:
+                    - generic [ref=e673]:
+                      - paragraph [ref=e674]:
+                        - paragraph [ref=e675]: QA On Duty 0ff37fa3
+                      - generic [ref=e677]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e678] [cursor=pointer]:
+                    - generic [ref=e679]:
+                      - paragraph [ref=e680]:
+                        - paragraph [ref=e681]: QA On Duty a5ae71ab
+                      - generic [ref=e683]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e684] [cursor=pointer]:
+                    - generic [ref=e685]:
+                      - paragraph [ref=e686]:
+                        - paragraph [ref=e687]: QA Regularisation 77fe81d...
+                      - generic [ref=e689]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e690] [cursor=pointer]:
+                    - generic [ref=e691]:
+                      - paragraph [ref=e692]:
+                        - paragraph [ref=e693]: QA Regularisation 874c942...
+                      - generic [ref=e695]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e696] [cursor=pointer]:
+                    - generic [ref=e697]:
+                      - paragraph [ref=e698]:
+                        - paragraph [ref=e699]: QA Adjustment 2754e215
+                      - generic [ref=e701]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e702] [cursor=pointer]:
+                    - generic [ref=e703]:
+                      - paragraph [ref=e704]:
+                        - paragraph [ref=e705]: QA Adjustment 1b9953db
+                      - generic [ref=e707]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e708] [cursor=pointer]:
+                    - generic [ref=e709]:
+                      - paragraph [ref=e710]:
+                        - paragraph [ref=e711]: QA WFH c668d21f
+                      - generic [ref=e713]: 1 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e714] [cursor=pointer]:
+                    - generic [ref=e715]:
+                      - paragraph [ref=e716]:
+                        - paragraph [ref=e717]: QA WFH c39efd54
+                      - generic [ref=e719]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e720] [cursor=pointer]:
+                    - generic [ref=e721]:
+                      - paragraph [ref=e722]:
+                        - paragraph [ref=e723]: QA WFH c11f5766
+                      - generic [ref=e725]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e726] [cursor=pointer]:
+                    - generic [ref=e727]:
+                      - paragraph [ref=e728]:
+                        - paragraph [ref=e729]: QA Web Clock-in f7439ccf
+                      - generic [ref=e731]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e732] [cursor=pointer]:
+                    - generic [ref=e733]:
+                      - paragraph [ref=e734]:
+                        - paragraph [ref=e735]: QA WFH 495b6741
+                      - generic [ref=e737]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e738] [cursor=pointer]:
+                    - generic [ref=e739]:
+                      - paragraph [ref=e740]:
+                        - paragraph [ref=e741]: QA WFH d627f990
+                      - generic [ref=e743]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e744] [cursor=pointer]:
+                    - generic [ref=e745]:
+                      - paragraph [ref=e746]:
+                        - paragraph [ref=e747]: QA WFH 0655ce93
+                      - generic [ref=e749]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e750] [cursor=pointer]:
+                    - generic [ref=e751]:
+                      - paragraph [ref=e752]:
+                        - paragraph [ref=e753]: QA Web Clock-in 47a42a59
+                      - generic [ref=e755]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e756] [cursor=pointer]:
+                    - generic [ref=e757]:
+                      - paragraph [ref=e758]:
+                        - paragraph [ref=e759]: QA On Duty eab37699
+                      - generic [ref=e761]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e762] [cursor=pointer]:
+                    - generic [ref=e763]:
+                      - paragraph [ref=e764]:
+                        - paragraph [ref=e765]: QA Regularisation 89c49cc...
+                      - generic [ref=e767]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e768] [cursor=pointer]:
+                    - generic [ref=e769]:
+                      - paragraph [ref=e770]:
+                        - paragraph [ref=e771]: QA On Duty d33bc529
+                      - generic [ref=e773]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e774] [cursor=pointer]:
+                    - generic [ref=e775]:
+                      - paragraph [ref=e776]:
+                        - paragraph [ref=e777]: QA Regularisation 5842773...
+                      - generic [ref=e779]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e780] [cursor=pointer]:
+                    - generic [ref=e781]:
+                      - paragraph [ref=e782]:
+                        - paragraph [ref=e783]: QA Regularisation d46a46c...
+                      - generic [ref=e785]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e786] [cursor=pointer]:
+                    - generic [ref=e787]:
+                      - paragraph [ref=e788]:
+                        - paragraph [ref=e789]: QA Adjustment 6fe68eea
+                      - generic [ref=e791]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e792] [cursor=pointer]:
+                    - generic [ref=e793]:
+                      - paragraph [ref=e794]:
+                        - paragraph [ref=e795]: QA Adjustment aed7778d
+                      - generic [ref=e797]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e798] [cursor=pointer]:
+                    - generic [ref=e799]:
+                      - paragraph [ref=e800]:
+                        - paragraph [ref=e801]: QA WFH 0c8b53c5
+                      - generic [ref=e803]: 2 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e804] [cursor=pointer]:
+                    - generic [ref=e805]:
+                      - paragraph [ref=e806]:
+                        - paragraph [ref=e807]: QA WFH 31418535
+                      - generic [ref=e809]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e810] [cursor=pointer]:
+                    - generic [ref=e811]:
+                      - paragraph [ref=e812]:
+                        - paragraph [ref=e813]: QA WFH 7923b09a
+                      - generic [ref=e815]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e816] [cursor=pointer]:
+                    - generic [ref=e817]:
+                      - paragraph [ref=e818]:
+                        - paragraph [ref=e819]: QA WFH 03f93e50
+                      - generic [ref=e821]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e822] [cursor=pointer]:
+                    - generic [ref=e823]:
+                      - paragraph [ref=e824]:
+                        - paragraph [ref=e825]: QA WFH aebebe3d
+                      - generic [ref=e827]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e828] [cursor=pointer]:
+                    - generic [ref=e829]:
+                      - paragraph [ref=e830]:
+                        - paragraph [ref=e831]: QA WFH dc1af11e
+                      - generic [ref=e833]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e834] [cursor=pointer]:
+                    - generic [ref=e835]:
+                      - paragraph [ref=e836]:
+                        - paragraph [ref=e837]: QA Web Clock-in 9a35be94
+                      - generic [ref=e839]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e840] [cursor=pointer]:
+                    - generic [ref=e841]:
+                      - paragraph [ref=e842]:
+                        - paragraph [ref=e843]: QA Web Clock-in 45573c4c
+                      - generic [ref=e845]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e846] [cursor=pointer]:
+                    - generic [ref=e847]:
+                      - paragraph [ref=e848]:
+                        - paragraph [ref=e849]: QA Regularisation a46328b...
+                      - generic [ref=e851]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e852] [cursor=pointer]:
+                    - generic [ref=e853]:
+                      - paragraph [ref=e854]:
+                        - paragraph [ref=e855]: QA On Duty 5e977a53
+                      - generic [ref=e857]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e858] [cursor=pointer]:
+                    - generic [ref=e859]:
+                      - paragraph [ref=e860]:
+                        - paragraph [ref=e861]: QA Regularisation 87c3728...
+                      - generic [ref=e863]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e864] [cursor=pointer]:
+                    - generic [ref=e865]:
+                      - paragraph [ref=e866]:
+                        - paragraph [ref=e867]: QA On Duty 384fabe9
+                      - generic [ref=e869]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e870] [cursor=pointer]:
+                    - generic [ref=e871]:
+                      - paragraph [ref=e872]:
+                        - paragraph [ref=e873]: QA Regularisation 62845d1...
+                      - generic [ref=e875]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e876] [cursor=pointer]:
+                    - generic [ref=e877]:
+                      - paragraph [ref=e878]:
+                        - paragraph [ref=e879]: QA Regularisation 4847366...
+                      - generic [ref=e881]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e882] [cursor=pointer]:
+                    - generic [ref=e883]:
+                      - paragraph [ref=e884]:
+                        - paragraph [ref=e885]: QA Adjustment c6f4e55b
+                      - generic [ref=e887]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e888] [cursor=pointer]:
+                    - generic [ref=e889]:
+                      - paragraph [ref=e890]:
+                        - paragraph [ref=e891]: QA Adjustment f25b81d4
+                      - generic [ref=e893]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e894] [cursor=pointer]:
+                    - generic [ref=e895]:
+                      - paragraph [ref=e896]:
+                        - paragraph [ref=e897]: QA WFH 3ec4d829
+                      - generic [ref=e899]: 2 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e900] [cursor=pointer]:
+                    - generic [ref=e901]:
+                      - paragraph [ref=e902]:
+                        - paragraph [ref=e903]: QA WFH a20e0a4e
+                      - generic [ref=e905]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e906] [cursor=pointer]:
+                    - generic [ref=e907]:
+                      - paragraph [ref=e908]:
+                        - paragraph [ref=e909]: QA WFH 1b987a5b
+                      - generic [ref=e911]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e912] [cursor=pointer]:
+                    - generic [ref=e913]:
+                      - paragraph [ref=e914]:
+                        - paragraph [ref=e915]: QA WFH 446e0138
+                      - generic [ref=e917]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e918] [cursor=pointer]:
+                    - generic [ref=e919]:
+                      - paragraph [ref=e920]:
+                        - paragraph [ref=e921]: QA WFH 366b332d
+                      - generic [ref=e923]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e924] [cursor=pointer]:
+                    - generic [ref=e925]:
+                      - paragraph [ref=e926]:
+                        - paragraph [ref=e927]: QA Web Clock-in 7790d9e1
+                      - generic [ref=e929]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e930] [cursor=pointer]:
+                    - generic [ref=e931]:
+                      - paragraph [ref=e932]:
+                        - paragraph [ref=e933]: QA WFH 30e71dcd
+                      - generic [ref=e935]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e936] [cursor=pointer]:
+                    - generic [ref=e937]:
+                      - paragraph [ref=e938]:
+                        - paragraph [ref=e939]: QA Web Clock-in d4b8be69
+                      - generic [ref=e941]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e942] [cursor=pointer]:
+                    - generic [ref=e943]:
+                      - paragraph [ref=e944]:
+                        - paragraph [ref=e945]: QA Regularisation e7edaf7...
+                      - generic [ref=e947]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e948] [cursor=pointer]:
+                    - generic [ref=e949]:
+                      - paragraph [ref=e950]:
+                        - paragraph [ref=e951]: QA On Duty 96d62d79
+                      - generic [ref=e953]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e954] [cursor=pointer]:
+                    - generic [ref=e955]:
+                      - paragraph [ref=e956]:
+                        - paragraph [ref=e957]: QA Regularisation e797ccd...
+                      - generic [ref=e959]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e960] [cursor=pointer]:
+                    - generic [ref=e961]:
+                      - paragraph [ref=e962]:
+                        - paragraph [ref=e963]: QA On Duty 00185cdc
+                      - generic [ref=e965]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e966] [cursor=pointer]:
+                    - generic [ref=e967]:
+                      - paragraph [ref=e968]:
+                        - paragraph [ref=e969]: QA Regularisation 9b2d0fe...
+                      - generic [ref=e971]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e972] [cursor=pointer]:
+                    - generic [ref=e973]:
+                      - paragraph [ref=e974]:
+                        - paragraph [ref=e975]: QA Regularisation c7d5d29...
+                      - generic [ref=e977]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e978] [cursor=pointer]:
+                    - generic [ref=e979]:
+                      - paragraph [ref=e980]:
+                        - paragraph [ref=e981]: QA Adjustment 61f9b575
+                      - generic [ref=e983]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e984] [cursor=pointer]:
+                    - generic [ref=e985]:
+                      - paragraph [ref=e986]:
+                        - paragraph [ref=e987]: QA Adjustment 8a7fc836
+                      - generic [ref=e989]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e990] [cursor=pointer]:
+                    - generic [ref=e991]:
+                      - paragraph [ref=e992]:
+                        - paragraph [ref=e993]: QA WFH 0da96aa9
+                      - generic [ref=e995]: 2 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e996] [cursor=pointer]:
+                    - generic [ref=e997]:
+                      - paragraph [ref=e998]:
+                        - paragraph [ref=e999]: QA WFH aabaabcf
+                      - generic [ref=e1001]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1002] [cursor=pointer]:
+                    - generic [ref=e1003]:
+                      - paragraph [ref=e1004]:
+                        - paragraph [ref=e1005]: QA WFH b8084f59
+                      - generic [ref=e1007]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1008] [cursor=pointer]:
+                    - generic [ref=e1009]:
+                      - paragraph [ref=e1010]:
+                        - paragraph [ref=e1011]: QA WFH 8a5e4198
+                      - generic [ref=e1013]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1014] [cursor=pointer]:
+                    - generic [ref=e1015]:
+                      - paragraph [ref=e1016]:
+                        - paragraph [ref=e1017]: QA WFH fbf5da62
+                      - generic [ref=e1019]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1020] [cursor=pointer]:
+                    - generic [ref=e1021]:
+                      - paragraph [ref=e1022]:
+                        - paragraph [ref=e1023]: QA Web Clock-in 0b8cd26b
+                      - generic [ref=e1025]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1026] [cursor=pointer]:
+                    - generic [ref=e1027]:
+                      - paragraph [ref=e1028]:
+                        - paragraph [ref=e1029]: QA WFH 22ef97fe
+                      - generic [ref=e1031]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1032] [cursor=pointer]:
+                    - generic [ref=e1033]:
+                      - paragraph [ref=e1034]:
+                        - paragraph [ref=e1035]: QA Web Clock-in 56fe3aae
+                      - generic [ref=e1037]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1038] [cursor=pointer]:
+                    - generic [ref=e1039]:
+                      - paragraph [ref=e1040]:
+                        - paragraph [ref=e1041]: QA Regularisation c2910ec...
+                      - generic [ref=e1043]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1044] [cursor=pointer]:
+                    - generic [ref=e1045]:
+                      - paragraph [ref=e1046]:
+                        - paragraph [ref=e1047]: QA On Duty f6346d9a
+                      - generic [ref=e1049]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1050] [cursor=pointer]:
+                    - generic [ref=e1051]:
+                      - paragraph [ref=e1052]:
+                        - paragraph [ref=e1053]: QA Regularisation f7f73c4...
+                      - generic [ref=e1055]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1056] [cursor=pointer]:
+                    - generic [ref=e1057]:
+                      - paragraph [ref=e1058]:
+                        - paragraph [ref=e1059]: QA On Duty e9b7486f
+                      - generic [ref=e1061]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1062] [cursor=pointer]:
+                    - generic [ref=e1063]:
+                      - paragraph [ref=e1064]:
+                        - paragraph [ref=e1065]: QA Regularisation 047034d...
+                      - generic [ref=e1067]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1068] [cursor=pointer]:
+                    - generic [ref=e1069]:
+                      - paragraph [ref=e1070]:
+                        - paragraph [ref=e1071]: QA Regularisation 084d115...
+                      - generic [ref=e1073]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1074] [cursor=pointer]:
+                    - generic [ref=e1075]:
+                      - paragraph [ref=e1076]:
+                        - paragraph [ref=e1077]: QA Adjustment 76f4120e
+                      - generic [ref=e1079]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1080] [cursor=pointer]:
+                    - generic [ref=e1081]:
+                      - paragraph [ref=e1082]:
+                        - paragraph [ref=e1083]: QA Adjustment 2686ad2d
+                      - generic [ref=e1085]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1086] [cursor=pointer]:
+                    - generic [ref=e1087]:
+                      - paragraph [ref=e1088]:
+                        - paragraph [ref=e1089]: QA WFH 30efeeef
+                      - generic [ref=e1091]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1092] [cursor=pointer]:
+                    - generic [ref=e1093]:
+                      - paragraph [ref=e1094]:
+                        - paragraph [ref=e1095]: QA Web Clock-in c25cf452
+                      - generic [ref=e1097]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1098] [cursor=pointer]:
+                    - generic [ref=e1099]:
+                      - paragraph [ref=e1100]:
+                        - paragraph [ref=e1101]: QA WFH cf67a0a5
+                      - generic [ref=e1103]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1104] [cursor=pointer]:
+                    - generic [ref=e1105]:
+                      - paragraph [ref=e1106]:
+                        - paragraph [ref=e1107]: QA Web Clock-in f986ba79
+                      - generic [ref=e1109]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1110] [cursor=pointer]:
+                    - generic [ref=e1111]:
+                      - paragraph [ref=e1112]:
+                        - paragraph [ref=e1113]: QA On Duty 657fabdd
+                      - generic [ref=e1115]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1116] [cursor=pointer]:
+                    - generic [ref=e1117]:
+                      - paragraph [ref=e1118]:
+                        - paragraph [ref=e1119]: QA Regularisation 8099b3e...
+                      - generic [ref=e1121]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1122] [cursor=pointer]:
+                    - generic [ref=e1123]:
+                      - paragraph [ref=e1124]:
+                        - paragraph [ref=e1125]: QA On Duty 00334b36
+                      - generic [ref=e1127]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1128] [cursor=pointer]:
+                    - generic [ref=e1129]:
+                      - paragraph [ref=e1130]:
+                        - paragraph [ref=e1131]: QA Regularisation df5074b...
+                      - generic [ref=e1133]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1134] [cursor=pointer]:
+                    - generic [ref=e1135]:
+                      - paragraph [ref=e1136]:
+                        - paragraph [ref=e1137]: QA Adjustment 4b22bcf4
+                      - generic [ref=e1139]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1140] [cursor=pointer]:
+                    - generic [ref=e1141]:
+                      - paragraph [ref=e1142]:
+                        - paragraph [ref=e1143]: QA Adjustment 55d652cf
+                      - generic [ref=e1145]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1146] [cursor=pointer]:
+                    - generic [ref=e1147]:
+                      - paragraph [ref=e1148]:
+                        - paragraph [ref=e1149]: QA WFH 8192cacb
+                      - generic [ref=e1151]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1152] [cursor=pointer]:
+                    - generic [ref=e1153]:
+                      - paragraph [ref=e1154]:
+                        - paragraph [ref=e1155]: QA WFH 40b9350c
+                      - generic [ref=e1157]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1158] [cursor=pointer]:
+                    - generic [ref=e1159]:
+                      - paragraph [ref=e1160]:
+                        - paragraph [ref=e1161]: QA Web Clock-in 82a5e7ba
+                      - generic [ref=e1163]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1164] [cursor=pointer]:
+                    - generic [ref=e1165]:
+                      - paragraph [ref=e1166]:
+                        - paragraph [ref=e1167]: QA Web Clock-in fa565295
+                      - generic [ref=e1169]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1170] [cursor=pointer]:
+                    - generic [ref=e1171]:
+                      - paragraph [ref=e1172]:
+                        - paragraph [ref=e1173]: QA On Duty ae4e8e1f
+                      - generic [ref=e1175]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1176] [cursor=pointer]:
+                    - generic [ref=e1177]:
+                      - paragraph [ref=e1178]:
+                        - paragraph [ref=e1179]: QA Regularisation 9054aea...
+                      - generic [ref=e1181]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1182] [cursor=pointer]:
+                    - generic [ref=e1183]:
+                      - paragraph [ref=e1184]:
+                        - paragraph [ref=e1185]: QA On Duty 54458496
+                      - generic [ref=e1187]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1188] [cursor=pointer]:
+                    - generic [ref=e1189]:
+                      - paragraph [ref=e1190]:
+                        - paragraph [ref=e1191]: QA Regularisation d5defaa...
+                      - generic [ref=e1193]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1194] [cursor=pointer]:
+                    - generic [ref=e1195]:
+                      - paragraph [ref=e1196]:
+                        - paragraph [ref=e1197]: QA Regularisation 6141601...
+                      - generic [ref=e1199]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1200] [cursor=pointer]:
+                    - generic [ref=e1201]:
+                      - paragraph [ref=e1202]:
+                        - paragraph [ref=e1203]: QA Adjustment 1ee97d74
+                      - generic [ref=e1205]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1206] [cursor=pointer]:
+                    - generic [ref=e1207]:
+                      - paragraph [ref=e1208]:
+                        - paragraph [ref=e1209]: QA Adjustment 3bc79880
+                      - generic [ref=e1211]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1212] [cursor=pointer]:
+                    - generic [ref=e1213]:
+                      - paragraph [ref=e1214]:
+                        - paragraph [ref=e1215]: QA Summary 42af6940
+                      - generic [ref=e1217]: 2 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1218] [cursor=pointer]:
+                    - generic [ref=e1219]:
+                      - paragraph [ref=e1220]:
+                        - paragraph [ref=e1221]: QA Summary Capture c0d5a5...
+                      - generic [ref=e1223]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1224] [cursor=pointer]:
+                    - generic [ref=e1225]:
+                      - paragraph [ref=e1226]:
+                        - paragraph [ref=e1227]: QA Summary Capture adca0b...
+                      - generic [ref=e1229]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1230] [cursor=pointer]:
+                    - generic [ref=e1231]:
+                      - paragraph [ref=e1232]:
+                        - paragraph [ref=e1233]: QA Summary Capture 90a051...
+                      - generic [ref=e1235]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1236] [cursor=pointer]:
+                    - generic [ref=e1237]:
+                      - paragraph [ref=e1238]:
+                        - paragraph [ref=e1239]: QA Summary Capture e5b383...
+                      - generic [ref=e1241]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1242] [cursor=pointer]:
+                    - generic [ref=e1243]:
+                      - paragraph [ref=e1244]:
+                        - paragraph [ref=e1245]: QA Summary 5131733e
+                      - generic [ref=e1247]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1248] [cursor=pointer]:
+                    - generic [ref=e1249]:
+                      - paragraph [ref=e1250]:
+                        - paragraph [ref=e1251]: QA Summary 1dfe5244
+                      - generic [ref=e1253]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1254] [cursor=pointer]:
+                    - generic [ref=e1255]:
+                      - paragraph [ref=e1256]:
+                        - paragraph [ref=e1257]: QA WFH 51180e66
+                      - generic [ref=e1259]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1260] [cursor=pointer]:
+                    - generic [ref=e1261]:
+                      - paragraph [ref=e1262]:
+                        - paragraph [ref=e1263]: QA Summary Capture 9d65c5...
+                      - generic [ref=e1265]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1266] [cursor=pointer]:
+                    - generic [ref=e1267]:
+                      - paragraph [ref=e1268]:
+                        - paragraph [ref=e1269]: QA Summary Capture a3a5e2...
+                      - generic [ref=e1271]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1272] [cursor=pointer]:
+                    - generic [ref=e1273]:
+                      - paragraph [ref=e1274]:
+                        - paragraph [ref=e1275]: QA WFH 1eb86f4c
+                      - generic [ref=e1277]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1278] [cursor=pointer]:
+                    - generic [ref=e1279]:
+                      - paragraph [ref=e1280]:
+                        - paragraph [ref=e1281]: QA Summary Capture ad6d7f...
+                      - generic [ref=e1283]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1284] [cursor=pointer]:
+                    - generic [ref=e1285]:
+                      - paragraph [ref=e1286]:
+                        - paragraph [ref=e1287]: QA WFH 001eeb46
+                      - generic [ref=e1289]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1290] [cursor=pointer]:
+                    - generic [ref=e1291]:
+                      - paragraph [ref=e1292]:
+                        - paragraph [ref=e1293]: QA Web Clock-in ccd235f0
+                      - generic [ref=e1295]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1296] [cursor=pointer]:
+                    - generic [ref=e1297]:
+                      - paragraph [ref=e1298]:
+                        - paragraph [ref=e1299]: QA Summary Capture 69a208...
+                      - generic [ref=e1301]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1302] [cursor=pointer]:
+                    - generic [ref=e1303]:
+                      - paragraph [ref=e1304]:
+                        - paragraph [ref=e1305]: QA WFH cdc3b84f
+                      - generic [ref=e1307]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1308] [cursor=pointer]:
+                    - generic [ref=e1309]:
+                      - paragraph [ref=e1310]:
+                        - paragraph [ref=e1311]: QA Summary e96446df
+                      - generic [ref=e1313]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1314] [cursor=pointer]:
+                    - generic [ref=e1315]:
+                      - paragraph [ref=e1316]:
+                        - paragraph [ref=e1317]: QA Web Clock-in ae3fe81d
+                      - generic [ref=e1319]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1320] [cursor=pointer]:
+                    - generic [ref=e1321]:
+                      - paragraph [ref=e1322]:
+                        - paragraph [ref=e1323]: QA Regularisation cc001f4...
+                      - generic [ref=e1325]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1326] [cursor=pointer]:
+                    - generic [ref=e1327]:
+                      - paragraph [ref=e1328]:
+                        - paragraph [ref=e1329]: QA Regularisation c81d76d...
+                      - generic [ref=e1331]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1332] [cursor=pointer]:
+                    - generic [ref=e1333]:
+                      - paragraph [ref=e1334]:
+                        - paragraph [ref=e1335]: QA Regularisation c8217a5...
+                      - generic [ref=e1337]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1338] [cursor=pointer]:
+                    - generic [ref=e1339]:
+                      - paragraph [ref=e1340]:
+                        - paragraph [ref=e1341]: QA On Duty 0efd10e6
+                      - generic [ref=e1343]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1344] [cursor=pointer]:
+                    - generic [ref=e1345]:
+                      - paragraph [ref=e1346]:
+                        - paragraph [ref=e1347]: QA Regularisation 234d1ac...
+                      - generic [ref=e1349]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1350] [cursor=pointer]:
+                    - generic [ref=e1351]:
+                      - paragraph [ref=e1352]:
+                        - paragraph [ref=e1353]: QA Regularisation 1f2de66...
+                      - generic [ref=e1355]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1356] [cursor=pointer]:
+                    - generic [ref=e1357]:
+                      - paragraph [ref=e1358]:
+                        - paragraph [ref=e1359]: QA On Duty e44f9446
+                      - generic [ref=e1361]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1362] [cursor=pointer]:
+                    - generic [ref=e1363]:
+                      - paragraph [ref=e1364]:
+                        - paragraph [ref=e1365]: QA Regularisation f0f06bd...
+                      - generic [ref=e1367]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1368] [cursor=pointer]:
+                    - generic [ref=e1369]:
+                      - paragraph [ref=e1370]:
+                        - paragraph [ref=e1371]: QA Regularisation a75ccfa...
+                      - generic [ref=e1373]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1374] [cursor=pointer]:
+                    - generic [ref=e1375]:
+                      - paragraph [ref=e1376]:
+                        - paragraph [ref=e1377]: QA Regularisation c747aa2...
+                      - generic [ref=e1379]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1380] [cursor=pointer]:
+                    - generic [ref=e1381]:
+                      - paragraph [ref=e1382]:
+                        - paragraph [ref=e1383]: QA Summary 2505603d
+                      - generic [ref=e1385]: 2 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1386] [cursor=pointer]:
+                    - generic [ref=e1387]:
+                      - paragraph [ref=e1388]:
+                        - paragraph [ref=e1389]: QA WFH 7b25f2c9
+                      - generic [ref=e1391]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1392] [cursor=pointer]:
+                    - generic [ref=e1393]:
+                      - paragraph [ref=e1394]:
+                        - paragraph [ref=e1395]: QA Summary Capture dfddab...
+                      - generic [ref=e1397]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1398] [cursor=pointer]:
+                    - generic [ref=e1399]:
+                      - paragraph [ref=e1400]:
+                        - paragraph [ref=e1401]: QA Summary Capture 6a9c9d...
+                      - generic [ref=e1403]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1404] [cursor=pointer]:
+                    - generic [ref=e1405]:
+                      - paragraph [ref=e1406]:
+                        - paragraph [ref=e1407]: QA WFH f9a1d4b0
+                      - generic [ref=e1409]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1410] [cursor=pointer]:
+                    - generic [ref=e1411]:
+                      - paragraph [ref=e1412]:
+                        - paragraph [ref=e1413]: QA Summary Capture fa8ccf...
+                      - generic [ref=e1415]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1416] [cursor=pointer]:
+                    - generic [ref=e1417]:
+                      - paragraph [ref=e1418]:
+                        - paragraph [ref=e1419]: QA WFH 93564904
+                      - generic [ref=e1421]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1422] [cursor=pointer]:
+                    - generic [ref=e1423]:
+                      - paragraph [ref=e1424]:
+                        - paragraph [ref=e1425]: QA Summary Capture 2aa188...
+                      - generic [ref=e1427]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1428] [cursor=pointer]:
+                    - generic [ref=e1429]:
+                      - paragraph [ref=e1430]:
+                        - paragraph [ref=e1431]: QA WFH 50d3a938
+                      - generic [ref=e1433]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1434] [cursor=pointer]:
+                    - generic [ref=e1435]:
+                      - paragraph [ref=e1436]:
+                        - paragraph [ref=e1437]: QA Summary 6b500b07
+                      - generic [ref=e1439]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1440] [cursor=pointer]:
+                    - generic [ref=e1441]:
+                      - paragraph [ref=e1442]:
+                        - paragraph [ref=e1443]: QA Web Clock-in 32009b1c
+                      - generic [ref=e1445]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1446] [cursor=pointer]:
+                    - generic [ref=e1447]:
+                      - paragraph [ref=e1448]:
+                        - paragraph [ref=e1449]: QA On Duty f2c0e114
+                      - generic [ref=e1451]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1452] [cursor=pointer]:
+                    - generic [ref=e1453]:
+                      - paragraph [ref=e1454]:
+                        - paragraph [ref=e1455]: QA On Duty 313776b4
+                      - generic [ref=e1457]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1458] [cursor=pointer]:
+                    - generic [ref=e1459]:
+                      - paragraph [ref=e1460]:
+                        - paragraph [ref=e1461]: QA Disabled Mobile d65827...
+                      - generic [ref=e1463]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1464] [cursor=pointer]:
+                    - generic [ref=e1465]:
+                      - paragraph [ref=e1466]:
+                        - paragraph [ref=e1467]: QA Mobile Clock-in 021fe6...
+                      - generic [ref=e1469]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1470] [cursor=pointer]:
+                    - generic [ref=e1471]:
+                      - paragraph [ref=e1472]:
+                        - paragraph [ref=e1473]: QA On Duty 19839cc3
+                      - generic [ref=e1475]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1476] [cursor=pointer]:
+                    - generic [ref=e1477]:
+                      - paragraph [ref=e1478]:
+                        - paragraph [ref=e1479]: QA Regularisation 56e2f6e...
+                      - generic [ref=e1481]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1482] [cursor=pointer]:
+                    - generic [ref=e1483]:
+                      - paragraph [ref=e1484]:
+                        - paragraph [ref=e1485]: QA On Duty b654f9a7
+                      - generic [ref=e1487]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1488] [cursor=pointer]:
+                    - generic [ref=e1489]:
+                      - paragraph [ref=e1490]:
+                        - paragraph [ref=e1491]: QA On Duty 7d414475
+                      - generic [ref=e1493]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1494] [cursor=pointer]:
+                    - generic [ref=e1495]:
+                      - paragraph [ref=e1496]:
+                        - paragraph [ref=e1497]: QA Regularisation 552473d...
+                      - generic [ref=e1499]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1500] [cursor=pointer]:
+                    - generic [ref=e1501]:
+                      - paragraph [ref=e1502]:
+                        - paragraph [ref=e1503]: QA Regularisation c4fb071...
+                      - generic [ref=e1505]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1506] [cursor=pointer]:
+                    - generic [ref=e1507]:
+                      - paragraph [ref=e1508]:
+                        - paragraph [ref=e1509]: QA Adjustment 7b01277a
+                      - generic [ref=e1511]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1512] [cursor=pointer]:
+                    - generic [ref=e1513]:
+                      - paragraph [ref=e1514]:
+                        - paragraph [ref=e1515]: QA Regularisation fcffea2...
+                      - generic [ref=e1517]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1518] [cursor=pointer]:
+                    - generic [ref=e1519]:
+                      - paragraph [ref=e1520]:
+                        - paragraph [ref=e1521]: QA Adjustment 359d5aca
+                      - generic [ref=e1523]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1524] [cursor=pointer]:
+                    - generic [ref=e1525]:
+                      - paragraph [ref=e1526]:
+                        - paragraph [ref=e1527]: QA Adjustment 56e6ed5c
+                      - generic [ref=e1529]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1530] [cursor=pointer]:
+                    - generic [ref=e1531]:
+                      - paragraph [ref=e1532]:
+                        - paragraph [ref=e1533]: QA Summary 97bf570d
+                      - generic [ref=e1535]: 1 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1536] [cursor=pointer]:
+                    - generic [ref=e1537]:
+                      - paragraph [ref=e1538]:
+                        - paragraph [ref=e1539]: QA WFH 5a7cdb68
+                      - generic [ref=e1541]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1542] [cursor=pointer]:
+                    - generic [ref=e1543]:
+                      - paragraph [ref=e1544]:
+                        - paragraph [ref=e1545]: QA Summary Capture 647263...
+                      - generic [ref=e1547]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1548] [cursor=pointer]:
+                    - generic [ref=e1549]:
+                      - paragraph [ref=e1550]:
+                        - paragraph [ref=e1551]: QA Summary Capture 756195...
+                      - generic [ref=e1553]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1554] [cursor=pointer]:
+                    - generic [ref=e1555]:
+                      - paragraph [ref=e1556]:
+                        - paragraph [ref=e1557]: QA WFH 05b042db
+                      - generic [ref=e1559]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1560] [cursor=pointer]:
+                    - generic [ref=e1561]:
+                      - paragraph [ref=e1562]:
+                        - paragraph [ref=e1563]: QA Summary Capture e3c97d...
+                      - generic [ref=e1565]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1566] [cursor=pointer]:
+                    - generic [ref=e1567]:
+                      - paragraph [ref=e1568]:
+                        - paragraph [ref=e1569]: QA WFH 0b144e42
+                      - generic [ref=e1571]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1572] [cursor=pointer]:
+                    - generic [ref=e1573]:
+                      - paragraph [ref=e1574]:
+                        - paragraph [ref=e1575]: QA Summary Capture 526ddb...
+                      - generic [ref=e1577]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1578] [cursor=pointer]:
+                    - generic [ref=e1579]:
+                      - paragraph [ref=e1580]:
+                        - paragraph [ref=e1581]: QA WFH eb00bb9e
+                      - generic [ref=e1583]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1584] [cursor=pointer]:
+                    - generic [ref=e1585]:
+                      - paragraph [ref=e1586]:
+                        - paragraph [ref=e1587]: QA Summary 5e7c597f
+                      - generic [ref=e1589]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1590] [cursor=pointer]:
+                    - generic [ref=e1591]:
+                      - paragraph [ref=e1592]:
+                        - paragraph [ref=e1593]: QA Web Clock-in b022c038
+                      - generic [ref=e1595]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1596] [cursor=pointer]:
+                    - generic [ref=e1597]:
+                      - paragraph [ref=e1598]:
+                        - paragraph [ref=e1599]: QA On Duty 4b7c0d0e
+                      - generic [ref=e1601]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1602] [cursor=pointer]:
+                    - generic [ref=e1603]:
+                      - paragraph [ref=e1604]:
+                        - paragraph [ref=e1605]: QA On Duty 5d9466e3
+                      - generic [ref=e1607]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1608] [cursor=pointer]:
+                    - generic [ref=e1609]:
+                      - paragraph [ref=e1610]:
+                        - paragraph [ref=e1611]: QA On Duty edd0c42b
+                      - generic [ref=e1613]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1614] [cursor=pointer]:
+                    - generic [ref=e1615]:
+                      - paragraph [ref=e1616]:
+                        - paragraph [ref=e1617]: QA Disabled Mobile e40495...
+                      - generic [ref=e1619]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1620] [cursor=pointer]:
+                    - generic [ref=e1621]:
+                      - paragraph [ref=e1622]:
+                        - paragraph [ref=e1623]: QA Mobile Clock-in 8db117...
+                      - generic [ref=e1625]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1626] [cursor=pointer]:
+                    - generic [ref=e1627]:
+                      - paragraph [ref=e1628]:
+                        - paragraph [ref=e1629]: QA On Duty baa3b001
+                      - generic [ref=e1631]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1632] [cursor=pointer]:
+                    - generic [ref=e1633]:
+                      - paragraph [ref=e1634]:
+                        - paragraph [ref=e1635]: QA Mobile Clock-in 4bd0e3...
+                      - generic [ref=e1637]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1638] [cursor=pointer]:
+                    - generic [ref=e1639]:
+                      - paragraph [ref=e1640]:
+                        - paragraph [ref=e1641]: QA Regularisation ff87e01...
+                      - generic [ref=e1643]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1644] [cursor=pointer]:
+                    - generic [ref=e1645]:
+                      - paragraph [ref=e1646]:
+                        - paragraph [ref=e1647]: QA On Duty 5b22b23f
+                      - generic [ref=e1649]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1650] [cursor=pointer]:
+                    - generic [ref=e1651]:
+                      - paragraph [ref=e1652]:
+                        - paragraph [ref=e1653]: QA Regularisation b782d91...
+                      - generic [ref=e1655]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1656] [cursor=pointer]:
+                    - generic [ref=e1657]:
+                      - paragraph [ref=e1658]:
+                        - paragraph [ref=e1659]: QA Regularisation aa65195...
+                      - generic [ref=e1661]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1662] [cursor=pointer]:
+                    - generic [ref=e1663]:
+                      - paragraph [ref=e1664]:
+                        - paragraph [ref=e1665]: QA Adjustment ed0cee7b
+                      - generic [ref=e1667]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1668] [cursor=pointer]:
+                    - generic [ref=e1669]:
+                      - paragraph [ref=e1670]:
+                        - paragraph [ref=e1671]: QA Regularisation 8f4bb29...
+                      - generic [ref=e1673]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1674] [cursor=pointer]:
+                    - generic [ref=e1675]:
+                      - paragraph [ref=e1676]:
+                        - paragraph [ref=e1677]: QA Adjustment 89b85944
+                      - generic [ref=e1679]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1680] [cursor=pointer]:
+                    - generic [ref=e1681]:
+                      - paragraph [ref=e1682]:
+                        - paragraph [ref=e1683]: QA Regularisation 19db4ba...
+                      - generic [ref=e1685]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1686] [cursor=pointer]:
+                    - generic [ref=e1687]:
+                      - paragraph [ref=e1688]:
+                        - paragraph [ref=e1689]: QA Adjustment 6df4ba1a
+                      - generic [ref=e1691]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1692] [cursor=pointer]:
+                    - generic [ref=e1693]:
+                      - paragraph [ref=e1694]:
+                        - paragraph [ref=e1695]: QA WFH 285820fb
+                      - generic [ref=e1697]: 1 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1698] [cursor=pointer]:
+                    - generic [ref=e1699]:
+                      - paragraph [ref=e1700]:
+                        - paragraph [ref=e1701]: QA Summary c9d6cd7c
+                      - generic [ref=e1703]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1704] [cursor=pointer]:
+                    - generic [ref=e1705]:
+                      - paragraph [ref=e1706]:
+                        - paragraph [ref=e1707]: QA WFH 4cc9333a
+                      - generic [ref=e1709]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1710] [cursor=pointer]:
+                    - generic [ref=e1711]:
+                      - paragraph [ref=e1712]:
+                        - paragraph [ref=e1713]: QA Summary Capture 900657...
+                      - generic [ref=e1715]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1716] [cursor=pointer]:
+                    - generic [ref=e1717]:
+                      - paragraph [ref=e1718]:
+                        - paragraph [ref=e1719]: QA Summary Capture 1d0612...
+                      - generic [ref=e1721]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1722] [cursor=pointer]:
+                    - generic [ref=e1723]:
+                      - paragraph [ref=e1724]:
+                        - paragraph [ref=e1725]: QA WFH 8921079d
+                      - generic [ref=e1727]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1728] [cursor=pointer]:
+                    - generic [ref=e1729]:
+                      - paragraph [ref=e1730]:
+                        - paragraph [ref=e1731]: QA Summary Capture 50ce7e...
+                      - generic [ref=e1733]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1734] [cursor=pointer]:
+                    - generic [ref=e1735]:
+                      - paragraph [ref=e1736]:
+                        - paragraph [ref=e1737]: QA WFH 39166762
+                      - generic [ref=e1739]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1740] [cursor=pointer]:
+                    - generic [ref=e1741]:
+                      - paragraph [ref=e1742]:
+                        - paragraph [ref=e1743]: QA Summary Capture 8c80d9...
+                      - generic [ref=e1745]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1746] [cursor=pointer]:
+                    - generic [ref=e1747]:
+                      - paragraph [ref=e1748]:
+                        - paragraph [ref=e1749]: QA Summary e737c381
+                      - generic [ref=e1751]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1752] [cursor=pointer]:
+                    - generic [ref=e1753]:
+                      - paragraph [ref=e1754]:
+                        - paragraph [ref=e1755]: QA Web Clock-in dd56c172
+                      - generic [ref=e1757]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1758] [cursor=pointer]:
+                    - generic [ref=e1759]:
+                      - paragraph [ref=e1760]:
+                        - paragraph [ref=e1761]: QA On Duty b4fa9262
+                      - generic [ref=e1763]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1764] [cursor=pointer]:
+                    - generic [ref=e1765]:
+                      - paragraph [ref=e1766]:
+                        - paragraph [ref=e1767]: QA On Duty 8118b645
+                      - generic [ref=e1769]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1770] [cursor=pointer]:
+                    - generic [ref=e1771]:
+                      - paragraph [ref=e1772]:
+                        - paragraph [ref=e1773]: QA Mobile Clock-in 1b15ba...
+                      - generic [ref=e1775]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1776] [cursor=pointer]:
+                    - generic [ref=e1777]:
+                      - paragraph [ref=e1778]:
+                        - paragraph [ref=e1779]: QA On Duty 339c83a2
+                      - generic [ref=e1781]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1782] [cursor=pointer]:
+                    - generic [ref=e1783]:
+                      - paragraph [ref=e1784]:
+                        - paragraph [ref=e1785]: QA Regularisation 64b0dd9...
+                      - generic [ref=e1787]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1788] [cursor=pointer]:
+                    - generic [ref=e1789]:
+                      - paragraph [ref=e1790]:
+                        - paragraph [ref=e1791]: QA Mobile Clock-in c1fa05...
+                      - generic [ref=e1793]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1794] [cursor=pointer]:
+                    - generic [ref=e1795]:
+                      - paragraph [ref=e1796]:
+                        - paragraph [ref=e1797]: QA On Duty bf00b8d5
+                      - generic [ref=e1799]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1800] [cursor=pointer]:
+                    - generic [ref=e1801]:
+                      - paragraph [ref=e1802]:
+                        - paragraph [ref=e1803]: QA On Duty 4d7b6d6a
+                      - generic [ref=e1805]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1806] [cursor=pointer]:
+                    - generic [ref=e1807]:
+                      - paragraph [ref=e1808]:
+                        - paragraph [ref=e1809]: QA On Duty a049e65b
+                      - generic [ref=e1811]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1812] [cursor=pointer]:
+                    - generic [ref=e1813]:
+                      - paragraph [ref=e1814]:
+                        - paragraph [ref=e1815]: QA Adjustment 0dcbbbc6
+                      - generic [ref=e1817]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1818] [cursor=pointer]:
+                    - generic [ref=e1819]:
+                      - paragraph [ref=e1820]:
+                        - paragraph [ref=e1821]: QA Adjustment f5c1dcb4
+                      - generic [ref=e1823]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1824] [cursor=pointer]:
+                    - generic [ref=e1825]:
+                      - paragraph [ref=e1826]:
+                        - paragraph [ref=e1827]: QA WFH c5de3dc1
+                      - generic [ref=e1829]: 1 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1830] [cursor=pointer]:
+                    - generic [ref=e1831]:
+                      - paragraph [ref=e1832]:
+                        - paragraph [ref=e1833]: QA WFH 9d228ef9
+                      - generic [ref=e1835]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1836] [cursor=pointer]:
+                    - generic [ref=e1837]:
+                      - paragraph [ref=e1838]:
+                        - paragraph [ref=e1839]: QA WFH c8fbd390
+                      - generic [ref=e1841]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1842] [cursor=pointer]:
+                    - generic [ref=e1843]:
+                      - paragraph [ref=e1844]:
+                        - paragraph [ref=e1845]: QA Summary Capture 74cd63...
+                      - generic [ref=e1847]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1848] [cursor=pointer]:
+                    - generic [ref=e1849]:
+                      - paragraph [ref=e1850]:
+                        - paragraph [ref=e1851]: QA Summary Capture 9ce6ed...
+                      - generic [ref=e1853]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1854] [cursor=pointer]:
+                    - generic [ref=e1855]:
+                      - paragraph [ref=e1856]:
+                        - paragraph [ref=e1857]: QA WFH 54a2124b
+                      - generic [ref=e1859]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1860] [cursor=pointer]:
+                    - generic [ref=e1861]:
+                      - paragraph [ref=e1862]:
+                        - paragraph [ref=e1863]: QA WFH f415f13f
+                      - generic [ref=e1865]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1866] [cursor=pointer]:
+                    - generic [ref=e1867]:
+                      - paragraph [ref=e1868]:
+                        - paragraph [ref=e1869]: QA Summary Capture 56a2fc...
+                      - generic [ref=e1871]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1872] [cursor=pointer]:
+                    - generic [ref=e1873]:
+                      - paragraph [ref=e1874]:
+                        - paragraph [ref=e1875]: QA Web Clock-in f6d23a81
+                      - generic [ref=e1877]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1878] [cursor=pointer]:
+                    - generic [ref=e1879]:
+                      - paragraph [ref=e1880]:
+                        - paragraph [ref=e1881]: QA Web Clock-in 45c06b1f
+                      - generic [ref=e1883]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1884] [cursor=pointer]:
+                    - generic [ref=e1885]:
+                      - paragraph [ref=e1886]:
+                        - paragraph [ref=e1887]: QA On Duty 0bf1fd39
+                      - generic [ref=e1889]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1890] [cursor=pointer]:
+                    - generic [ref=e1891]:
+                      - paragraph [ref=e1892]:
+                        - paragraph [ref=e1893]: QA On Duty c95c1504
+                      - generic [ref=e1895]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1896] [cursor=pointer]:
+                    - generic [ref=e1897]:
+                      - paragraph [ref=e1898]:
+                        - paragraph [ref=e1899]: QA On Duty e3783800
+                      - generic [ref=e1901]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1902] [cursor=pointer]:
+                    - generic [ref=e1903]:
+                      - paragraph [ref=e1904]:
+                        - paragraph [ref=e1905]: QA On Duty dc103ca4
+                      - generic [ref=e1907]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1908] [cursor=pointer]:
+                    - generic [ref=e1909]:
+                      - paragraph [ref=e1910]:
+                        - paragraph [ref=e1911]: QA On Duty 75c9e0b3
+                      - generic [ref=e1913]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1914] [cursor=pointer]:
+                    - generic [ref=e1915]:
+                      - paragraph [ref=e1916]:
+                        - paragraph [ref=e1917]: QA On Duty add50efe
+                      - generic [ref=e1919]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1920] [cursor=pointer]:
+                    - generic [ref=e1921]:
+                      - paragraph [ref=e1922]:
+                        - paragraph [ref=e1923]: QA Mobile Clock-in 2a90ad...
+                      - generic [ref=e1925]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1926] [cursor=pointer]:
+                    - generic [ref=e1927]:
+                      - paragraph [ref=e1928]:
+                        - paragraph [ref=e1929]: QA On Duty 0b59ce01
+                      - generic [ref=e1931]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1932] [cursor=pointer]:
+                    - generic [ref=e1933]:
+                      - paragraph [ref=e1934]:
+                        - paragraph [ref=e1935]: QA Mobile Clock-in 3aed50...
+                      - generic [ref=e1937]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1938] [cursor=pointer]:
+                    - generic [ref=e1939]:
+                      - paragraph [ref=e1940]:
+                        - paragraph [ref=e1941]: QA On Duty a95a1225
+                      - generic [ref=e1943]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1944] [cursor=pointer]:
+                    - generic [ref=e1945]:
+                      - paragraph [ref=e1946]:
+                        - paragraph [ref=e1947]: QA Adjustment 662d19d0
+                      - generic [ref=e1949]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1950] [cursor=pointer]:
+                    - generic [ref=e1951]:
+                      - paragraph [ref=e1952]:
+                        - paragraph [ref=e1953]: QA Adjustment ff9762fe
+                      - generic [ref=e1955]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1956] [cursor=pointer]:
+                    - generic [ref=e1957]:
+                      - paragraph [ref=e1958]:
+                        - paragraph [ref=e1959]: QA WFH 84bac6c9
+                      - generic [ref=e1961]: 1 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1962] [cursor=pointer]:
+                    - generic [ref=e1963]:
+                      - paragraph [ref=e1964]:
+                        - paragraph [ref=e1965]: QA WFH 57479409
+                      - generic [ref=e1967]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1968] [cursor=pointer]:
+                    - generic [ref=e1969]:
+                      - paragraph [ref=e1970]:
+                        - paragraph [ref=e1971]: QA WFH fb4db6a2
+                      - generic [ref=e1973]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1974] [cursor=pointer]:
+                    - generic [ref=e1975]:
+                      - paragraph [ref=e1976]:
+                        - paragraph [ref=e1977]: QA Summary Capture 940f86...
+                      - generic [ref=e1979]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1980] [cursor=pointer]:
+                    - generic [ref=e1981]:
+                      - paragraph [ref=e1982]:
+                        - paragraph [ref=e1983]: QA WFH c7ab69c1
+                      - generic [ref=e1985]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1986] [cursor=pointer]:
+                    - generic [ref=e1987]:
+                      - paragraph [ref=e1988]:
+                        - paragraph [ref=e1989]: QA Summary c3089c51
+                      - generic [ref=e1991]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1992] [cursor=pointer]:
+                    - generic [ref=e1993]:
+                      - paragraph [ref=e1994]:
+                        - paragraph [ref=e1995]: QA Web Clock-in fa8542ec
+                      - generic [ref=e1997]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e1998] [cursor=pointer]:
+                    - generic [ref=e1999]:
+                      - paragraph [ref=e2000]:
+                        - paragraph [ref=e2001]: QA Web Clock-in db5bce0d
+                      - generic [ref=e2003]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2004] [cursor=pointer]:
+                    - generic [ref=e2005]:
+                      - paragraph [ref=e2006]:
+                        - paragraph [ref=e2007]: QA On Duty 8be904a1
+                      - generic [ref=e2009]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2010] [cursor=pointer]:
+                    - generic [ref=e2011]:
+                      - paragraph [ref=e2012]:
+                        - paragraph [ref=e2013]: QA On Duty 7baae297
+                      - generic [ref=e2015]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2016] [cursor=pointer]:
+                    - generic [ref=e2017]:
+                      - paragraph [ref=e2018]:
+                        - paragraph [ref=e2019]: QA On Duty 74029e86
+                      - generic [ref=e2021]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2022] [cursor=pointer]:
+                    - generic [ref=e2023]:
+                      - paragraph [ref=e2024]:
+                        - paragraph [ref=e2025]: QA On Duty 1b4b20f5
+                      - generic [ref=e2027]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2028] [cursor=pointer]:
+                    - generic [ref=e2029]:
+                      - paragraph [ref=e2030]:
+                        - paragraph [ref=e2031]: QA Mobile Clock-in a36490...
+                      - generic [ref=e2033]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2034] [cursor=pointer]:
+                    - generic [ref=e2035]:
+                      - paragraph [ref=e2036]:
+                        - paragraph [ref=e2037]: QA On Duty 691f58ec
+                      - generic [ref=e2039]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2040] [cursor=pointer]:
+                    - generic [ref=e2041]:
+                      - paragraph [ref=e2042]:
+                        - paragraph [ref=e2043]: QA Regularisation a0e169a...
+                      - generic [ref=e2045]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2046] [cursor=pointer]:
+                    - generic [ref=e2047]:
+                      - paragraph [ref=e2048]:
+                        - paragraph [ref=e2049]: QA Mobile Clock-in 07ba53...
+                      - generic [ref=e2051]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2052] [cursor=pointer]:
+                    - generic [ref=e2053]:
+                      - paragraph [ref=e2054]:
+                        - paragraph [ref=e2055]: QA On Duty 050588a5
+                      - generic [ref=e2057]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2058] [cursor=pointer]:
+                    - generic [ref=e2059]:
+                      - paragraph [ref=e2060]:
+                        - paragraph [ref=e2061]: QA On Duty c040adeb
+                      - generic [ref=e2063]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2064] [cursor=pointer]:
+                    - generic [ref=e2065]:
+                      - paragraph [ref=e2066]:
+                        - paragraph [ref=e2067]: QA Regularisation baa3f86...
+                      - generic [ref=e2069]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2070] [cursor=pointer]:
+                    - generic [ref=e2071]:
+                      - paragraph [ref=e2072]:
+                        - paragraph [ref=e2073]: QA Summary 7376375c
+                      - generic [ref=e2075]: 1 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2076] [cursor=pointer]:
+                    - generic [ref=e2077]:
+                      - paragraph [ref=e2078]:
+                        - paragraph [ref=e2079]: QA WFH a04dcef5
+                      - generic [ref=e2081]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2082] [cursor=pointer]:
+                    - generic [ref=e2083]:
+                      - paragraph [ref=e2084]:
+                        - paragraph [ref=e2085]: QA Summary Capture 75683b...
+                      - generic [ref=e2087]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2088] [cursor=pointer]:
+                    - generic [ref=e2089]:
+                      - paragraph [ref=e2090]:
+                        - paragraph [ref=e2091]: QA Summary Capture 4d1cfa...
+                      - generic [ref=e2093]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2094] [cursor=pointer]:
+                    - generic [ref=e2095]:
+                      - paragraph [ref=e2096]:
+                        - paragraph [ref=e2097]: QA WFH 54ca8607
+                      - generic [ref=e2099]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2100] [cursor=pointer]:
+                    - generic [ref=e2101]:
+                      - paragraph [ref=e2102]:
+                        - paragraph [ref=e2103]: QA Summary Capture a0fc99...
+                      - generic [ref=e2105]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2106] [cursor=pointer]:
+                    - generic [ref=e2107]:
+                      - paragraph [ref=e2108]:
+                        - paragraph [ref=e2109]: QA WFH 764539ff
+                      - generic [ref=e2111]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2112] [cursor=pointer]:
+                    - generic [ref=e2113]:
+                      - paragraph [ref=e2114]:
+                        - paragraph [ref=e2115]: QA Summary Capture 402cee...
+                      - generic [ref=e2117]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2118] [cursor=pointer]:
+                    - generic [ref=e2119]:
+                      - paragraph [ref=e2120]:
+                        - paragraph [ref=e2121]: QA WFH 5d3b6611
+                      - generic [ref=e2123]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2124] [cursor=pointer]:
+                    - generic [ref=e2125]:
+                      - paragraph [ref=e2126]:
+                        - paragraph [ref=e2127]: QA Summary 3b3f83b3
+                      - generic [ref=e2129]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2130] [cursor=pointer]:
+                    - generic [ref=e2131]:
+                      - paragraph [ref=e2132]:
+                        - paragraph [ref=e2133]: QA On Duty f283e108
+                      - generic [ref=e2135]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2136] [cursor=pointer]:
+                    - generic [ref=e2137]:
+                      - paragraph [ref=e2138]:
+                        - paragraph [ref=e2139]: QA On Duty 5fe4c66a
+                      - generic [ref=e2141]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2142] [cursor=pointer]:
+                    - generic [ref=e2143]:
+                      - paragraph [ref=e2144]:
+                        - paragraph [ref=e2145]: QA On Duty 3d877ff1
+                      - generic [ref=e2147]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2148] [cursor=pointer]:
+                    - generic [ref=e2149]:
+                      - paragraph [ref=e2150]:
+                        - paragraph [ref=e2151]: QA Disabled Mobile a73fdf...
+                      - generic [ref=e2153]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2154] [cursor=pointer]:
+                    - generic [ref=e2155]:
+                      - paragraph [ref=e2156]:
+                        - paragraph [ref=e2157]: QA Mobile Clock-in 970f84...
+                      - generic [ref=e2159]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2160] [cursor=pointer]:
+                    - generic [ref=e2161]:
+                      - paragraph [ref=e2162]:
+                        - paragraph [ref=e2163]: QA Regularisation 829f942...
+                      - generic [ref=e2165]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2166] [cursor=pointer]:
+                    - generic [ref=e2167]:
+                      - paragraph [ref=e2168]:
+                        - paragraph [ref=e2169]: QA On Duty 9efe81f9
+                      - generic [ref=e2171]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2172] [cursor=pointer]:
+                    - generic [ref=e2173]:
+                      - paragraph [ref=e2174]:
+                        - paragraph [ref=e2175]: QA Regularisation cd57f28...
+                      - generic [ref=e2177]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2178] [cursor=pointer]:
+                    - generic [ref=e2179]:
+                      - paragraph [ref=e2180]:
+                        - paragraph [ref=e2181]: QA On Duty 994765ba
+                      - generic [ref=e2183]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2184] [cursor=pointer]:
+                    - generic [ref=e2185]:
+                      - paragraph [ref=e2186]:
+                        - paragraph [ref=e2187]: QA Regularisation 1f72000...
+                      - generic [ref=e2189]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2190] [cursor=pointer]:
+                    - generic [ref=e2191]:
+                      - paragraph [ref=e2192]:
+                        - paragraph [ref=e2193]: QA Regularisation b6a3471...
+                      - generic [ref=e2195]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2196] [cursor=pointer]:
+                    - generic [ref=e2197]:
+                      - paragraph [ref=e2198]:
+                        - paragraph [ref=e2199]: QA Adjustment c9280f0b
+                      - generic [ref=e2201]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2202] [cursor=pointer]:
+                    - generic [ref=e2203]:
+                      - paragraph [ref=e2204]:
+                        - paragraph [ref=e2205]: QA Adjustment c59f4499
+                      - generic [ref=e2207]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2208] [cursor=pointer]:
+                    - generic [ref=e2209]:
+                      - paragraph [ref=e2210]:
+                        - paragraph [ref=e2211]: QA Summary adc0309c
+                      - generic [ref=e2213]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2214] [cursor=pointer]:
+                    - generic [ref=e2215]:
+                      - paragraph [ref=e2216]:
+                        - paragraph [ref=e2217]: QA WFH 2ceb77d2
+                      - generic [ref=e2219]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2220] [cursor=pointer]:
+                    - generic [ref=e2221]:
+                      - paragraph [ref=e2222]:
+                        - paragraph [ref=e2223]: QA Summary Capture 86a8b3...
+                      - generic [ref=e2225]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2226] [cursor=pointer]:
+                    - generic [ref=e2227]:
+                      - paragraph [ref=e2228]:
+                        - paragraph [ref=e2229]: QA Summary Capture a459aa...
+                      - generic [ref=e2231]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2232] [cursor=pointer]:
+                    - generic [ref=e2233]:
+                      - paragraph [ref=e2234]:
+                        - paragraph [ref=e2235]: QA WFH fbeff7d2
+                      - generic [ref=e2237]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2238] [cursor=pointer]:
+                    - generic [ref=e2239]:
+                      - paragraph [ref=e2240]:
+                        - paragraph [ref=e2241]: QA Summary Capture 8684f0...
+                      - generic [ref=e2243]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2244] [cursor=pointer]:
+                    - generic [ref=e2245]:
+                      - paragraph [ref=e2246]:
+                        - paragraph [ref=e2247]: QA WFH 80838815
+                      - generic [ref=e2249]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2250] [cursor=pointer]:
+                    - generic [ref=e2251]:
+                      - paragraph [ref=e2252]:
+                        - paragraph [ref=e2253]: QA Summary Capture c75417...
+                      - generic [ref=e2255]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2256] [cursor=pointer]:
+                    - generic [ref=e2257]:
+                      - paragraph [ref=e2258]:
+                        - paragraph [ref=e2259]: QA WFH 2ab7a7db
+                      - generic [ref=e2261]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2262] [cursor=pointer]:
+                    - generic [ref=e2263]:
+                      - paragraph [ref=e2264]:
+                        - paragraph [ref=e2265]: QA Summary 22cabf07
+                      - generic [ref=e2267]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2268] [cursor=pointer]:
+                    - generic [ref=e2269]:
+                      - paragraph [ref=e2270]:
+                        - paragraph [ref=e2271]: QA On Duty 7a084c12
+                      - generic [ref=e2273]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2274] [cursor=pointer]:
+                    - generic [ref=e2275]:
+                      - paragraph [ref=e2276]:
+                        - paragraph [ref=e2277]: QA On Duty d1569dab
+                      - generic [ref=e2279]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2280] [cursor=pointer]:
+                    - generic [ref=e2281]:
+                      - paragraph [ref=e2282]:
+                        - paragraph [ref=e2283]: QA On Duty e0a9de2e
+                      - generic [ref=e2285]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2286] [cursor=pointer]:
+                    - generic [ref=e2287]:
+                      - paragraph [ref=e2288]:
+                        - paragraph [ref=e2289]: QA Disabled Mobile f1d5d7...
+                      - generic [ref=e2291]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2292] [cursor=pointer]:
+                    - generic [ref=e2293]:
+                      - paragraph [ref=e2294]:
+                        - paragraph [ref=e2295]: QA Mobile Clock-in f5bd09...
+                      - generic [ref=e2297]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2298] [cursor=pointer]:
+                    - generic [ref=e2299]:
+                      - paragraph [ref=e2300]:
+                        - paragraph [ref=e2301]: QA Mobile Clock-in 59abe3...
+                      - generic [ref=e2303]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2304] [cursor=pointer]:
+                    - generic [ref=e2305]:
+                      - paragraph [ref=e2306]:
+                        - paragraph [ref=e2307]: QA On Duty 677d1e7f
+                      - generic [ref=e2309]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2310] [cursor=pointer]:
+                    - generic [ref=e2311]:
+                      - paragraph [ref=e2312]:
+                        - paragraph [ref=e2313]: QA Regularisation 5f4ea26...
+                      - generic [ref=e2315]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2316] [cursor=pointer]:
+                    - generic [ref=e2317]:
+                      - paragraph [ref=e2318]:
+                        - paragraph [ref=e2319]: QA On Duty 7e21909c
+                      - generic [ref=e2321]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2322] [cursor=pointer]:
+                    - generic [ref=e2323]:
+                      - paragraph [ref=e2324]:
+                        - paragraph [ref=e2325]: QA Regularisation 2215f6b...
+                      - generic [ref=e2327]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2328] [cursor=pointer]:
+                    - generic [ref=e2329]:
+                      - paragraph [ref=e2330]:
+                        - paragraph [ref=e2331]: QA Regularisation bfda5b5...
+                      - generic [ref=e2333]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2334] [cursor=pointer]:
+                    - generic [ref=e2335]:
+                      - paragraph [ref=e2336]:
+                        - paragraph [ref=e2337]: QA Regularisation 873ea8b...
+                      - generic [ref=e2339]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2340] [cursor=pointer]:
+                    - generic [ref=e2341]:
+                      - paragraph [ref=e2342]:
+                        - paragraph [ref=e2343]: QA Regularisation 2299eaa...
+                      - generic [ref=e2345]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2346] [cursor=pointer]:
+                    - generic [ref=e2347]:
+                      - paragraph [ref=e2348]:
+                        - paragraph [ref=e2349]: QA Adjustment f61d3bcb
+                      - generic [ref=e2351]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2352] [cursor=pointer]:
+                    - generic [ref=e2353]:
+                      - paragraph [ref=e2354]:
+                        - paragraph [ref=e2355]: QA Adjustment 25c3bc8f
+                      - generic [ref=e2357]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2358] [cursor=pointer]:
+                    - generic [ref=e2359]:
+                      - paragraph [ref=e2360]:
+                        - paragraph [ref=e2361]: QA Summary 8d399e35
+                      - generic [ref=e2363]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2364] [cursor=pointer]:
+                    - generic [ref=e2365]:
+                      - paragraph [ref=e2366]:
+                        - paragraph [ref=e2367]: QA WFH fb0591c7
+                      - generic [ref=e2369]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2370] [cursor=pointer]:
+                    - generic [ref=e2371]:
+                      - paragraph [ref=e2372]:
+                        - paragraph [ref=e2373]: QA Summary Capture 446b17...
+                      - generic [ref=e2375]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2376] [cursor=pointer]:
+                    - generic [ref=e2377]:
+                      - paragraph [ref=e2378]:
+                        - paragraph [ref=e2379]: QA Summary Capture 50b5e5...
+                      - generic [ref=e2381]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2382] [cursor=pointer]:
+                    - generic [ref=e2383]:
+                      - paragraph [ref=e2384]:
+                        - paragraph [ref=e2385]: QA Summary Capture f9b141...
+                      - generic [ref=e2387]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2388] [cursor=pointer]:
+                    - generic [ref=e2389]:
+                      - paragraph [ref=e2390]:
+                        - paragraph [ref=e2391]: QA WFH e1a6d233
+                      - generic [ref=e2393]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2394] [cursor=pointer]:
+                    - generic [ref=e2395]:
+                      - paragraph [ref=e2396]:
+                        - paragraph [ref=e2397]: QA WFH 86a570bd
+                      - generic [ref=e2399]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2400] [cursor=pointer]:
+                    - generic [ref=e2401]:
+                      - paragraph [ref=e2402]:
+                        - paragraph [ref=e2403]: QA Summary Capture 299e85...
+                      - generic [ref=e2405]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2406] [cursor=pointer]:
+                    - generic [ref=e2407]:
+                      - paragraph [ref=e2408]:
+                        - paragraph [ref=e2409]: QA WFH 634e331f
+                      - generic [ref=e2411]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2412] [cursor=pointer]:
+                    - generic [ref=e2413]:
+                      - paragraph [ref=e2414]:
+                        - paragraph [ref=e2415]: QA Summary 06962c0d
+                      - generic [ref=e2417]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2418] [cursor=pointer]:
+                    - generic [ref=e2419]:
+                      - paragraph [ref=e2420]:
+                        - paragraph [ref=e2421]: QA Web Clock-in ce720b4d
+                      - generic [ref=e2423]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2424] [cursor=pointer]:
+                    - generic [ref=e2425]:
+                      - paragraph [ref=e2426]:
+                        - paragraph [ref=e2427]: QA On Duty aed19abc
+                      - generic [ref=e2429]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2430] [cursor=pointer]:
+                    - generic [ref=e2431]:
+                      - paragraph [ref=e2432]:
+                        - paragraph [ref=e2433]: QA On Duty 22d14509
+                      - generic [ref=e2435]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2436] [cursor=pointer]:
+                    - generic [ref=e2437]:
+                      - paragraph [ref=e2438]:
+                        - paragraph [ref=e2439]: QA On Duty 185c6c02
+                      - generic [ref=e2441]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2442] [cursor=pointer]:
+                    - generic [ref=e2443]:
+                      - paragraph [ref=e2444]:
+                        - paragraph [ref=e2445]: QA Disabled Mobile ba4982...
+                      - generic [ref=e2447]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2448] [cursor=pointer]:
+                    - generic [ref=e2449]:
+                      - paragraph [ref=e2450]:
+                        - paragraph [ref=e2451]: QA Regularisation b654557...
+                      - generic [ref=e2453]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2454] [cursor=pointer]:
+                    - generic [ref=e2455]:
+                      - paragraph [ref=e2456]:
+                        - paragraph [ref=e2457]: QA Mobile Clock-in 98c47c...
+                      - generic [ref=e2459]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2460] [cursor=pointer]:
+                    - generic [ref=e2461]:
+                      - paragraph [ref=e2462]:
+                        - paragraph [ref=e2463]: QA On Duty 56a1834b
+                      - generic [ref=e2465]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2466] [cursor=pointer]:
+                    - generic [ref=e2467]:
+                      - paragraph [ref=e2468]:
+                        - paragraph [ref=e2469]: QA Regularisation 31525aa...
+                      - generic [ref=e2471]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2472] [cursor=pointer]:
+                    - generic [ref=e2473]:
+                      - paragraph [ref=e2474]:
+                        - paragraph [ref=e2475]: QA On Duty 145e64aa
+                      - generic [ref=e2477]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2478] [cursor=pointer]:
+                    - generic [ref=e2479]:
+                      - paragraph [ref=e2480]:
+                        - paragraph [ref=e2481]: QA Regularisation de42d39...
+                      - generic [ref=e2483]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2484] [cursor=pointer]:
+                    - generic [ref=e2485]:
+                      - paragraph [ref=e2486]:
+                        - paragraph [ref=e2487]: QA Regularisation 805e2e3...
+                      - generic [ref=e2489]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2490] [cursor=pointer]:
+                    - generic [ref=e2491]:
+                      - paragraph [ref=e2492]:
+                        - paragraph [ref=e2493]: QA Adjustment 7205224c
+                      - generic [ref=e2495]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2496] [cursor=pointer]:
+                    - generic [ref=e2497]:
+                      - paragraph [ref=e2498]:
+                        - paragraph [ref=e2499]: QA WFH b745a233
+                      - generic [ref=e2501]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2502] [cursor=pointer]:
+                    - generic [ref=e2503]:
+                      - paragraph [ref=e2504]:
+                        - paragraph [ref=e2505]: QA Summary 15d26ed9
+                      - generic [ref=e2507]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2508] [cursor=pointer]:
+                    - generic [ref=e2509]:
+                      - paragraph [ref=e2510]:
+                        - paragraph [ref=e2511]: QA Summary Capture 180b25...
+                      - generic [ref=e2513]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2514] [cursor=pointer]:
+                    - generic [ref=e2515]:
+                      - paragraph [ref=e2516]:
+                        - paragraph [ref=e2517]: QA WFH a6167c18
+                      - generic [ref=e2519]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2520] [cursor=pointer]:
+                    - generic [ref=e2521]:
+                      - paragraph [ref=e2522]:
+                        - paragraph [ref=e2523]: QA Summary Capture 061e15...
+                      - generic [ref=e2525]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2526] [cursor=pointer]:
+                    - generic [ref=e2527]:
+                      - paragraph [ref=e2528]:
+                        - paragraph [ref=e2529]: QA WFH 173933bb
+                      - generic [ref=e2531]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2532] [cursor=pointer]:
+                    - generic [ref=e2533]:
+                      - paragraph [ref=e2534]:
+                        - paragraph [ref=e2535]: QA Summary Capture c33f30...
+                      - generic [ref=e2537]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2538] [cursor=pointer]:
+                    - generic [ref=e2539]:
+                      - paragraph [ref=e2540]:
+                        - paragraph [ref=e2541]: QA WFH 290b1da2
+                      - generic [ref=e2543]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2544] [cursor=pointer]:
+                    - generic [ref=e2545]:
+                      - paragraph [ref=e2546]:
+                        - paragraph [ref=e2547]: QA Summary Capture 433897...
+                      - generic [ref=e2549]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2550] [cursor=pointer]:
+                    - generic [ref=e2551]:
+                      - paragraph [ref=e2552]:
+                        - paragraph [ref=e2553]: QA Summary 82bf6344
+                      - generic [ref=e2555]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2556] [cursor=pointer]:
+                    - generic [ref=e2557]:
+                      - paragraph [ref=e2558]:
+                        - paragraph [ref=e2559]: QA On Duty 255eb3f3
+                      - generic [ref=e2561]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2562] [cursor=pointer]:
+                    - generic [ref=e2563]:
+                      - paragraph [ref=e2564]:
+                        - paragraph [ref=e2565]: QA On Duty 557fd753
+                      - generic [ref=e2567]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2568] [cursor=pointer]:
+                    - generic [ref=e2569]:
+                      - paragraph [ref=e2570]:
+                        - paragraph [ref=e2571]: QA On Duty 78821c31
+                      - generic [ref=e2573]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2574] [cursor=pointer]:
+                    - generic [ref=e2575]:
+                      - paragraph [ref=e2576]:
+                        - paragraph [ref=e2577]: QA Disabled Mobile f2a19f...
+                      - generic [ref=e2579]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2580] [cursor=pointer]:
+                    - generic [ref=e2581]:
+                      - paragraph [ref=e2582]:
+                        - paragraph [ref=e2583]: QA Regularisation 3e81f4c...
+                      - generic [ref=e2585]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2586] [cursor=pointer]:
+                    - generic [ref=e2587]:
+                      - paragraph [ref=e2588]:
+                        - paragraph [ref=e2589]: QA On Duty 26750a07
+                      - generic [ref=e2591]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2592] [cursor=pointer]:
+                    - generic [ref=e2593]:
+                      - paragraph [ref=e2594]:
+                        - paragraph [ref=e2595]: QA On Duty 731eb2ad
+                      - generic [ref=e2597]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2598] [cursor=pointer]:
+                    - generic [ref=e2599]:
+                      - paragraph [ref=e2600]:
+                        - paragraph [ref=e2601]: QA Regularisation d6f6b5f...
+                      - generic [ref=e2603]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2604] [cursor=pointer]:
+                    - generic [ref=e2605]:
+                      - paragraph [ref=e2606]:
+                        - paragraph [ref=e2607]: QA Regularisation cfd091a...
+                      - generic [ref=e2609]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2610] [cursor=pointer]:
+                    - generic [ref=e2611]:
+                      - paragraph [ref=e2612]:
+                        - paragraph [ref=e2613]: QA Regularisation 192d05d...
+                      - generic [ref=e2615]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2616] [cursor=pointer]:
+                    - generic [ref=e2617]:
+                      - paragraph [ref=e2618]:
+                        - paragraph [ref=e2619]: QA Adjustment 6e5f659f
+                      - generic [ref=e2621]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2622] [cursor=pointer]:
+                    - generic [ref=e2623]:
+                      - paragraph [ref=e2624]:
+                        - paragraph [ref=e2625]: QA Adjustment f8efe319
+                      - generic [ref=e2627]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2628] [cursor=pointer]:
+                    - generic [ref=e2629]:
+                      - paragraph [ref=e2630]:
+                        - paragraph [ref=e2631]: QA WFH fbd2a87f
+                      - generic [ref=e2633]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2634] [cursor=pointer]:
+                    - generic [ref=e2635]:
+                      - paragraph [ref=e2636]:
+                        - paragraph [ref=e2637]: QA Summary bd1bbebd
+                      - generic [ref=e2639]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2640] [cursor=pointer]:
+                    - generic [ref=e2641]:
+                      - paragraph [ref=e2642]:
+                        - paragraph [ref=e2643]: QA Summary Capture 938501...
+                      - generic [ref=e2645]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2646] [cursor=pointer]:
+                    - generic [ref=e2647]:
+                      - paragraph [ref=e2648]:
+                        - paragraph [ref=e2649]: QA WFH 0837d48b
+                      - generic [ref=e2651]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2652] [cursor=pointer]:
+                    - generic [ref=e2653]:
+                      - paragraph [ref=e2654]:
+                        - paragraph [ref=e2655]: QA Summary Capture b9f069...
+                      - generic [ref=e2657]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2658] [cursor=pointer]:
+                    - generic [ref=e2659]:
+                      - paragraph [ref=e2660]:
+                        - paragraph [ref=e2661]: QA Summary Capture ce7fbe...
+                      - generic [ref=e2663]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2664] [cursor=pointer]:
+                    - generic [ref=e2665]:
+                      - paragraph [ref=e2666]:
+                        - paragraph [ref=e2667]: QA WFH 54606356
+                      - generic [ref=e2669]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2670] [cursor=pointer]:
+                    - generic [ref=e2671]:
+                      - paragraph [ref=e2672]:
+                        - paragraph [ref=e2673]: QA WFH 0e242832
+                      - generic [ref=e2675]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2676] [cursor=pointer]:
+                    - generic [ref=e2677]:
+                      - paragraph [ref=e2678]:
+                        - paragraph [ref=e2679]: QA Summary Capture 686a04...
+                      - generic [ref=e2681]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2682] [cursor=pointer]:
+                    - generic [ref=e2683]:
+                      - paragraph [ref=e2684]:
+                        - paragraph [ref=e2685]: QA Summary 885ff00d
+                      - generic [ref=e2687]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2688] [cursor=pointer]:
+                    - generic [ref=e2689]:
+                      - paragraph [ref=e2690]:
+                        - paragraph [ref=e2691]: QA On Duty 1503f235
+                      - generic [ref=e2693]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2694] [cursor=pointer]:
+                    - generic [ref=e2695]:
+                      - paragraph [ref=e2696]:
+                        - paragraph [ref=e2697]: QA On Duty bbc3c0fb
+                      - generic [ref=e2699]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2700] [cursor=pointer]:
+                    - generic [ref=e2701]:
+                      - paragraph [ref=e2702]:
+                        - paragraph [ref=e2703]: QA On Duty eef2234d
+                      - generic [ref=e2705]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2706] [cursor=pointer]:
+                    - generic [ref=e2707]:
+                      - paragraph [ref=e2708]:
+                        - paragraph [ref=e2709]: QA Disabled Mobile 09760f...
+                      - generic [ref=e2711]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2712] [cursor=pointer]:
+                    - generic [ref=e2713]:
+                      - paragraph [ref=e2714]:
+                        - paragraph [ref=e2715]: QA Regularisation aef18a8...
+                      - generic [ref=e2717]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2718] [cursor=pointer]:
+                    - generic [ref=e2719]:
+                      - paragraph [ref=e2720]:
+                        - paragraph [ref=e2721]: QA On Duty b9dc08a9
+                      - generic [ref=e2723]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2724] [cursor=pointer]:
+                    - generic [ref=e2725]:
+                      - paragraph [ref=e2726]:
+                        - paragraph [ref=e2727]: QA On Duty 2398aeae
+                      - generic [ref=e2729]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2730] [cursor=pointer]:
+                    - generic [ref=e2731]:
+                      - paragraph [ref=e2732]:
+                        - paragraph [ref=e2733]: QA Regularisation 6276898...
+                      - generic [ref=e2735]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2736] [cursor=pointer]:
+                    - generic [ref=e2737]:
+                      - paragraph [ref=e2738]:
+                        - paragraph [ref=e2739]: QA Regularisation 374817a...
+                      - generic [ref=e2741]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2742] [cursor=pointer]:
+                    - generic [ref=e2743]:
+                      - paragraph [ref=e2744]:
+                        - paragraph [ref=e2745]: QA Adjustment 9c3d2939
+                      - generic [ref=e2747]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2748] [cursor=pointer]:
+                    - generic [ref=e2749]:
+                      - paragraph [ref=e2750]:
+                        - paragraph [ref=e2751]: QA Adjustment 1e2b6d9b
+                      - generic [ref=e2753]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2754] [cursor=pointer]:
+                    - generic [ref=e2755]:
+                      - paragraph [ref=e2756]:
+                        - paragraph [ref=e2757]: QA WFH 2f4e32a1
+                      - generic [ref=e2759]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2760] [cursor=pointer]:
+                    - generic [ref=e2761]:
+                      - paragraph [ref=e2762]:
+                        - paragraph [ref=e2763]: QA Summary 57ada481
+                      - generic [ref=e2765]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2766] [cursor=pointer]:
+                    - generic [ref=e2767]:
+                      - paragraph [ref=e2768]:
+                        - paragraph [ref=e2769]: QA Summary Capture e0a0c6...
+                      - generic [ref=e2771]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2772] [cursor=pointer]:
+                    - generic [ref=e2773]:
+                      - paragraph [ref=e2774]:
+                        - paragraph [ref=e2775]: QA Summary Capture 533e71...
+                      - generic [ref=e2777]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2778] [cursor=pointer]:
+                    - generic [ref=e2779]:
+                      - paragraph [ref=e2780]:
+                        - paragraph [ref=e2781]: QA WFH 78020a84
+                      - generic [ref=e2783]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2784] [cursor=pointer]:
+                    - generic [ref=e2785]:
+                      - paragraph [ref=e2786]:
+                        - paragraph [ref=e2787]: QA Summary Capture d82ac6...
+                      - generic [ref=e2789]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2790] [cursor=pointer]:
+                    - generic [ref=e2791]:
+                      - paragraph [ref=e2792]:
+                        - paragraph [ref=e2793]: QA WFH 3b2ece94
+                      - generic [ref=e2795]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2796] [cursor=pointer]:
+                    - generic [ref=e2797]:
+                      - paragraph [ref=e2798]:
+                        - paragraph [ref=e2799]: QA Summary Capture a202cf...
+                      - generic [ref=e2801]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2802] [cursor=pointer]:
+                    - generic [ref=e2803]:
+                      - paragraph [ref=e2804]:
+                        - paragraph [ref=e2805]: QA WFH 9ac24ffa
+                      - generic [ref=e2807]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2808] [cursor=pointer]:
+                    - generic [ref=e2809]:
+                      - paragraph [ref=e2810]:
+                        - paragraph [ref=e2811]: QA Web Clock-in 1dbd48e1
+                      - generic [ref=e2813]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2814] [cursor=pointer]:
+                    - generic [ref=e2815]:
+                      - paragraph [ref=e2816]:
+                        - paragraph [ref=e2817]: QA Summary e9fd133f
+                      - generic [ref=e2819]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2820] [cursor=pointer]:
+                    - generic [ref=e2821]:
+                      - paragraph [ref=e2822]:
+                        - paragraph [ref=e2823]: QA On Duty d56bf95c
+                      - generic [ref=e2825]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2826] [cursor=pointer]:
+                    - generic [ref=e2827]:
+                      - paragraph [ref=e2828]:
+                        - paragraph [ref=e2829]: QA On Duty 84505c60
+                      - generic [ref=e2831]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2832] [cursor=pointer]:
+                    - generic [ref=e2833]:
+                      - paragraph [ref=e2834]:
+                        - paragraph [ref=e2835]: QA On Duty 790c2587
+                      - generic [ref=e2837]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2838] [cursor=pointer]:
+                    - generic [ref=e2839]:
+                      - paragraph [ref=e2840]:
+                        - paragraph [ref=e2841]: QA Disabled Mobile cdfc00...
+                      - generic [ref=e2843]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2844] [cursor=pointer]:
+                    - generic [ref=e2845]:
+                      - paragraph [ref=e2846]:
+                        - paragraph [ref=e2847]: QA On Duty cf9abe17
+                      - generic [ref=e2849]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2850] [cursor=pointer]:
+                    - generic [ref=e2851]:
+                      - paragraph [ref=e2852]:
+                        - paragraph [ref=e2853]: QA Mobile Clock-in f71ec2...
+                      - generic [ref=e2855]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2856] [cursor=pointer]:
+                    - generic [ref=e2857]:
+                      - paragraph [ref=e2858]:
+                        - paragraph [ref=e2859]: QA Regularisation 83a5de7...
+                      - generic [ref=e2861]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2862] [cursor=pointer]:
+                    - generic [ref=e2863]:
+                      - paragraph [ref=e2864]:
+                        - paragraph [ref=e2865]: QA On Duty 6d1f26f1
+                      - generic [ref=e2867]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2868] [cursor=pointer]:
+                    - generic [ref=e2869]:
+                      - paragraph [ref=e2870]:
+                        - paragraph [ref=e2871]: QA Regularisation 9ecfa38...
+                      - generic [ref=e2873]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2874] [cursor=pointer]:
+                    - generic [ref=e2875]:
+                      - paragraph [ref=e2876]:
+                        - paragraph [ref=e2877]: QA Regularisation 996e777...
+                      - generic [ref=e2879]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2880] [cursor=pointer]:
+                    - generic [ref=e2881]:
+                      - paragraph [ref=e2882]:
+                        - paragraph [ref=e2883]: QA Regularisation da1bdfa...
+                      - generic [ref=e2885]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2886] [cursor=pointer]:
+                    - generic [ref=e2887]:
+                      - paragraph [ref=e2888]:
+                        - paragraph [ref=e2889]: QA Adjustment c9bf932c
+                      - generic [ref=e2891]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2892] [cursor=pointer]:
+                    - generic [ref=e2893]:
+                      - paragraph [ref=e2894]:
+                        - paragraph [ref=e2895]: QA Regularisation 3c5886c...
+                      - generic [ref=e2897]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2898] [cursor=pointer]:
+                    - generic [ref=e2899]:
+                      - paragraph [ref=e2900]:
+                        - paragraph [ref=e2901]: QA Adjustment 4c303fcf
+                      - generic [ref=e2903]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2904] [cursor=pointer]:
+                    - generic [ref=e2905]:
+                      - paragraph [ref=e2906]:
+                        - paragraph [ref=e2907]: QA WFH da870535
+                      - generic [ref=e2909]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2910] [cursor=pointer]:
+                    - generic [ref=e2911]:
+                      - paragraph [ref=e2912]:
+                        - paragraph [ref=e2913]: QA Summary 0c52f264
+                      - generic [ref=e2915]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2916] [cursor=pointer]:
+                    - generic [ref=e2917]:
+                      - paragraph [ref=e2918]:
+                        - paragraph [ref=e2919]: QA WFH 18d4c474
+                      - generic [ref=e2921]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2922] [cursor=pointer]:
+                    - generic [ref=e2923]:
+                      - paragraph [ref=e2924]:
+                        - paragraph [ref=e2925]: QA Summary Capture 29c8a9...
+                      - generic [ref=e2927]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2928] [cursor=pointer]:
+                    - generic [ref=e2929]:
+                      - paragraph [ref=e2930]:
+                        - paragraph [ref=e2931]: QA WFH c2264be2
+                      - generic [ref=e2933]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2934] [cursor=pointer]:
+                    - generic [ref=e2935]:
+                      - paragraph [ref=e2936]:
+                        - paragraph [ref=e2937]: QA Summary Capture 86ab04...
+                      - generic [ref=e2939]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2940] [cursor=pointer]:
+                    - generic [ref=e2941]:
+                      - paragraph [ref=e2942]:
+                        - paragraph [ref=e2943]: QA Summary Capture 76e906...
+                      - generic [ref=e2945]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2946] [cursor=pointer]:
+                    - generic [ref=e2947]:
+                      - paragraph [ref=e2948]:
+                        - paragraph [ref=e2949]: QA WFH f394541c
+                      - generic [ref=e2951]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2952] [cursor=pointer]:
+                    - generic [ref=e2953]:
+                      - paragraph [ref=e2954]:
+                        - paragraph [ref=e2955]: QA Summary Capture ef8072...
+                      - generic [ref=e2957]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2958] [cursor=pointer]:
+                    - generic [ref=e2959]:
+                      - paragraph [ref=e2960]:
+                        - paragraph [ref=e2961]: QA On Duty cefef4a7
+                      - generic [ref=e2963]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2964] [cursor=pointer]:
+                    - generic [ref=e2965]:
+                      - paragraph [ref=e2966]:
+                        - paragraph [ref=e2967]: QA Web Clock-in 952e6d62
+                      - generic [ref=e2969]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2970] [cursor=pointer]:
+                    - generic [ref=e2971]:
+                      - paragraph [ref=e2972]:
+                        - paragraph [ref=e2973]: QA On Duty 657aea4b
+                      - generic [ref=e2975]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2976] [cursor=pointer]:
+                    - generic [ref=e2977]:
+                      - paragraph [ref=e2978]:
+                        - paragraph [ref=e2979]: QA Summary 882845ca
+                      - generic [ref=e2981]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2982] [cursor=pointer]:
+                    - generic [ref=e2983]:
+                      - paragraph [ref=e2984]:
+                        - paragraph [ref=e2985]: QA On Duty 54824aff
+                      - generic [ref=e2987]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2988] [cursor=pointer]:
+                    - generic [ref=e2989]:
+                      - paragraph [ref=e2990]:
+                        - paragraph [ref=e2991]: QA Disabled Mobile d426e3...
+                      - generic [ref=e2993]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e2994] [cursor=pointer]:
+                    - generic [ref=e2995]:
+                      - paragraph [ref=e2996]:
+                        - paragraph [ref=e2997]: QA Regularisation f8de627...
+                      - generic [ref=e2999]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3000] [cursor=pointer]:
+                    - generic [ref=e3001]:
+                      - paragraph [ref=e3002]:
+                        - paragraph [ref=e3003]: QA On Duty b6d875f0
+                      - generic [ref=e3005]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3006] [cursor=pointer]:
+                    - generic [ref=e3007]:
+                      - paragraph [ref=e3008]:
+                        - paragraph [ref=e3009]: QA On Duty 298e2113
+                      - generic [ref=e3011]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3012] [cursor=pointer]:
+                    - generic [ref=e3013]:
+                      - paragraph [ref=e3014]:
+                        - paragraph [ref=e3015]: QA Regularisation d681c4d...
+                      - generic [ref=e3017]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3018] [cursor=pointer]:
+                    - generic [ref=e3019]:
+                      - paragraph [ref=e3020]:
+                        - paragraph [ref=e3021]: QA Regularisation a37cc64...
+                      - generic [ref=e3023]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3024] [cursor=pointer]:
+                    - generic [ref=e3025]:
+                      - paragraph [ref=e3026]:
+                        - paragraph [ref=e3027]: QA Regularisation 9c51d36...
+                      - generic [ref=e3029]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3030] [cursor=pointer]:
+                    - generic [ref=e3031]:
+                      - paragraph [ref=e3032]:
+                        - paragraph [ref=e3033]: QA WFH 3325395e
+                      - generic [ref=e3035]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3036] [cursor=pointer]:
+                    - generic [ref=e3037]:
+                      - paragraph [ref=e3038]:
+                        - paragraph [ref=e3039]: QA Summary d3599a26
+                      - generic [ref=e3041]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3042] [cursor=pointer]:
+                    - generic [ref=e3043]:
+                      - paragraph [ref=e3044]:
+                        - paragraph [ref=e3045]: QA WFH 0bd2abb1
+                      - generic [ref=e3047]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3048] [cursor=pointer]:
+                    - generic [ref=e3049]:
+                      - paragraph [ref=e3050]:
+                        - paragraph [ref=e3051]: QA Summary Capture 7602db...
+                      - generic [ref=e3053]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3054] [cursor=pointer]:
+                    - generic [ref=e3055]:
+                      - paragraph [ref=e3056]:
+                        - paragraph [ref=e3057]: QA WFH 5f3e36dd
+                      - generic [ref=e3059]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3060] [cursor=pointer]:
+                    - generic [ref=e3061]:
+                      - paragraph [ref=e3062]:
+                        - paragraph [ref=e3063]: QA Summary Capture 2c252d...
+                      - generic [ref=e3065]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3066] [cursor=pointer]:
+                    - generic [ref=e3067]:
+                      - paragraph [ref=e3068]:
+                        - paragraph [ref=e3069]: QA Summary Capture 86b3f1...
+                      - generic [ref=e3071]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3072] [cursor=pointer]:
+                    - generic [ref=e3073]:
+                      - paragraph [ref=e3074]:
+                        - paragraph [ref=e3075]: QA WFH c31d0c81
+                      - generic [ref=e3077]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3078] [cursor=pointer]:
+                    - generic [ref=e3079]:
+                      - paragraph [ref=e3080]:
+                        - paragraph [ref=e3081]: QA Summary Capture 847bb3...
+                      - generic [ref=e3083]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3084] [cursor=pointer]:
+                    - generic [ref=e3085]:
+                      - paragraph [ref=e3086]:
+                        - paragraph [ref=e3087]: QA On Duty 4df7fa61
+                      - generic [ref=e3089]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3090] [cursor=pointer]:
+                    - generic [ref=e3091]:
+                      - paragraph [ref=e3092]:
+                        - paragraph [ref=e3093]: QA Web Clock-in 8abad5e2
+                      - generic [ref=e3095]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3096] [cursor=pointer]:
+                    - generic [ref=e3097]:
+                      - paragraph [ref=e3098]:
+                        - paragraph [ref=e3099]: QA On Duty f46048ee
+                      - generic [ref=e3101]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3102] [cursor=pointer]:
+                    - generic [ref=e3103]:
+                      - paragraph [ref=e3104]:
+                        - paragraph [ref=e3105]: QA Summary 1a99c8c2
+                      - generic [ref=e3107]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3108] [cursor=pointer]:
+                    - generic [ref=e3109]:
+                      - paragraph [ref=e3110]:
+                        - paragraph [ref=e3111]: QA On Duty 63bc2751
+                      - generic [ref=e3113]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3114] [cursor=pointer]:
+                    - generic [ref=e3115]:
+                      - paragraph [ref=e3116]:
+                        - paragraph [ref=e3117]: QA Disabled Mobile ccceca...
+                      - generic [ref=e3119]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3120] [cursor=pointer]:
+                    - generic [ref=e3121]:
+                      - paragraph [ref=e3122]:
+                        - paragraph [ref=e3123]: QA Mobile Clock-in 906bba...
+                      - generic [ref=e3125]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3126] [cursor=pointer]:
+                    - generic [ref=e3127]:
+                      - paragraph [ref=e3128]:
+                        - paragraph [ref=e3129]: QA On Duty 081c9b1d
+                      - generic [ref=e3131]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3132] [cursor=pointer]:
+                    - generic [ref=e3133]:
+                      - paragraph [ref=e3134]:
+                        - paragraph [ref=e3135]: QA Regularisation 81d9851...
+                      - generic [ref=e3137]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3138] [cursor=pointer]:
+                    - generic [ref=e3139]:
+                      - paragraph [ref=e3140]:
+                        - paragraph [ref=e3141]: QA On Duty d21c4641
+                      - generic [ref=e3143]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3144] [cursor=pointer]:
+                    - generic [ref=e3145]:
+                      - paragraph [ref=e3146]:
+                        - paragraph [ref=e3147]: QA Regularisation 39b6976...
+                      - generic [ref=e3149]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3150] [cursor=pointer]:
+                    - generic [ref=e3151]:
+                      - paragraph [ref=e3152]:
+                        - paragraph [ref=e3153]: QA Regularisation 2d9e393...
+                      - generic [ref=e3155]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3156] [cursor=pointer]:
+                    - generic [ref=e3157]:
+                      - paragraph [ref=e3158]:
+                        - paragraph [ref=e3159]: QA Regularisation b52eb4f...
+                      - generic [ref=e3161]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3162] [cursor=pointer]:
+                    - generic [ref=e3163]:
+                      - paragraph [ref=e3164]:
+                        - paragraph [ref=e3165]: QA Adjustment 0c3e721c
+                      - generic [ref=e3167]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3168] [cursor=pointer]:
+                    - generic [ref=e3169]:
+                      - paragraph [ref=e3170]:
+                        - paragraph [ref=e3171]: QA Adjustment 13e36796
+                      - generic [ref=e3173]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3174] [cursor=pointer]:
+                    - generic [ref=e3175]:
+                      - paragraph [ref=e3176]:
+                        - paragraph [ref=e3177]: QA WFH 99401854
+                      - generic [ref=e3179]: 2 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3180] [cursor=pointer]:
+                    - generic [ref=e3181]:
+                      - paragraph [ref=e3182]:
+                        - paragraph [ref=e3183]: QA Summary 197a7423
+                      - generic [ref=e3185]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3186] [cursor=pointer]:
+                    - generic [ref=e3187]:
+                      - paragraph [ref=e3188]:
+                        - paragraph [ref=e3189]: QA WFH 7b2ff5a4
+                      - generic [ref=e3191]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3192] [cursor=pointer]:
+                    - generic [ref=e3193]:
+                      - paragraph [ref=e3194]:
+                        - paragraph [ref=e3195]: QA Summary Capture d4a277...
+                      - generic [ref=e3197]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3198] [cursor=pointer]:
+                    - generic [ref=e3199]:
+                      - paragraph [ref=e3200]:
+                        - paragraph [ref=e3201]: QA WFH 2419eb34
+                      - generic [ref=e3203]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3204] [cursor=pointer]:
+                    - generic [ref=e3205]:
+                      - paragraph [ref=e3206]:
+                        - paragraph [ref=e3207]: QA Summary Capture 538828...
+                      - generic [ref=e3209]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3210] [cursor=pointer]:
+                    - generic [ref=e3211]:
+                      - paragraph [ref=e3212]:
+                        - paragraph [ref=e3213]: QA Summary Capture 63b942...
+                      - generic [ref=e3215]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3216] [cursor=pointer]:
+                    - generic [ref=e3217]:
+                      - paragraph [ref=e3218]:
+                        - paragraph [ref=e3219]: QA WFH ba8de4a9
+                      - generic [ref=e3221]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3222] [cursor=pointer]:
+                    - generic [ref=e3223]:
+                      - paragraph [ref=e3224]:
+                        - paragraph [ref=e3225]: QA Summary Capture c756ef...
+                      - generic [ref=e3227]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3228] [cursor=pointer]:
+                    - generic [ref=e3229]:
+                      - paragraph [ref=e3230]:
+                        - paragraph [ref=e3231]: QA On Duty 189b69f1
+                      - generic [ref=e3233]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3234] [cursor=pointer]:
+                    - generic [ref=e3235]:
+                      - paragraph [ref=e3236]:
+                        - paragraph [ref=e3237]: QA On Duty e5904fa0
+                      - generic [ref=e3239]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3240] [cursor=pointer]:
+                    - generic [ref=e3241]:
+                      - paragraph [ref=e3242]:
+                        - paragraph [ref=e3243]: QA Web Clock-in 1dc3aec8
+                      - generic [ref=e3245]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3246] [cursor=pointer]:
+                    - generic [ref=e3247]:
+                      - paragraph [ref=e3248]:
+                        - paragraph [ref=e3249]: QA Summary 99bbc3ab
+                      - generic [ref=e3251]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3252] [cursor=pointer]:
+                    - generic [ref=e3253]:
+                      - paragraph [ref=e3254]:
+                        - paragraph [ref=e3255]: QA On Duty ac63715e
+                      - generic [ref=e3257]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3258] [cursor=pointer]:
+                    - generic [ref=e3259]:
+                      - paragraph [ref=e3260]:
+                        - paragraph [ref=e3261]: QA Disabled Mobile 0010ae...
+                      - generic [ref=e3263]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3264] [cursor=pointer]:
+                    - generic [ref=e3265]:
+                      - paragraph [ref=e3266]:
+                        - paragraph [ref=e3267]: QA On Duty 2aa04071
+                      - generic [ref=e3269]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3270] [cursor=pointer]:
+                    - generic [ref=e3271]:
+                      - paragraph [ref=e3272]:
+                        - paragraph [ref=e3273]: QA On Duty 3ea58fc9
+                      - generic [ref=e3275]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3276] [cursor=pointer]:
+                    - generic [ref=e3277]:
+                      - paragraph [ref=e3278]:
+                        - paragraph [ref=e3279]: QA Regularisation 05f50df...
+                      - generic [ref=e3281]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3282] [cursor=pointer]:
+                    - generic [ref=e3283]:
+                      - paragraph [ref=e3284]:
+                        - paragraph [ref=e3285]: QA Regularisation a816e04...
+                      - generic [ref=e3287]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3288] [cursor=pointer]:
+                    - generic [ref=e3289]:
+                      - paragraph [ref=e3290]:
+                        - paragraph [ref=e3291]: QA Adjustment 595558d2
+                      - generic [ref=e3293]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3294] [cursor=pointer]:
+                    - generic [ref=e3295]:
+                      - paragraph [ref=e3296]:
+                        - paragraph [ref=e3297]: QA Regularisation ccd0eba...
+                      - generic [ref=e3299]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3300] [cursor=pointer]:
+                    - generic [ref=e3301]:
+                      - paragraph [ref=e3302]:
+                        - paragraph [ref=e3303]: QA Adjustment 57f9ff42
+                      - generic [ref=e3305]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3306] [cursor=pointer]:
+                    - generic [ref=e3307]:
+                      - paragraph [ref=e3308]:
+                        - paragraph [ref=e3309]: QA On Duty 39efba8c
+                      - generic [ref=e3311]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3312] [cursor=pointer]:
+                    - generic [ref=e3313]:
+                      - paragraph [ref=e3314]:
+                        - paragraph [ref=e3315]: QA On Duty 67c1fdd2
+                      - generic [ref=e3317]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3318] [cursor=pointer]:
+                    - generic [ref=e3319]:
+                      - paragraph [ref=e3320]:
+                        - paragraph [ref=e3321]: QA On Duty 9afa19e8
+                      - generic [ref=e3323]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3324] [cursor=pointer]:
+                    - generic [ref=e3325]:
+                      - paragraph [ref=e3326]:
+                        - paragraph [ref=e3327]: QA On Duty f51e7dda
+                      - generic [ref=e3329]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3330] [cursor=pointer]:
+                    - generic [ref=e3331]:
+                      - paragraph [ref=e3332]:
+                        - paragraph [ref=e3333]: QA Disabled Mobile cfd3a8...
+                      - generic [ref=e3335]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3336] [cursor=pointer]:
+                    - generic [ref=e3337]:
+                      - paragraph [ref=e3338]:
+                        - paragraph [ref=e3339]: QA Summary eeb97fa5
+                      - generic [ref=e3341]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3342] [cursor=pointer]:
+                    - generic [ref=e3343]:
+                      - paragraph [ref=e3344]:
+                        - paragraph [ref=e3345]: QA Summary Capture 5e5a99...
+                      - generic [ref=e3347]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3348] [cursor=pointer]:
+                    - generic [ref=e3349]:
+                      - paragraph [ref=e3350]:
+                        - paragraph [ref=e3351]: QA Summary Capture 0d90e6...
+                      - generic [ref=e3353]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3354] [cursor=pointer]:
+                    - generic [ref=e3355]:
+                      - paragraph [ref=e3356]:
+                        - paragraph [ref=e3357]: QA Summary Capture 74a292...
+                      - generic [ref=e3359]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3360] [cursor=pointer]:
+                    - generic [ref=e3361]:
+                      - paragraph [ref=e3362]:
+                        - paragraph [ref=e3363]: QA Summary Capture ca5333...
+                      - generic [ref=e3365]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3366] [cursor=pointer]:
+                    - generic [ref=e3367]:
+                      - paragraph [ref=e3368]:
+                        - paragraph [ref=e3369]: QA Summary e47e6572
+                      - generic [ref=e3371]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3372] [cursor=pointer]:
+                    - generic [ref=e3373]:
+                      - paragraph [ref=e3374]:
+                        - paragraph [ref=e3375]: QA On Duty dc0465a2
+                      - generic [ref=e3377]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3378] [cursor=pointer]:
+                    - generic [ref=e3379]:
+                      - paragraph [ref=e3380]:
+                        - paragraph [ref=e3381]: QA On Duty f5a9ad6e
+                      - generic [ref=e3383]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3384] [cursor=pointer]:
+                    - generic [ref=e3385]:
+                      - paragraph [ref=e3386]:
+                        - paragraph [ref=e3387]: QA On Duty fd7c4261
+                      - generic [ref=e3389]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3390] [cursor=pointer]:
+                    - generic [ref=e3391]:
+                      - paragraph [ref=e3392]:
+                        - paragraph [ref=e3393]: QA On Duty 6a5c57ee
+                      - generic [ref=e3395]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3396] [cursor=pointer]:
+                    - generic [ref=e3397]:
+                      - paragraph [ref=e3398]:
+                        - paragraph [ref=e3399]: QA Disabled Mobile 69fedc...
+                      - generic [ref=e3401]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3402] [cursor=pointer]:
+                    - generic [ref=e3403]:
+                      - paragraph [ref=e3404]:
+                        - paragraph [ref=e3405]: QA Mobile Clock-in 7c7ba6...
+                      - generic [ref=e3407]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3408] [cursor=pointer]:
+                    - generic [ref=e3409]:
+                      - paragraph [ref=e3410]:
+                        - paragraph [ref=e3411]: QA Adjustment 0d36f0e4
+                      - generic [ref=e3413]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3414] [cursor=pointer]:
+                    - generic [ref=e3415]:
+                      - paragraph [ref=e3416]:
+                        - paragraph [ref=e3417]: QA Adjustment aede25e0
+                      - generic [ref=e3419]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3420] [cursor=pointer]:
+                    - generic [ref=e3421]:
+                      - paragraph [ref=e3422]:
+                        - paragraph [ref=e3423]: QA WFH 7929bcc2
+                      - generic [ref=e3425]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3426] [cursor=pointer]:
+                    - generic [ref=e3427]:
+                      - paragraph [ref=e3428]:
+                        - paragraph [ref=e3429]: QA Summary 52d0b8f5
+                      - generic [ref=e3431]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3432] [cursor=pointer]:
+                    - generic [ref=e3433]:
+                      - paragraph [ref=e3434]:
+                        - paragraph [ref=e3435]: QA WFH d3b02301
+                      - generic [ref=e3437]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3438] [cursor=pointer]:
+                    - generic [ref=e3439]:
+                      - paragraph [ref=e3440]:
+                        - paragraph [ref=e3441]: QA Summary Capture 84d77d...
+                      - generic [ref=e3443]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3444] [cursor=pointer]:
+                    - generic [ref=e3445]:
+                      - paragraph [ref=e3446]:
+                        - paragraph [ref=e3447]: QA Summary Capture 178b40...
+                      - generic [ref=e3449]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3450] [cursor=pointer]:
+                    - generic [ref=e3451]:
+                      - paragraph [ref=e3452]:
+                        - paragraph [ref=e3453]: QA WFH 2173a2b0
+                      - generic [ref=e3455]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3456] [cursor=pointer]:
+                    - generic [ref=e3457]:
+                      - paragraph [ref=e3458]:
+                        - paragraph [ref=e3459]: QA Summary Capture 76ca04...
+                      - generic [ref=e3461]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3462] [cursor=pointer]:
+                    - generic [ref=e3463]:
+                      - paragraph [ref=e3464]:
+                        - paragraph [ref=e3465]: QA WFH c0929367
+                      - generic [ref=e3467]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3468] [cursor=pointer]:
+                    - generic [ref=e3469]:
+                      - paragraph [ref=e3470]:
+                        - paragraph [ref=e3471]: QA Summary Capture 8acff9...
+                      - generic [ref=e3473]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3474] [cursor=pointer]:
+                    - generic [ref=e3475]:
+                      - paragraph [ref=e3476]:
+                        - paragraph [ref=e3477]: QA On Duty b70a18e8
+                      - generic [ref=e3479]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3480] [cursor=pointer]:
+                    - generic [ref=e3481]:
+                      - paragraph [ref=e3482]:
+                        - paragraph [ref=e3483]: QA On Duty 73a3497d
+                      - generic [ref=e3485]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3486] [cursor=pointer]:
+                    - generic [ref=e3487]:
+                      - paragraph [ref=e3488]:
+                        - paragraph [ref=e3489]: QA Summary d93addfd
+                      - generic [ref=e3491]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3492] [cursor=pointer]:
+                    - generic [ref=e3493]:
+                      - paragraph [ref=e3494]:
+                        - paragraph [ref=e3495]: QA Web Clock-in 299855a3
+                      - generic [ref=e3497]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3498] [cursor=pointer]:
+                    - generic [ref=e3499]:
+                      - paragraph [ref=e3500]:
+                        - paragraph [ref=e3501]: QA On Duty 369a5d2c
+                      - generic [ref=e3503]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3504] [cursor=pointer]:
+                    - generic [ref=e3505]:
+                      - paragraph [ref=e3506]:
+                        - paragraph [ref=e3507]: QA Disabled Mobile de1784...
+                      - generic [ref=e3509]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3510] [cursor=pointer]:
+                    - generic [ref=e3511]:
+                      - paragraph [ref=e3512]:
+                        - paragraph [ref=e3513]: QA Mobile Clock-in 309b9b...
+                      - generic [ref=e3515]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3516] [cursor=pointer]:
+                    - generic [ref=e3517]:
+                      - paragraph [ref=e3518]:
+                        - paragraph [ref=e3519]: QA On Duty 312bb7af
+                      - generic [ref=e3521]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3522] [cursor=pointer]:
+                    - generic [ref=e3523]:
+                      - paragraph [ref=e3524]:
+                        - paragraph [ref=e3525]: QA Regularisation 269b78a...
+                      - generic [ref=e3527]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3528] [cursor=pointer]:
+                    - generic [ref=e3529]:
+                      - paragraph [ref=e3530]:
+                        - paragraph [ref=e3531]: QA Regularisation be3058b...
+                      - generic [ref=e3533]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3534] [cursor=pointer]:
+                    - generic [ref=e3535]:
+                      - paragraph [ref=e3536]:
+                        - paragraph [ref=e3537]: QA On Duty 79861754
+                      - generic [ref=e3539]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3540] [cursor=pointer]:
+                    - generic [ref=e3541]:
+                      - paragraph [ref=e3542]:
+                        - paragraph [ref=e3543]: QA Regularisation 1d3c56e...
+                      - generic [ref=e3545]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3546] [cursor=pointer]:
+                    - generic [ref=e3547]:
+                      - paragraph [ref=e3548]:
+                        - paragraph [ref=e3549]: QA Adjustment d033957a
+                      - generic [ref=e3551]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3552] [cursor=pointer]:
+                    - generic [ref=e3553]:
+                      - paragraph [ref=e3554]:
+                        - paragraph [ref=e3555]: QA Regularisation 715f35b...
+                      - generic [ref=e3557]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3558] [cursor=pointer]:
+                    - generic [ref=e3559]:
+                      - paragraph [ref=e3560]:
+                        - paragraph [ref=e3561]: QA Adjustment 8f79d88f
+                      - generic [ref=e3563]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3564] [cursor=pointer]:
+                    - generic [ref=e3565]:
+                      - paragraph [ref=e3566]:
+                        - paragraph [ref=e3567]: QA Summary c8b1925d
+                      - generic [ref=e3569]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3570] [cursor=pointer]:
+                    - generic [ref=e3571]:
+                      - paragraph [ref=e3572]:
+                        - paragraph [ref=e3573]: QA Summary Capture 39186e...
+                      - generic [ref=e3575]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3576] [cursor=pointer]:
+                    - generic [ref=e3577]:
+                      - paragraph [ref=e3578]:
+                        - paragraph [ref=e3579]: QA Summary Capture 424b41...
+                      - generic [ref=e3581]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3582] [cursor=pointer]:
+                    - generic [ref=e3583]:
+                      - paragraph [ref=e3584]:
+                        - paragraph [ref=e3585]: QA Summary Capture ff8b16...
+                      - generic [ref=e3587]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3588] [cursor=pointer]:
+                    - generic [ref=e3589]:
+                      - paragraph [ref=e3590]:
+                        - paragraph [ref=e3591]: QA Summary Capture 23f300...
+                      - generic [ref=e3593]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3594] [cursor=pointer]:
+                    - generic [ref=e3595]:
+                      - paragraph [ref=e3596]:
+                        - paragraph [ref=e3597]: QA Summary 3fec027f
+                      - generic [ref=e3599]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3600] [cursor=pointer]:
+                    - generic [ref=e3601]:
+                      - paragraph [ref=e3602]:
+                        - paragraph [ref=e3603]: QA Summary 339d3ecd
+                      - generic [ref=e3605]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3606] [cursor=pointer]:
+                    - generic [ref=e3607]:
+                      - paragraph [ref=e3608]:
+                        - paragraph [ref=e3609]: QA Summary Capture 6b7b25...
+                      - generic [ref=e3611]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3612] [cursor=pointer]:
+                    - generic [ref=e3613]:
+                      - paragraph [ref=e3614]:
+                        - paragraph [ref=e3615]: QA Summary Capture 9e6d6c...
+                      - generic [ref=e3617]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3618] [cursor=pointer]:
+                    - generic [ref=e3619]:
+                      - paragraph [ref=e3620]:
+                        - paragraph [ref=e3621]: QA Summary Capture ff8412...
+                      - generic [ref=e3623]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3624] [cursor=pointer]:
+                    - generic [ref=e3625]:
+                      - paragraph [ref=e3626]:
+                        - paragraph [ref=e3627]: QA Summary Capture 8a1f89...
+                      - generic [ref=e3629]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3630] [cursor=pointer]:
+                    - generic [ref=e3631]:
+                      - paragraph [ref=e3632]:
+                        - paragraph [ref=e3633]: QA Summary b8ab9d17
+                      - generic [ref=e3635]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3636] [cursor=pointer]:
+                    - generic [ref=e3637]:
+                      - paragraph [ref=e3638]:
+                        - paragraph [ref=e3639]: QA Summary 3505f019
+                      - generic [ref=e3641]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3642] [cursor=pointer]:
+                    - generic [ref=e3643]:
+                      - paragraph [ref=e3644]:
+                        - paragraph [ref=e3645]: QA Summary Capture 213c7b...
+                      - generic [ref=e3647]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3648] [cursor=pointer]:
+                    - generic [ref=e3649]:
+                      - paragraph [ref=e3650]:
+                        - paragraph [ref=e3651]: QA Summary Capture 2603c5...
+                      - generic [ref=e3653]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3654] [cursor=pointer]:
+                    - generic [ref=e3655]:
+                      - paragraph [ref=e3656]:
+                        - paragraph [ref=e3657]: QA Summary Capture 4f9ab7...
+                      - generic [ref=e3659]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3660] [cursor=pointer]:
+                    - generic [ref=e3661]:
+                      - paragraph [ref=e3662]:
+                        - paragraph [ref=e3663]: QA Summary Capture e03ce5...
+                      - generic [ref=e3665]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3666] [cursor=pointer]:
+                    - generic [ref=e3667]:
+                      - paragraph [ref=e3668]:
+                        - paragraph [ref=e3669]: QA Summary 4d973c02
+                      - generic [ref=e3671]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3672] [cursor=pointer]:
+                    - generic [ref=e3673]:
+                      - paragraph [ref=e3674]:
+                        - paragraph [ref=e3675]: QA WFH 2a8bd807
+                      - generic [ref=e3677]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3678] [cursor=pointer]:
+                    - generic [ref=e3679]:
+                      - paragraph [ref=e3680]:
+                        - paragraph [ref=e3681]: QA WFH 769da0c2
+                      - generic [ref=e3683]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3684] [cursor=pointer]:
+                    - generic [ref=e3685]:
+                      - paragraph [ref=e3686]:
+                        - paragraph [ref=e3687]: QA WFH 5d3a39b5
+                      - generic [ref=e3689]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3690] [cursor=pointer]:
+                    - generic [ref=e3691]:
+                      - paragraph [ref=e3692]:
+                        - paragraph [ref=e3693]: QA WFH edc948a2
+                      - generic [ref=e3695]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3696] [cursor=pointer]:
+                    - generic [ref=e3697]:
+                      - paragraph [ref=e3698]:
+                        - paragraph [ref=e3699]: QA Summary 126bb320
+                      - generic [ref=e3701]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3702] [cursor=pointer]:
+                    - generic [ref=e3703]:
+                      - paragraph [ref=e3704]:
+                        - paragraph [ref=e3705]: QA Summary Capture 299cbf...
+                      - generic [ref=e3707]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3708] [cursor=pointer]:
+                    - generic [ref=e3709]:
+                      - paragraph [ref=e3710]:
+                        - paragraph [ref=e3711]: QA Summary Capture 215f0f...
+                      - generic [ref=e3713]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3714] [cursor=pointer]:
+                    - generic [ref=e3715]:
+                      - paragraph [ref=e3716]:
+                        - paragraph [ref=e3717]: QA Summary Capture 2316fd...
+                      - generic [ref=e3719]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3720] [cursor=pointer]:
+                    - generic [ref=e3721]:
+                      - paragraph [ref=e3722]:
+                        - paragraph [ref=e3723]: QA Summary Capture fb6b14...
+                      - generic [ref=e3725]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3726] [cursor=pointer]:
+                    - generic [ref=e3727]:
+                      - paragraph [ref=e3728]:
+                        - paragraph [ref=e3729]: QA Summary 569c26fc
+                      - generic [ref=e3731]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3732] [cursor=pointer]:
+                    - generic [ref=e3733]:
+                      - paragraph [ref=e3734]:
+                        - paragraph [ref=e3735]: QA Regularisation cfde433...
+                      - generic [ref=e3737]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3738] [cursor=pointer]:
+                    - generic [ref=e3739]:
+                      - paragraph [ref=e3740]:
+                        - paragraph [ref=e3741]: QA On Duty 5053f72f
+                      - generic [ref=e3743]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3744] [cursor=pointer]:
+                    - generic [ref=e3745]:
+                      - paragraph [ref=e3746]:
+                        - paragraph [ref=e3747]: QA On Duty 2d1569fe
+                      - generic [ref=e3749]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3750] [cursor=pointer]:
+                    - generic [ref=e3751]:
+                      - paragraph [ref=e3752]:
+                        - paragraph [ref=e3753]: QA On Duty 05fc74c2
+                      - generic [ref=e3755]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3756] [cursor=pointer]:
+                    - generic [ref=e3757]:
+                      - paragraph [ref=e3758]:
+                        - paragraph [ref=e3759]: QA On Duty 87882807
+                      - generic [ref=e3761]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3762] [cursor=pointer]:
+                    - generic [ref=e3763]:
+                      - paragraph [ref=e3764]:
+                        - paragraph [ref=e3765]: QA Disabled Mobile 564a7e...
+                      - generic [ref=e3767]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3768] [cursor=pointer]:
+                    - generic [ref=e3769]:
+                      - paragraph [ref=e3770]:
+                        - paragraph [ref=e3771]: QA Mobile Clock-in 65f10a...
+                      - generic [ref=e3773]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3774] [cursor=pointer]:
+                    - generic [ref=e3775]:
+                      - paragraph [ref=e3776]:
+                        - paragraph [ref=e3777]: QA Regularisation 5853af2...
+                      - generic [ref=e3779]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3780] [cursor=pointer]:
+                    - generic [ref=e3781]:
+                      - paragraph [ref=e3782]:
+                        - paragraph [ref=e3783]: QA Regularisation f4a6116...
+                      - generic [ref=e3785]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3786] [cursor=pointer]:
+                    - generic [ref=e3787]:
+                      - paragraph [ref=e3788]:
+                        - paragraph [ref=e3789]: QA Regularisation 1e26f2e...
+                      - generic [ref=e3791]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3792] [cursor=pointer]:
+                    - generic [ref=e3793]:
+                      - paragraph [ref=e3794]:
+                        - paragraph [ref=e3795]: QA WFH 223e01ba
+                      - generic [ref=e3797]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3798] [cursor=pointer]:
+                    - generic [ref=e3799]:
+                      - paragraph [ref=e3800]:
+                        - paragraph [ref=e3801]: QA WFH 69b81c55
+                      - generic [ref=e3803]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3804] [cursor=pointer]:
+                    - generic [ref=e3805]:
+                      - paragraph [ref=e3806]:
+                        - paragraph [ref=e3807]: QA WFH f33803f7
+                      - generic [ref=e3809]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3810] [cursor=pointer]:
+                    - generic [ref=e3811]:
+                      - paragraph [ref=e3812]:
+                        - paragraph [ref=e3813]: QA WFH 9c495a9e
+                      - generic [ref=e3815]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3816] [cursor=pointer]:
+                    - generic [ref=e3817]:
+                      - paragraph [ref=e3818]:
+                        - paragraph [ref=e3819]: QA WFH 1f1bdffd
+                      - generic [ref=e3821]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3822] [cursor=pointer]:
+                    - generic [ref=e3823]:
+                      - paragraph [ref=e3824]:
+                        - paragraph [ref=e3825]: QA On Duty 10023a16
+                      - generic [ref=e3827]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3828] [cursor=pointer]:
+                    - generic [ref=e3829]:
+                      - paragraph [ref=e3830]:
+                        - paragraph [ref=e3831]: QA On Duty db50a968
+                      - generic [ref=e3833]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3834] [cursor=pointer]:
+                    - generic [ref=e3835]:
+                      - paragraph [ref=e3836]:
+                        - paragraph [ref=e3837]: QA On Duty 0de6d06c
+                      - generic [ref=e3839]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3840] [cursor=pointer]:
+                    - generic [ref=e3841]:
+                      - paragraph [ref=e3842]:
+                        - paragraph [ref=e3843]: QA On Duty e69b3702
+                      - generic [ref=e3845]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3846] [cursor=pointer]:
+                    - generic [ref=e3847]:
+                      - paragraph [ref=e3848]:
+                        - paragraph [ref=e3849]: QA Mobile Clock-in e9f2c5...
+                      - generic [ref=e3851]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3852] [cursor=pointer]:
+                    - generic [ref=e3853]:
+                      - paragraph [ref=e3854]:
+                        - paragraph [ref=e3855]: QA On Duty 33531ed1
+                      - generic [ref=e3857]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3858] [cursor=pointer]:
+                    - generic [ref=e3859]:
+                      - paragraph [ref=e3860]:
+                        - paragraph [ref=e3861]: QA Mobile Clock-in 46023b...
+                      - generic [ref=e3863]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3864] [cursor=pointer]:
+                    - generic [ref=e3865]:
+                      - paragraph [ref=e3866]:
+                        - paragraph [ref=e3867]: QA On Duty f150cfd3
+                      - generic [ref=e3869]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3870] [cursor=pointer]:
+                    - generic [ref=e3871]:
+                      - paragraph [ref=e3872]:
+                        - paragraph [ref=e3873]: QA WFH 3e592ce1
+                      - generic [ref=e3875]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3876] [cursor=pointer]:
+                    - generic [ref=e3877]:
+                      - paragraph [ref=e3878]:
+                        - paragraph [ref=e3879]: QA WFH 2fa64093
+                      - generic [ref=e3881]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3882] [cursor=pointer]:
+                    - generic [ref=e3883]:
+                      - paragraph [ref=e3884]:
+                        - paragraph [ref=e3885]: QA WFH 6a8ca69b
+                      - generic [ref=e3887]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3888] [cursor=pointer]:
+                    - generic [ref=e3889]:
+                      - paragraph [ref=e3890]:
+                        - paragraph [ref=e3891]: QA WFH dfd26aae
+                      - generic [ref=e3893]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3894] [cursor=pointer]:
+                    - generic [ref=e3895]:
+                      - paragraph [ref=e3896]:
+                        - paragraph [ref=e3897]: QA WFH e9bf86fa
+                      - generic [ref=e3899]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3900] [cursor=pointer]:
+                    - generic [ref=e3901]:
+                      - paragraph [ref=e3902]:
+                        - paragraph [ref=e3903]: QA On Duty bd5bfae0
+                      - generic [ref=e3905]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3906] [cursor=pointer]:
+                    - generic [ref=e3907]:
+                      - paragraph [ref=e3908]:
+                        - paragraph [ref=e3909]: QA On Duty e26ace7f
+                      - generic [ref=e3911]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3912] [cursor=pointer]:
+                    - generic [ref=e3913]:
+                      - paragraph [ref=e3914]:
+                        - paragraph [ref=e3915]: QA On Duty 4b876a6c
+                      - generic [ref=e3917]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3918] [cursor=pointer]:
+                    - generic [ref=e3919]:
+                      - paragraph [ref=e3920]:
+                        - paragraph [ref=e3921]: QA On Duty a255055a
+                      - generic [ref=e3923]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3924] [cursor=pointer]:
+                    - generic [ref=e3925]:
+                      - paragraph [ref=e3926]:
+                        - paragraph [ref=e3927]: QA On Duty 2eedf2a3
+                      - generic [ref=e3929]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3930] [cursor=pointer]:
+                    - generic [ref=e3931]:
+                      - paragraph [ref=e3932]:
+                        - paragraph [ref=e3933]: QA Mobile Clock-in 5a69a1...
+                      - generic [ref=e3935]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3936] [cursor=pointer]:
+                    - generic [ref=e3937]:
+                      - paragraph [ref=e3938]:
+                        - paragraph [ref=e3939]: QA Mobile Clock-in e0e09c...
+                      - generic [ref=e3941]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3942] [cursor=pointer]:
+                    - generic [ref=e3943]:
+                      - paragraph [ref=e3944]:
+                        - paragraph [ref=e3945]: QA On Duty f8e09d28
+                      - generic [ref=e3947]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3948] [cursor=pointer]:
+                    - generic [ref=e3949]:
+                      - paragraph [ref=e3950]:
+                        - paragraph [ref=e3951]: QA WFH 62c280a5
+                      - generic [ref=e3953]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3954] [cursor=pointer]:
+                    - generic [ref=e3955]:
+                      - paragraph [ref=e3956]:
+                        - paragraph [ref=e3957]: QA WFH 8b1c6595
+                      - generic [ref=e3959]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3960] [cursor=pointer]:
+                    - generic [ref=e3961]:
+                      - paragraph [ref=e3962]:
+                        - paragraph [ref=e3963]: QA WFH 4f3257cf
+                      - generic [ref=e3965]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3966] [cursor=pointer]:
+                    - generic [ref=e3967]:
+                      - paragraph [ref=e3968]:
+                        - paragraph [ref=e3969]: QA WFH ba4b365e
+                      - generic [ref=e3971]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3972] [cursor=pointer]:
+                    - generic [ref=e3973]:
+                      - paragraph [ref=e3974]:
+                        - paragraph [ref=e3975]: QA WFH 12c806de
+                      - generic [ref=e3977]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3978] [cursor=pointer]:
+                    - generic [ref=e3979]:
+                      - paragraph [ref=e3980]:
+                        - paragraph [ref=e3981]: QA On Duty 77f89aaa
+                      - generic [ref=e3983]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3984] [cursor=pointer]:
+                    - generic [ref=e3985]:
+                      - paragraph [ref=e3986]:
+                        - paragraph [ref=e3987]: QA On Duty d76f75a4
+                      - generic [ref=e3989]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3990] [cursor=pointer]:
+                    - generic [ref=e3991]:
+                      - paragraph [ref=e3992]:
+                        - paragraph [ref=e3993]: QA On Duty 6b02c378
+                      - generic [ref=e3995]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e3996] [cursor=pointer]:
+                    - generic [ref=e3997]:
+                      - paragraph [ref=e3998]:
+                        - paragraph [ref=e3999]: QA On Duty f05c0b53
+                      - generic [ref=e4001]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4002] [cursor=pointer]:
+                    - generic [ref=e4003]:
+                      - paragraph [ref=e4004]:
+                        - paragraph [ref=e4005]: QA On Duty cc0d96f8
+                      - generic [ref=e4007]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4008] [cursor=pointer]:
+                    - generic [ref=e4009]:
+                      - paragraph [ref=e4010]:
+                        - paragraph [ref=e4011]: QA Mobile Clock-in da81da...
+                      - generic [ref=e4013]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4014] [cursor=pointer]:
+                    - generic [ref=e4015]:
+                      - paragraph [ref=e4016]:
+                        - paragraph [ref=e4017]: QA On Duty 94ef2871
+                      - generic [ref=e4019]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4020] [cursor=pointer]:
+                    - generic [ref=e4021]:
+                      - paragraph [ref=e4022]:
+                        - paragraph [ref=e4023]: QA Mobile Clock-in c32401...
+                      - generic [ref=e4025]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4026] [cursor=pointer]:
+                    - generic [ref=e4027]:
+                      - paragraph [ref=e4028]:
+                        - paragraph [ref=e4029]: QA WFH fa4f29b8
+                      - generic [ref=e4031]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4032] [cursor=pointer]:
+                    - generic [ref=e4033]:
+                      - paragraph [ref=e4034]:
+                        - paragraph [ref=e4035]: QA WFH 78948273
+                      - generic [ref=e4037]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4038] [cursor=pointer]:
+                    - generic [ref=e4039]:
+                      - paragraph [ref=e4040]:
+                        - paragraph [ref=e4041]: QA WFH 981b95a7
+                      - generic [ref=e4043]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4044] [cursor=pointer]:
+                    - generic [ref=e4045]:
+                      - paragraph [ref=e4046]:
+                        - paragraph [ref=e4047]: QA WFH 8a291666
+                      - generic [ref=e4049]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4050] [cursor=pointer]:
+                    - generic [ref=e4051]:
+                      - paragraph [ref=e4052]:
+                        - paragraph [ref=e4053]: QA WFH 56f6068b
+                      - generic [ref=e4055]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4056] [cursor=pointer]:
+                    - generic [ref=e4057]:
+                      - paragraph [ref=e4058]:
+                        - paragraph [ref=e4059]: QA WFH 680acefc
+                      - generic [ref=e4061]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4062] [cursor=pointer]:
+                    - generic [ref=e4063]:
+                      - paragraph [ref=e4064]:
+                        - paragraph [ref=e4065]: QA WFH e8d0feb4
+                      - generic [ref=e4067]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4068] [cursor=pointer]:
+                    - generic [ref=e4069]:
+                      - paragraph [ref=e4070]:
+                        - paragraph [ref=e4071]: QA WFH fa39b1b1
+                      - generic [ref=e4073]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4074] [cursor=pointer]:
+                    - generic [ref=e4075]:
+                      - paragraph [ref=e4076]:
+                        - paragraph [ref=e4077]: QA On Duty 5843862c
+                      - generic [ref=e4079]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4080] [cursor=pointer]:
+                    - generic [ref=e4081]:
+                      - paragraph [ref=e4082]:
+                        - paragraph [ref=e4083]: QA On Duty 227f1db5
+                      - generic [ref=e4085]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4086] [cursor=pointer]:
+                    - generic [ref=e4087]:
+                      - paragraph [ref=e4088]:
+                        - paragraph [ref=e4089]: QA On Duty 3aa8cfbd
+                      - generic [ref=e4091]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4092] [cursor=pointer]:
+                    - generic [ref=e4093]:
+                      - paragraph [ref=e4094]:
+                        - paragraph [ref=e4095]: QA Mobile Clock-in 9d030c...
+                      - generic [ref=e4097]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4098] [cursor=pointer]:
+                    - generic [ref=e4099]:
+                      - paragraph [ref=e4100]:
+                        - paragraph [ref=e4101]: QA On Duty 7e6d98ae
+                      - generic [ref=e4103]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4104] [cursor=pointer]:
+                    - generic [ref=e4105]:
+                      - paragraph [ref=e4106]:
+                        - paragraph [ref=e4107]: QA Mobile Clock-in ca4b14...
+                      - generic [ref=e4109]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4110] [cursor=pointer]:
+                    - generic [ref=e4111]:
+                      - paragraph [ref=e4112]:
+                        - paragraph [ref=e4113]: QA On Duty 8a22e704
+                      - generic [ref=e4115]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4116] [cursor=pointer]:
+                    - generic [ref=e4117]:
+                      - paragraph [ref=e4118]:
+                        - paragraph [ref=e4119]: QA On Duty 5f3eb581
+                      - generic [ref=e4121]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4122] [cursor=pointer]:
+                    - generic [ref=e4123]:
+                      - paragraph [ref=e4124]:
+                        - paragraph [ref=e4125]: QA On Duty d28edc0b
+                      - generic [ref=e4127]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4128] [cursor=pointer]:
+                    - generic [ref=e4129]:
+                      - paragraph [ref=e4130]:
+                        - paragraph [ref=e4131]: QA On Duty 90bcfaab
+                      - generic [ref=e4133]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4134] [cursor=pointer]:
+                    - generic [ref=e4135]:
+                      - paragraph [ref=e4136]:
+                        - paragraph [ref=e4137]: QA WFH 0dfa1f22
+                      - generic [ref=e4139]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4140] [cursor=pointer]:
+                    - generic [ref=e4141]:
+                      - paragraph [ref=e4142]:
+                        - paragraph [ref=e4143]: QA WFH 42202776
+                      - generic [ref=e4145]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4146] [cursor=pointer]:
+                    - generic [ref=e4147]:
+                      - paragraph [ref=e4148]:
+                        - paragraph [ref=e4149]: QA WFH 9655ba4c
+                      - generic [ref=e4151]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4152] [cursor=pointer]:
+                    - generic [ref=e4153]:
+                      - paragraph [ref=e4154]:
+                        - paragraph [ref=e4155]: QA WFH 3e7bfff6
+                      - generic [ref=e4157]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4158] [cursor=pointer]:
+                    - generic [ref=e4159]:
+                      - paragraph [ref=e4160]:
+                        - paragraph [ref=e4161]: QA WFH 499e6e45
+                      - generic [ref=e4163]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4164] [cursor=pointer]:
+                    - generic [ref=e4165]:
+                      - paragraph [ref=e4166]:
+                        - paragraph [ref=e4167]: QA WFH e576f088
+                      - generic [ref=e4169]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4170] [cursor=pointer]:
+                    - generic [ref=e4171]:
+                      - paragraph [ref=e4172]:
+                        - paragraph [ref=e4173]: QA WFH faeefdb3
+                      - generic [ref=e4175]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4176] [cursor=pointer]:
+                    - generic [ref=e4177]:
+                      - paragraph [ref=e4178]:
+                        - paragraph [ref=e4179]: QA WFH 61fe7b07
+                      - generic [ref=e4181]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4182] [cursor=pointer]:
+                    - generic [ref=e4183]:
+                      - paragraph [ref=e4184]:
+                        - paragraph [ref=e4185]: QA On Duty 810c3d0a
+                      - generic [ref=e4187]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4188] [cursor=pointer]:
+                    - generic [ref=e4189]:
+                      - paragraph [ref=e4190]:
+                        - paragraph [ref=e4191]: QA On Duty 7bdee338
+                      - generic [ref=e4193]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4194] [cursor=pointer]:
+                    - generic [ref=e4195]:
+                      - paragraph [ref=e4196]:
+                        - paragraph [ref=e4197]: QA On Duty 1eb26e7a
+                      - generic [ref=e4199]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4200] [cursor=pointer]:
+                    - generic [ref=e4201]:
+                      - paragraph [ref=e4202]:
+                        - paragraph [ref=e4203]: QA On Duty a703a8c8
+                      - generic [ref=e4205]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4206] [cursor=pointer]:
+                    - generic [ref=e4207]:
+                      - paragraph [ref=e4208]:
+                        - paragraph [ref=e4209]: QA Mobile Clock-in 40778b...
+                      - generic [ref=e4211]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4212] [cursor=pointer]:
+                    - generic [ref=e4213]:
+                      - paragraph [ref=e4214]:
+                        - paragraph [ref=e4215]: QA On Duty fae8b36b
+                      - generic [ref=e4217]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4218] [cursor=pointer]:
+                    - generic [ref=e4219]:
+                      - paragraph [ref=e4220]:
+                        - paragraph [ref=e4221]: QA Mobile Clock-in e08448...
+                      - generic [ref=e4223]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4224] [cursor=pointer]:
+                    - generic [ref=e4225]:
+                      - paragraph [ref=e4226]:
+                        - paragraph [ref=e4227]: QA On Duty 3ddf9e07
+                      - generic [ref=e4229]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4230] [cursor=pointer]:
+                    - generic [ref=e4231]:
+                      - paragraph [ref=e4232]:
+                        - paragraph [ref=e4233]: QA On Duty ac1294b8
+                      - generic [ref=e4235]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4236] [cursor=pointer]:
+                    - generic [ref=e4237]:
+                      - paragraph [ref=e4238]:
+                        - paragraph [ref=e4239]: QA On Duty c5934fe7
+                      - generic [ref=e4241]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4242] [cursor=pointer]:
+                    - generic [ref=e4243]:
+                      - paragraph [ref=e4244]:
+                        - paragraph [ref=e4245]: QA WFH dbcc633b
+                      - generic [ref=e4247]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4248] [cursor=pointer]:
+                    - generic [ref=e4249]:
+                      - paragraph [ref=e4250]:
+                        - paragraph [ref=e4251]: QA WFH 796863b0
+                      - generic [ref=e4253]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4254] [cursor=pointer]:
+                    - generic [ref=e4255]:
+                      - paragraph [ref=e4256]:
+                        - paragraph [ref=e4257]: QA WFH 65ca9e92
+                      - generic [ref=e4259]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4260] [cursor=pointer]:
+                    - generic [ref=e4261]:
+                      - paragraph [ref=e4262]:
+                        - paragraph [ref=e4263]: QA WFH 060f271b
+                      - generic [ref=e4265]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4266] [cursor=pointer]:
+                    - generic [ref=e4267]:
+                      - paragraph [ref=e4268]:
+                        - paragraph [ref=e4269]: QA On Duty 6c19cd70
+                      - generic [ref=e4271]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4272] [cursor=pointer]:
+                    - generic [ref=e4273]:
+                      - paragraph [ref=e4274]:
+                        - paragraph [ref=e4275]: QA Mobile Clock-in 1e185f...
+                      - generic [ref=e4277]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4278] [cursor=pointer]:
+                    - generic [ref=e4279]:
+                      - paragraph [ref=e4280]:
+                        - paragraph [ref=e4281]: QA On Duty f03bfc69
+                      - generic [ref=e4283]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4284] [cursor=pointer]:
+                    - generic [ref=e4285]:
+                      - paragraph [ref=e4286]:
+                        - paragraph [ref=e4287]: QA WFH a2f203d5
+                      - generic [ref=e4289]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4290] [cursor=pointer]:
+                    - generic [ref=e4291]:
+                      - paragraph [ref=e4292]:
+                        - paragraph [ref=e4293]: QA WFH 5e99d90a
+                      - generic [ref=e4295]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4296] [cursor=pointer]:
+                    - generic [ref=e4297]:
+                      - paragraph [ref=e4298]:
+                        - paragraph [ref=e4299]: QA WFH 00457fec
+                      - generic [ref=e4301]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4302] [cursor=pointer]:
+                    - generic [ref=e4303]:
+                      - paragraph [ref=e4304]:
+                        - paragraph [ref=e4305]: QA WFH f24bccd0
+                      - generic [ref=e4307]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4308] [cursor=pointer]:
+                    - generic [ref=e4309]:
+                      - paragraph [ref=e4310]:
+                        - paragraph [ref=e4311]: QA Mobile Clock-in e0333d...
+                      - generic [ref=e4313]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4314] [cursor=pointer]:
+                    - generic [ref=e4315]:
+                      - paragraph [ref=e4316]:
+                        - paragraph [ref=e4317]: QA On Duty 42292048
+                      - generic [ref=e4319]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4320] [cursor=pointer]:
+                    - generic [ref=e4321]:
+                      - paragraph [ref=e4322]:
+                        - paragraph [ref=e4323]: QA On Duty 1978b75c
+                      - generic [ref=e4325]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4326] [cursor=pointer]:
+                    - generic [ref=e4327]:
+                      - paragraph [ref=e4328]:
+                        - paragraph [ref=e4329]: QA On Duty 25c75c10
+                      - generic [ref=e4331]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4332] [cursor=pointer]:
+                    - generic [ref=e4333]:
+                      - paragraph [ref=e4334]:
+                        - paragraph [ref=e4335]: QA On Duty 2e3dc9db
+                      - generic [ref=e4337]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4338] [cursor=pointer]:
+                    - generic [ref=e4339]:
+                      - paragraph [ref=e4340]:
+                        - paragraph [ref=e4341]: QA WFH 28273c91
+                      - generic [ref=e4343]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4344] [cursor=pointer]:
+                    - generic [ref=e4345]:
+                      - paragraph [ref=e4346]:
+                        - paragraph [ref=e4347]: QA WFH 3e071f3a
+                      - generic [ref=e4349]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4350] [cursor=pointer]:
+                    - generic [ref=e4351]:
+                      - paragraph [ref=e4352]:
+                        - paragraph [ref=e4353]: QA WFH 7384c233
+                      - generic [ref=e4355]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4356] [cursor=pointer]:
+                    - generic [ref=e4357]:
+                      - paragraph [ref=e4358]:
+                        - paragraph [ref=e4359]: QA WFH dfbf301c
+                      - generic [ref=e4361]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4362] [cursor=pointer]:
+                    - generic [ref=e4363]:
+                      - paragraph [ref=e4364]:
+                        - paragraph [ref=e4365]: QA WFH fe65f08d
+                      - generic [ref=e4367]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4368] [cursor=pointer]:
+                    - generic [ref=e4369]:
+                      - paragraph [ref=e4370]:
+                        - paragraph [ref=e4371]: QA WFH 2445547c
+                      - generic [ref=e4373]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4374] [cursor=pointer]:
+                    - generic [ref=e4375]:
+                      - paragraph [ref=e4376]:
+                        - paragraph [ref=e4377]: QA WFH 4abf1f0a
+                      - generic [ref=e4379]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4380] [cursor=pointer]:
+                    - generic [ref=e4381]:
+                      - paragraph [ref=e4382]:
+                        - paragraph [ref=e4383]: QA WFH 2d080409
+                      - generic [ref=e4385]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4386] [cursor=pointer]:
+                    - generic [ref=e4387]:
+                      - paragraph [ref=e4388]:
+                        - paragraph [ref=e4389]: QA On Duty 9216613e
+                      - generic [ref=e4391]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4392] [cursor=pointer]:
+                    - generic [ref=e4393]:
+                      - paragraph [ref=e4394]:
+                        - paragraph [ref=e4395]: QA On Duty b3437551
+                      - generic [ref=e4397]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4398] [cursor=pointer]:
+                    - generic [ref=e4399]:
+                      - paragraph [ref=e4400]:
+                        - paragraph [ref=e4401]: QA On Duty 9977086b
+                      - generic [ref=e4403]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4404] [cursor=pointer]:
+                    - generic [ref=e4405]:
+                      - paragraph [ref=e4406]:
+                        - paragraph [ref=e4407]: QA On Duty 444e00b4
+                      - generic [ref=e4409]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4410] [cursor=pointer]:
+                    - generic [ref=e4411]:
+                      - paragraph [ref=e4412]:
+                        - paragraph [ref=e4413]: QA On Duty c532d31e
+                      - generic [ref=e4415]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4416] [cursor=pointer]:
+                    - generic [ref=e4417]:
+                      - paragraph [ref=e4418]:
+                        - paragraph [ref=e4419]: QA Mobile Clock-in 2b7275...
+                      - generic [ref=e4421]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4422] [cursor=pointer]:
+                    - generic [ref=e4423]:
+                      - paragraph [ref=e4424]:
+                        - paragraph [ref=e4425]: QA On Duty 937272b9
+                      - generic [ref=e4427]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4428] [cursor=pointer]:
+                    - generic [ref=e4429]:
+                      - paragraph [ref=e4430]:
+                        - paragraph [ref=e4431]: QA Mobile Clock-in 863d36...
+                      - generic [ref=e4433]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4434] [cursor=pointer]:
+                    - generic [ref=e4435]:
+                      - paragraph [ref=e4436]:
+                        - paragraph [ref=e4437]: QA On Duty 324f2a71
+                      - generic [ref=e4439]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4440] [cursor=pointer]:
+                    - generic [ref=e4441]:
+                      - paragraph [ref=e4442]:
+                        - paragraph [ref=e4443]: QA On Duty 30e49251
+                      - generic [ref=e4445]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4446] [cursor=pointer]:
+                    - generic [ref=e4447]:
+                      - paragraph [ref=e4448]:
+                        - paragraph [ref=e4449]: QA WFH 37b398db
+                      - generic [ref=e4451]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4452] [cursor=pointer]:
+                    - generic [ref=e4453]:
+                      - paragraph [ref=e4454]:
+                        - paragraph [ref=e4455]: QA WFH 7fe96481
+                      - generic [ref=e4457]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4458] [cursor=pointer]:
+                    - generic [ref=e4459]:
+                      - paragraph [ref=e4460]:
+                        - paragraph [ref=e4461]: QA WFH abbd257a
+                      - generic [ref=e4463]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4464] [cursor=pointer]:
+                    - generic [ref=e4465]:
+                      - paragraph [ref=e4466]:
+                        - paragraph [ref=e4467]: QA WFH 043c0f37
+                      - generic [ref=e4469]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4470] [cursor=pointer]:
+                    - generic [ref=e4471]:
+                      - paragraph [ref=e4472]:
+                        - paragraph [ref=e4473]: QA WFH e75a35f5
+                      - generic [ref=e4475]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4476] [cursor=pointer]:
+                    - generic [ref=e4477]:
+                      - paragraph [ref=e4478]:
+                        - paragraph [ref=e4479]: QA WFH 2db83fb5
+                      - generic [ref=e4481]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4482] [cursor=pointer]:
+                    - generic [ref=e4483]:
+                      - paragraph [ref=e4484]:
+                        - paragraph [ref=e4485]: QA WFH b6fe622b
+                      - generic [ref=e4487]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4488] [cursor=pointer]:
+                    - generic [ref=e4489]:
+                      - paragraph [ref=e4490]:
+                        - paragraph [ref=e4491]: QA WFH cde326d8
+                      - generic [ref=e4493]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4494] [cursor=pointer]:
+                    - generic [ref=e4495]:
+                      - paragraph [ref=e4496]:
+                        - paragraph [ref=e4497]: QA On Duty 86d935ae
+                      - generic [ref=e4499]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4500] [cursor=pointer]:
+                    - generic [ref=e4501]:
+                      - paragraph [ref=e4502]:
+                        - paragraph [ref=e4503]: QA On Duty b8411368
+                      - generic [ref=e4505]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4506] [cursor=pointer]:
+                    - generic [ref=e4507]:
+                      - paragraph [ref=e4508]:
+                        - paragraph [ref=e4509]: QA On Duty f0e09cbd
+                      - generic [ref=e4511]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4512] [cursor=pointer]:
+                    - generic [ref=e4513]:
+                      - paragraph [ref=e4514]:
+                        - paragraph [ref=e4515]: QA On Duty 7a6d945d
+                      - generic [ref=e4517]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4518] [cursor=pointer]:
+                    - generic [ref=e4519]:
+                      - paragraph [ref=e4520]:
+                        - paragraph [ref=e4521]: QA Mobile Clock-in 6b009c...
+                      - generic [ref=e4523]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4524] [cursor=pointer]:
+                    - generic [ref=e4525]:
+                      - paragraph [ref=e4526]:
+                        - paragraph [ref=e4527]: QA On Duty 1651cd5d
+                      - generic [ref=e4529]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4530] [cursor=pointer]:
+                    - generic [ref=e4531]:
+                      - paragraph [ref=e4532]:
+                        - paragraph [ref=e4533]: QA Mobile Clock-in 98e36d...
+                      - generic [ref=e4535]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4536] [cursor=pointer]:
+                    - generic [ref=e4537]:
+                      - paragraph [ref=e4538]:
+                        - paragraph [ref=e4539]: QA On Duty abc3aff7
+                      - generic [ref=e4541]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4542] [cursor=pointer]:
+                    - generic [ref=e4543]:
+                      - paragraph [ref=e4544]:
+                        - paragraph [ref=e4545]: QA On Duty 41df1af1
+                      - generic [ref=e4547]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4548] [cursor=pointer]:
+                    - generic [ref=e4549]:
+                      - paragraph [ref=e4550]:
+                        - paragraph [ref=e4551]: QA On Duty 93a0dc1c
+                      - generic [ref=e4553]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4554] [cursor=pointer]:
+                    - generic [ref=e4555]:
+                      - paragraph [ref=e4556]:
+                        - paragraph [ref=e4557]: QA WFH 8c39d5de
+                      - generic [ref=e4559]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4560] [cursor=pointer]:
+                    - generic [ref=e4561]:
+                      - paragraph [ref=e4562]:
+                        - paragraph [ref=e4563]: QA WFH fb884ed7
+                      - generic [ref=e4565]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4566] [cursor=pointer]:
+                    - generic [ref=e4567]:
+                      - paragraph [ref=e4568]:
+                        - paragraph [ref=e4569]: QA WFH f70b5e0c
+                      - generic [ref=e4571]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4572] [cursor=pointer]:
+                    - generic [ref=e4573]:
+                      - paragraph [ref=e4574]:
+                        - paragraph [ref=e4575]: QA WFH 1bde1de9
+                      - generic [ref=e4577]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4578] [cursor=pointer]:
+                    - generic [ref=e4579]:
+                      - paragraph [ref=e4580]:
+                        - paragraph [ref=e4581]: QA WFH af8172bb
+                      - generic [ref=e4583]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4584] [cursor=pointer]:
+                    - generic [ref=e4585]:
+                      - paragraph [ref=e4586]:
+                        - paragraph [ref=e4587]: QA WFH be0f3d48
+                      - generic [ref=e4589]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4590] [cursor=pointer]:
+                    - generic [ref=e4591]:
+                      - paragraph [ref=e4592]:
+                        - paragraph [ref=e4593]: QA WFH 53b22a50
+                      - generic [ref=e4595]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4596] [cursor=pointer]:
+                    - generic [ref=e4597]:
+                      - paragraph [ref=e4598]:
+                        - paragraph [ref=e4599]: QA WFH d2bde157
+                      - generic [ref=e4601]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4602] [cursor=pointer]:
+                    - generic [ref=e4603]:
+                      - paragraph [ref=e4604]:
+                        - paragraph [ref=e4605]: QA On Duty 2fa4b7f3
+                      - generic [ref=e4607]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4608] [cursor=pointer]:
+                    - generic [ref=e4609]:
+                      - paragraph [ref=e4610]:
+                        - paragraph [ref=e4611]: QA On Duty 44496a56
+                      - generic [ref=e4613]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4614] [cursor=pointer]:
+                    - generic [ref=e4615]:
+                      - paragraph [ref=e4616]:
+                        - paragraph [ref=e4617]: QA On Duty c4472e53
+                      - generic [ref=e4619]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4620] [cursor=pointer]:
+                    - generic [ref=e4621]:
+                      - paragraph [ref=e4622]:
+                        - paragraph [ref=e4623]: QA Mobile Clock-in 750b3b...
+                      - generic [ref=e4625]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4626] [cursor=pointer]:
+                    - generic [ref=e4627]:
+                      - paragraph [ref=e4628]:
+                        - paragraph [ref=e4629]: QA On Duty c79095b1
+                      - generic [ref=e4631]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4632] [cursor=pointer]:
+                    - generic [ref=e4633]:
+                      - paragraph [ref=e4634]:
+                        - paragraph [ref=e4635]: QA Mobile Clock-in ac8382...
+                      - generic [ref=e4637]: 1 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4638] [cursor=pointer]:
+                    - generic [ref=e4639]:
+                      - paragraph [ref=e4640]:
+                        - paragraph [ref=e4641]: QA On Duty efd189c5
+                      - generic [ref=e4643]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4644] [cursor=pointer]:
+                    - generic [ref=e4645]:
+                      - paragraph [ref=e4646]:
+                        - paragraph [ref=e4647]: QA On Duty d0bca9ae
+                      - generic [ref=e4649]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4650] [cursor=pointer]:
+                    - generic [ref=e4651]:
+                      - paragraph [ref=e4652]:
+                        - paragraph [ref=e4653]: QA On Duty 1359492c
+                      - generic [ref=e4655]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4656] [cursor=pointer]:
+                    - generic [ref=e4657]:
+                      - paragraph [ref=e4658]:
+                        - paragraph [ref=e4659]: QA On Duty 1db2a580
+                      - generic [ref=e4661]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4662] [cursor=pointer]:
+                    - generic [ref=e4663]:
+                      - paragraph [ref=e4664]:
+                        - paragraph [ref=e4665]: QA WFH 5db66e6d
+                      - generic [ref=e4667]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4668] [cursor=pointer]:
+                    - generic [ref=e4669]:
+                      - paragraph [ref=e4670]:
+                        - paragraph [ref=e4671]: QA WFH 92877b2a
+                      - generic [ref=e4673]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4674] [cursor=pointer]:
+                    - generic [ref=e4675]:
+                      - paragraph [ref=e4676]:
+                        - paragraph [ref=e4677]: QA WFH a09abc82
+                      - generic [ref=e4679]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4680] [cursor=pointer]:
+                    - generic [ref=e4681]:
+                      - paragraph [ref=e4682]:
+                        - paragraph [ref=e4683]: QA WFH fb6a0cbb
+                      - generic [ref=e4685]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4686] [cursor=pointer]:
+                    - generic [ref=e4687]:
+                      - paragraph [ref=e4688]:
+                        - paragraph [ref=e4689]: QA WFH 936b44ed
+                      - generic [ref=e4691]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4692] [cursor=pointer]:
+                    - generic [ref=e4693]:
+                      - paragraph [ref=e4694]:
+                        - paragraph [ref=e4695]: QA WFH c9c5a094
+                      - generic [ref=e4697]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4698] [cursor=pointer]:
+                    - generic [ref=e4699]:
+                      - paragraph [ref=e4700]:
+                        - paragraph [ref=e4701]: QA WFH 8c92b8a4
+                      - generic [ref=e4703]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4704] [cursor=pointer]:
+                    - generic [ref=e4705]:
+                      - paragraph [ref=e4706]:
+                        - paragraph [ref=e4707]: QA WFH 7145d515
+                      - generic [ref=e4709]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4710] [cursor=pointer]:
+                    - generic [ref=e4711]:
+                      - paragraph [ref=e4712]:
+                        - paragraph [ref=e4713]: QA On Duty 871a4eb8
+                      - generic [ref=e4715]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4716] [cursor=pointer]:
+                    - generic [ref=e4717]:
+                      - paragraph [ref=e4718]:
+                        - paragraph [ref=e4719]: QA On Duty 801951ec
+                      - generic [ref=e4721]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4722] [cursor=pointer]:
+                    - generic [ref=e4723]:
+                      - paragraph [ref=e4724]:
+                        - paragraph [ref=e4725]: QA On Duty f523c9da
+                      - generic [ref=e4727]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4728] [cursor=pointer]:
+                    - generic [ref=e4729]:
+                      - paragraph [ref=e4730]:
+                        - paragraph [ref=e4731]: QA On Duty e6821772
+                      - generic [ref=e4733]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4734] [cursor=pointer]:
+                    - generic [ref=e4735]:
+                      - paragraph [ref=e4736]:
+                        - paragraph [ref=e4737]: QA On Duty aa0565da
+                      - generic [ref=e4739]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4740] [cursor=pointer]:
+                    - generic [ref=e4741]:
+                      - paragraph [ref=e4742]:
+                        - paragraph [ref=e4743]: QA Mobile Clock-in 673705...
+                      - generic [ref=e4745]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4746] [cursor=pointer]:
+                    - generic [ref=e4747]:
+                      - paragraph [ref=e4748]:
+                        - paragraph [ref=e4749]: QA Mobile Clock-in b1bc67...
+                      - generic [ref=e4751]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4752] [cursor=pointer]:
+                    - generic [ref=e4753]:
+                      - paragraph [ref=e4754]:
+                        - paragraph [ref=e4755]: QA On Duty c77f55f4
+                      - generic [ref=e4757]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4758] [cursor=pointer]:
+                    - generic [ref=e4759]:
+                      - paragraph [ref=e4760]:
+                        - paragraph [ref=e4761]: QA On Duty b98759aa
+                      - generic [ref=e4763]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4764] [cursor=pointer]:
+                    - generic [ref=e4765]:
+                      - paragraph [ref=e4766]:
+                        - paragraph [ref=e4767]: QA On Duty ec1bc24d
+                      - generic [ref=e4769]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4770] [cursor=pointer]:
+                    - generic [ref=e4771]:
+                      - paragraph [ref=e4772]:
+                        - paragraph [ref=e4773]: QA WFH a9cee9ea
+                      - generic [ref=e4775]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4776] [cursor=pointer]:
+                    - generic [ref=e4777]:
+                      - paragraph [ref=e4778]:
+                        - paragraph [ref=e4779]: QA WFH 0c5b2d89
+                      - generic [ref=e4781]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4782] [cursor=pointer]:
+                    - generic [ref=e4783]:
+                      - paragraph [ref=e4784]:
+                        - paragraph [ref=e4785]: QA WFH 42607b2e
+                      - generic [ref=e4787]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4788] [cursor=pointer]:
+                    - generic [ref=e4789]:
+                      - paragraph [ref=e4790]:
+                        - paragraph [ref=e4791]: QA WFH b4d19f91
+                      - generic [ref=e4793]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4794] [cursor=pointer]:
+                    - generic [ref=e4795]:
+                      - paragraph [ref=e4796]:
+                        - paragraph [ref=e4797]: QA WFH 06a98cf7
+                      - generic [ref=e4799]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4800] [cursor=pointer]:
+                    - generic [ref=e4801]:
+                      - paragraph [ref=e4802]:
+                        - paragraph [ref=e4803]: QA WFH 80117ccd
+                      - generic [ref=e4805]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4806] [cursor=pointer]:
+                    - generic [ref=e4807]:
+                      - paragraph [ref=e4808]:
+                        - paragraph [ref=e4809]: QA On Duty db8e4e69
+                      - generic [ref=e4811]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4812] [cursor=pointer]:
+                    - generic [ref=e4813]:
+                      - paragraph [ref=e4814]:
+                        - paragraph [ref=e4815]: QA On Duty d7625a07
+                      - generic [ref=e4817]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4818] [cursor=pointer]:
+                    - generic [ref=e4819]:
+                      - paragraph [ref=e4820]:
+                        - paragraph [ref=e4821]: QA On Duty d7cc5a97
+                      - generic [ref=e4823]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4824] [cursor=pointer]:
+                    - generic [ref=e4825]:
+                      - paragraph [ref=e4826]:
+                        - paragraph [ref=e4827]: QA On Duty 9fe55643
+                      - generic [ref=e4829]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4830] [cursor=pointer]:
+                    - generic [ref=e4831]:
+                      - paragraph [ref=e4832]:
+                        - paragraph [ref=e4833]: QA On Duty a6fb2acd
+                      - generic [ref=e4835]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4836] [cursor=pointer]:
+                    - generic [ref=e4837]:
+                      - paragraph [ref=e4838]:
+                        - paragraph [ref=e4839]: QA On Duty ac436c51
+                      - generic [ref=e4841]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4842] [cursor=pointer]:
+                    - generic [ref=e4843]:
+                      - paragraph [ref=e4844]:
+                        - paragraph [ref=e4845]: QA WFH ad64ca7c
+                      - generic [ref=e4847]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4848] [cursor=pointer]:
+                    - generic [ref=e4849]:
+                      - paragraph [ref=e4850]:
+                        - paragraph [ref=e4851]: QA WFH 212c542f
+                      - generic [ref=e4853]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4854] [cursor=pointer]:
+                    - generic [ref=e4855]:
+                      - paragraph [ref=e4856]:
+                        - paragraph [ref=e4857]: QA WFH 00e87df0
+                      - generic [ref=e4859]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4860] [cursor=pointer]:
+                    - generic [ref=e4861]:
+                      - paragraph [ref=e4862]:
+                        - paragraph [ref=e4863]: QA WFH a3025afb
+                      - generic [ref=e4865]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4866] [cursor=pointer]:
+                    - generic [ref=e4867]:
+                      - paragraph [ref=e4868]:
+                        - paragraph [ref=e4869]: QA WFH 0f9df8a8
+                      - generic [ref=e4871]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4872] [cursor=pointer]:
+                    - generic [ref=e4873]:
+                      - paragraph [ref=e4874]:
+                        - paragraph [ref=e4875]: QA WFH 38f6788a
+                      - generic [ref=e4877]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4878] [cursor=pointer]:
+                    - generic [ref=e4879]:
+                      - paragraph [ref=e4880]:
+                        - paragraph [ref=e4881]: QA On Duty 29df6f24
+                      - generic [ref=e4883]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4884] [cursor=pointer]:
+                    - generic [ref=e4885]:
+                      - paragraph [ref=e4886]:
+                        - paragraph [ref=e4887]: QA On Duty 8c5f3343
+                      - generic [ref=e4889]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4890] [cursor=pointer]:
+                    - generic [ref=e4891]:
+                      - paragraph [ref=e4892]:
+                        - paragraph [ref=e4893]: QA On Duty dde9d03f
+                      - generic [ref=e4895]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4896] [cursor=pointer]:
+                    - generic [ref=e4897]:
+                      - paragraph [ref=e4898]:
+                        - paragraph [ref=e4899]: QA On Duty 7b084197
+                      - generic [ref=e4901]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4902] [cursor=pointer]:
+                    - generic [ref=e4903]:
+                      - paragraph [ref=e4904]:
+                        - paragraph [ref=e4905]: QA On Duty e36d427e
+                      - generic [ref=e4907]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4908] [cursor=pointer]:
+                    - generic [ref=e4909]:
+                      - paragraph [ref=e4910]:
+                        - paragraph [ref=e4911]: QA On Duty ae0df219
+                      - generic [ref=e4913]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4914] [cursor=pointer]:
+                    - generic [ref=e4915]:
+                      - paragraph [ref=e4916]:
+                        - paragraph [ref=e4917]: QA WFH e48ec8c9
+                      - generic [ref=e4919]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4920] [cursor=pointer]:
+                    - generic [ref=e4921]:
+                      - paragraph [ref=e4922]:
+                        - paragraph [ref=e4923]: QA WFH 62d1a7b1
+                      - generic [ref=e4925]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4926] [cursor=pointer]:
+                    - generic [ref=e4927]:
+                      - paragraph [ref=e4928]:
+                        - paragraph [ref=e4929]: QA WFH 8a0d572d
+                      - generic [ref=e4931]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4932] [cursor=pointer]:
+                    - generic [ref=e4933]:
+                      - paragraph [ref=e4934]:
+                        - paragraph [ref=e4935]: QA WFH 76f309c3
+                      - generic [ref=e4937]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4938] [cursor=pointer]:
+                    - generic [ref=e4939]:
+                      - paragraph [ref=e4940]:
+                        - paragraph [ref=e4941]: QA WFH e3111f51
+                      - generic [ref=e4943]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4944] [cursor=pointer]:
+                    - generic [ref=e4945]:
+                      - paragraph [ref=e4946]:
+                        - paragraph [ref=e4947]: QA WFH f80e7208
+                      - generic [ref=e4949]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4950] [cursor=pointer]:
+                    - generic [ref=e4951]:
+                      - paragraph [ref=e4952]:
+                        - paragraph [ref=e4953]: QA On Duty 3e84ec85
+                      - generic [ref=e4955]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4956] [cursor=pointer]:
+                    - generic [ref=e4957]:
+                      - paragraph [ref=e4958]:
+                        - paragraph [ref=e4959]: QA On Duty 87248f6c
+                      - generic [ref=e4961]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4962] [cursor=pointer]:
+                    - generic [ref=e4963]:
+                      - paragraph [ref=e4964]:
+                        - paragraph [ref=e4965]: QA On Duty ec65ce4a
+                      - generic [ref=e4967]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4968] [cursor=pointer]:
+                    - generic [ref=e4969]:
+                      - paragraph [ref=e4970]:
+                        - paragraph [ref=e4971]: QA On Duty f861a184
+                      - generic [ref=e4973]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4974] [cursor=pointer]:
+                    - generic [ref=e4975]:
+                      - paragraph [ref=e4976]:
+                        - paragraph [ref=e4977]: QA On Duty 57505dfd
+                      - generic [ref=e4979]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4980] [cursor=pointer]:
+                    - generic [ref=e4981]:
+                      - paragraph [ref=e4982]:
+                        - paragraph [ref=e4983]: QA On Duty 25acd7ae
+                      - generic [ref=e4985]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4986] [cursor=pointer]:
+                    - generic [ref=e4987]:
+                      - paragraph [ref=e4988]:
+                        - paragraph [ref=e4989]: QA WFH 6a965751
+                      - generic [ref=e4991]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4992] [cursor=pointer]:
+                    - generic [ref=e4993]:
+                      - paragraph [ref=e4994]:
+                        - paragraph [ref=e4995]: QA WFH b878eebf
+                      - generic [ref=e4997]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e4998] [cursor=pointer]:
+                    - generic [ref=e4999]:
+                      - paragraph [ref=e5000]:
+                        - paragraph [ref=e5001]: QA WFH 612b22ba
+                      - generic [ref=e5003]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e5004] [cursor=pointer]:
+                    - generic [ref=e5005]:
+                      - paragraph [ref=e5006]:
+                        - paragraph [ref=e5007]: QA WFH d308c458
+                      - generic [ref=e5009]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e5010] [cursor=pointer]:
+                    - generic [ref=e5011]:
+                      - paragraph [ref=e5012]:
+                        - paragraph [ref=e5013]: QA WFH e264f853
+                      - generic [ref=e5015]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e5016] [cursor=pointer]:
+                    - generic [ref=e5017]:
+                      - paragraph [ref=e5018]:
+                        - paragraph [ref=e5019]: QA On Duty 9f246bb2
+                      - generic [ref=e5021]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e5022] [cursor=pointer]:
+                    - generic [ref=e5023]:
+                      - paragraph [ref=e5024]:
+                        - paragraph [ref=e5025]: QA On Duty c173f437
+                      - generic [ref=e5027]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e5028] [cursor=pointer]:
+                    - generic [ref=e5029]:
+                      - paragraph [ref=e5030]:
+                        - paragraph [ref=e5031]: QA On Duty f10620bd
+                      - generic [ref=e5033]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e5034] [cursor=pointer]:
+                    - generic [ref=e5035]:
+                      - paragraph [ref=e5036]:
+                        - paragraph [ref=e5037]: QA On Duty 1da44a91
+                      - generic [ref=e5039]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e5040] [cursor=pointer]:
+                    - generic [ref=e5041]:
+                      - paragraph [ref=e5042]:
+                        - paragraph [ref=e5043]: QA On Duty 1e3134fb
+                      - generic [ref=e5045]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e5046] [cursor=pointer]:
+                    - generic [ref=e5047]:
+                      - paragraph [ref=e5048]:
+                        - paragraph [ref=e5049]: QA On Duty e67f0902
+                      - generic [ref=e5051]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e5052] [cursor=pointer]:
+                    - generic [ref=e5053]:
+                      - paragraph [ref=e5054]:
+                        - paragraph [ref=e5055]: QA No Method 07a1f4e4
+                      - generic [ref=e5057]: 2 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e5058] [cursor=pointer]:
+                    - generic [ref=e5059]:
+                      - paragraph [ref=e5060]:
+                        - paragraph [ref=e5061]: QA No Method f31085e6
+                      - generic [ref=e5063]: 1 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e5064] [cursor=pointer]:
+                    - generic [ref=e5065]:
+                      - paragraph [ref=e5066]:
+                        - paragraph [ref=e5067]: QA No Method 3b8f2dfa
+                      - generic [ref=e5069]: 1 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e5070] [cursor=pointer]:
+                    - generic [ref=e5071]:
+                      - paragraph [ref=e5072]:
+                        - paragraph [ref=e5073]: QA No Method 1553ad81
+                      - generic [ref=e5075]: 1 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e5076] [cursor=pointer]:
+                    - generic [ref=e5077]:
+                      - paragraph [ref=e5078]:
+                        - paragraph [ref=e5079]: QA Disabled Web abc44a20
+                      - generic [ref=e5081]: 6 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e5082] [cursor=pointer]:
+                    - generic [ref=e5083]:
+                      - paragraph [ref=e5084]:
+                        - paragraph [ref=e5085]: UniquePolicy
+                      - generic [ref=e5087]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e5088] [cursor=pointer]:
+                    - generic [ref=e5089]:
+                      - paragraph [ref=e5090]:
+                        - paragraph [ref=e5091]: QA Disabled Web 054e040b
+                      - generic [ref=e5093]: 2 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e5094] [cursor=pointer]:
+                    - generic [ref=e5095]:
+                      - paragraph [ref=e5096]:
+                        - paragraph [ref=e5097]: QA Disabled Web 89c55817
+                      - generic [ref=e5099]: 1 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e5100] [cursor=pointer]:
+                    - generic [ref=e5101]:
+                      - paragraph [ref=e5102]:
+                        - paragraph [ref=e5103]: QA Disabled Web 0ac78b15
+                      - generic [ref=e5105]: 2 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e5106] [cursor=pointer]:
+                    - generic [ref=e5107]:
+                      - paragraph [ref=e5108]:
+                        - paragraph [ref=e5109]: QA No Method c107e05b
+                      - generic [ref=e5111]: 1 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e5112] [cursor=pointer]:
+                    - generic [ref=e5113]:
+                      - paragraph [ref=e5114]:
+                        - paragraph [ref=e5115]: QA Disabled Web 95d42226
+                      - generic [ref=e5117]: 1 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e5118] [cursor=pointer]:
+                    - generic [ref=e5119]:
+                      - paragraph [ref=e5120]:
+                        - paragraph [ref=e5121]: QA No Method e7ca5534
+                      - generic [ref=e5123]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e5124] [cursor=pointer]:
+                    - generic [ref=e5125]:
+                      - paragraph [ref=e5126]:
+                        - paragraph [ref=e5127]: QA No Method efc4e5f7
+                      - generic [ref=e5129]: 0 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e5130] [cursor=pointer]:
+                    - generic [ref=e5131]:
+                      - paragraph [ref=e5132]:
+                        - paragraph [ref=e5133]: Xepert Time Tracking
+                      - generic [ref=e5135]: 20 Employees
+                    - generic:
+                      - img
+                  - generic [ref=e5136] [cursor=pointer]:
+                    - generic [ref=e5137]:
+                      - paragraph [ref=e5138]:
+                        - generic [ref=e5139]:
+                          - paragraph [ref=e5140]: Default Time Track...
+                          - generic:
+                            - generic: Default
+                      - generic [ref=e5142]: 2331 Employees
+                    - generic:
+                      - img
+              - generic [ref=e5144]:
+                - generic [ref=e5145]:
+                  - img
+                  - img
+                  - button [ref=e5147] [cursor=pointer]:
+                    - img [ref=e5148]
+                  - generic [ref=e5152]:
+                    - heading [level=6] [ref=e5154]: QA Adjustment 6daff78f
+                    - paragraph [ref=e5155]:
+                      - text: "Description:"
+                      - paragraph [ref=e5156]: No description provided for this policy.
+                    - generic [ref=e5157]:
+                      - generic [ref=e5158]: Capture Mode
+                      - generic [ref=e5159]:
+                        - generic [ref=e5160]:
+                          - img [ref=e5161]
+                          - generic [ref=e5163]: Web Clock-In
+                        - generic [ref=e5164]:
+                          - img [ref=e5165]
+                          - generic [ref=e5167]: Mobile Clock-In
+                        - generic [ref=e5168]:
+                          - img [ref=e5169]
+                          - generic [ref=e5171]: Remote Work
+                        - generic [ref=e5172]:
+                          - img [ref=e5173]
+                          - generic [ref=e5175]: Biometric
+                  - generic [ref=e5177]: "Configured On: October 31, 2026"
+                - generic [ref=e5179]:
+                  - tablist [ref=e5180]:
+                    - tab [selected] [ref=e5181] [cursor=pointer]:
+                      - generic [ref=e5182]: Summary
+                    - tab [ref=e5183] [cursor=pointer]:
+                      - generic [ref=e5184]: Employees (0)
+                  - separator [ref=e5185]
+                  - tabpanel [ref=e5186]:
+                    - generic [ref=e5187]:
+                      - generic [ref=e5188]:
+                        - generic [ref=e5189]:
+                          - img [ref=e5191]
+                          - heading [level=6] [ref=e5194]: Work from home
+                        - generic [ref=e5198]:
+                          - generic [ref=e5199]: WORK FROM HOME
+                          - generic [ref=e5200]:
+                            - img [ref=e5201]
+                            - paragraph [ref=e5203]: Not Allowed
+                      - generic [ref=e5204]:
+                        - generic [ref=e5205]:
+                          - img [ref=e5207]
+                          - heading [level=6] [ref=e5209]: On Duty
+                        - generic [ref=e5213]:
+                          - generic [ref=e5214]: ON DUTY
+                          - generic [ref=e5215]:
+                            - img [ref=e5216]
+                            - paragraph [ref=e5218]: Not Allowed
+                      - generic [ref=e5219]:
+                        - generic [ref=e5220]:
+                          - img [ref=e5222]
+                          - heading [level=6] [ref=e5225]: Partial Work Day
+                        - generic [ref=e5227]:
+                          - generic [ref=e5229]:
+                            - generic [ref=e5230]: LATE ARRIVAL
+                            - generic [ref=e5231]:
+                              - img [ref=e5232]
+                              - paragraph [ref=e5234]: Not Allowed
+                          - generic [ref=e5236]:
+                            - generic [ref=e5237]: EARLY LEAVING
+                            - generic [ref=e5238]:
+                              - img [ref=e5239]
+                              - paragraph [ref=e5241]: Not Allowed
+                          - generic [ref=e5243]:
+                            - generic [ref=e5244]: INTERVENING TIME-OFF
+                            - generic [ref=e5245]:
+                              - img [ref=e5246]
+                              - paragraph [ref=e5248]: Not Allowed
+    - generic [ref=e5249]:
+      - generic [ref=e5250]:
+        - heading [level=6] [ref=e5251]: Theme & Style
+        - img [ref=e5252] [cursor=pointer]
+      - generic [ref=e5254]:
+        - generic [ref=e5255]:
+          - heading [level=6] [ref=e5256]:
+            - img [ref=e5257]
+            - text: Theme Mode
+          - generic [ref=e5259]:
+            - button [ref=e5260] [cursor=pointer]:
+              - img [ref=e5261]
+              - text: Light
+            - button [ref=e5263] [cursor=pointer]:
+              - img [ref=e5264]
+              - text: Dark
+            - button [ref=e5266] [cursor=pointer]:
+              - img [ref=e5267]
+              - text: Auto
+        - heading [level=6] [ref=e5270]:
+          - img [ref=e5271]
+          - text: Theme Color
+        - generic [ref=e5286]:
+          - heading [level=6] [ref=e5287]: Dashboard Layout
+          - generic [ref=e5288]:
+            - button [ref=e5289] [cursor=pointer]:
+              - img [ref=e5290]
+              - text: Default
+            - button [ref=e5292] [cursor=pointer]:
+              - img [ref=e5293]
+              - text: New Layout
+    - generic [ref=e5295]:
+      - generic [ref=e5296]:
+        - heading [level=6] [ref=e5297]: Change Password
+        - img [ref=e5298] [cursor=pointer]
+      - generic [ref=e5300]:
+        - generic [ref=e5301]:
+          - text: "You are currently logged in as:"
+          - strong [ref=e5302]: xperts_imaging@yopmail.com
+          - generic [ref=e5303]: Please enter your current password to verify your identity, then create a strong new password to keep your account secure.
+        - alert [ref=e5304]:
+          - img [ref=e5306]
+          - generic [ref=e5309]:
+            - strong [ref=e5310]: Security Notice
+            - generic [ref=e5311]: For your safety, you will be automatically logged out after a successful password change.
+        - generic [ref=e5312]:
+          - generic [ref=e5314]:
+            - generic [ref=e5315]:
+              - generic [ref=e5317]:
+                - text: Old Password
+                - generic [ref=e5318]: "*"
+              - textbox [ref=e5320]:
+                - /placeholder: Enter your current password
+            - img [ref=e5322] [cursor=pointer]
+          - generic [ref=e5325]:
+            - generic [ref=e5326]:
+              - generic [ref=e5328]:
+                - text: New Password
+                - generic [ref=e5329]: "*"
+              - textbox [ref=e5331]:
+                - /placeholder: Create a strong new password
+            - img [ref=e5333] [cursor=pointer]
+          - generic [ref=e5336]:
+            - generic [ref=e5337]:
+              - generic [ref=e5339]:
+                - text: Confirm Password
+                - generic [ref=e5340]: "*"
+              - textbox [disabled] [ref=e5342]:
+                - /placeholder: Re-enter your new password
+            - img [ref=e5344]
+          - button [ref=e5346] [cursor=pointer]: Update Password
+  - dialog [ref=e5350]:
+    - banner [ref=e5351]:
+      - generic [ref=e5352]:
+        - generic [ref=e5354]: Add Time Tracking Policy
+        - button [ref=e5355] [cursor=pointer]:
+          - img [ref=e5356]
+    - generic [ref=e5358]:
+      - generic [ref=e5359]:
+        - generic [ref=e5360]:
+          - generic [ref=e5362]:
+            - generic [ref=e5364]:
+              - generic [ref=e5366]:
+                - text: Policy Name
+                - generic [ref=e5367]: "*"
+              - textbox [ref=e5369]:
+                - /placeholder: e.g. Standard Web Clock-in Policy
+                - text: QA Regularisation a1939972-6f50-4818-9b58-728db0df39d1
+            - generic [ref=e5371]:
+              - generic [ref=e5373]: Policy Description
+              - textbox [ref=e5375]:
+                - /placeholder: Provide a brief description of this policy
+          - separator [ref=e5376]
+          - generic [ref=e5377]:
+            - generic [ref=e5379]:
+              - list [ref=e5380]:
+                - listitem [ref=e5381]:
+                  - button [ref=e5382] [cursor=pointer]:
+                    - img [ref=e5384]
+                    - paragraph [ref=e5387]: Remote work
+                - separator [ref=e5388]
+                - listitem [ref=e5389]:
+                  - button [ref=e5390] [cursor=pointer]:
+                    - img [ref=e5392]
+                    - paragraph [ref=e5395]: Regularisation
+              - button [ref=e5397] [cursor=pointer]:
+                - img [ref=e5398]
+                - paragraph [ref=e5400]: Add time tracking methods
+            - generic [ref=e5402]:
+              - generic [ref=e5404]:
+                - img [ref=e5406]
+                - generic [ref=e5408]:
+                  - paragraph [ref=e5409]: Regularisation
+                  - paragraph [ref=e5410]: Allow employees to submit requests for attendance regularisation for missed clock-ins.
+              - generic [ref=e5411]:
+                - separator [ref=e5412]
+                - generic [ref=e5413]:
+                  - generic [ref=e5415]:
+                    - generic [ref=e5416]:
+                      - paragraph [ref=e5417]: Attendance adjustment
+                      - paragraph [ref=e5418]: Employees can edit their logged time entries
+                    - switch [ref=e5421] [cursor=pointer]
+                  - generic [ref=e5424]:
+                    - generic [ref=e5425]:
+                      - generic [ref=e5426]:
+                        - paragraph [ref=e5427]: Attendance regularisation
+                        - paragraph [ref=e5428]: Employees can raise a request to remove their penalties
+                      - switch [checked] [ref=e5431] [cursor=pointer]
+                    - separator [ref=e5434]
+                    - generic [ref=e5435]:
+                      - generic [ref=e5437]:
+                        - generic [ref=e5438] [cursor=pointer]:
+                          - checkbox [ref=e5439]
+                          - img [ref=e5440]
+                        - paragraph [ref=e5442]: Employees can regularise attendance logs
+                        - textbox [disabled] [ref=e5444]:
+                          - /placeholder: e.g. 2
+                        - paragraph [ref=e5445]: times in a
+                        - generic [ref=e5446]:
+                          - combobox [disabled] [ref=e5447]:
+                            - paragraph [ref=e5448]: Select undefined
+                          - textbox [disabled]
+                          - img
+                          - group
+                      - generic [ref=e5450]:
+                        - generic [ref=e5451] [cursor=pointer]:
+                          - checkbox [ref=e5452]
+                          - img [ref=e5453]
+                        - paragraph [ref=e5455]: Let employees regularise upto
+                        - textbox [disabled] [ref=e5457]:
+                          - /placeholder: e.g. 10
+                        - paragraph [ref=e5458]: days after incident
+                      - generic [ref=e5460]:
+                        - generic [ref=e5461] [cursor=pointer]:
+                          - checkbox [ref=e5462]
+                          - img [ref=e5463]
+                        - paragraph [ref=e5465]: Last date to regularise for past dates in a month is
+                        - generic [ref=e5466]:
+                          - combobox [disabled] [ref=e5467]:
+                            - paragraph [ref=e5468]: Select undefined
+                          - textbox [disabled]
+                          - img
+                          - group
+                      - generic [ref=e5470]:
+                        - generic [ref=e5471] [cursor=pointer]:
+                          - checkbox [ref=e5472]
+                          - img [ref=e5473]
+                        - paragraph [ref=e5475]: Employee is required to choose a reason for regularisation
+                  - generic [ref=e5477]:
+                    - generic [ref=e5478]:
+                      - paragraph [ref=e5479]: Partial day
+                      - paragraph [ref=e5480]: Employees can request permission for coming late, leaving early or any time during the shift hours
+                    - switch [ref=e5483] [cursor=pointer]
+                  - generic [ref=e5487]:
+                    - generic [ref=e5488]:
+                      - paragraph [ref=e5489]: Mandatory approval
+                      - paragraph [ref=e5490]: Set up approval chain for regularisation, adjustment & partial day
+                    - switch [ref=e5493] [cursor=pointer]
+        - generic [ref=e5496]:
+          - generic [ref=e5497]:
+            - img [ref=e5498]
+            - paragraph [ref=e5500]: Help Center
+          - generic [ref=e5501]:
+            - img [ref=e5503]
+            - generic [ref=e5525]:
+              - paragraph [ref=e5526]: What is Attendance Regularisation?
+              - list [ref=e5527]:
+                - listitem [ref=e5528]: Allows raising correction requests for missing or wrong logs.
+                - listitem [ref=e5529]: Helps override late marks, half-days, or forgotten punches.
+                - listitem [ref=e5530]: Enables off-duty assignment markings for site visits.
+            - generic [ref=e5531]:
+              - paragraph [ref=e5532]: Approval Workflow
+              - list [ref=e5533]:
+                - listitem [ref=e5534]: Routes adjustment requests to reporting managers.
+                - listitem [ref=e5535]: Updates monthly attendance automatically once approved.
+                - listitem [ref=e5536]: Saves employees from wrong salary deductions.
+      - generic [ref=e5537]:
+        - generic [ref=e5538]:
+          - img [ref=e5540]
+          - generic [ref=e5542]:
+            - heading [level=6] [ref=e5543]: You have unsaved changes
+            - text: Don't forget to save your configuration before leaving the page.
+        - generic [ref=e5544]:
+          - button [ref=e5545] [cursor=pointer]: Reset
+          - button [ref=e5546] [cursor=pointer]: Save Time Tracking Policy
+  - dialog "Unsaved Changes" [active] [ref=e5547]:
+    - button "Close modal" [ref=e5548]
+    - generic [ref=e5549]:
+      - generic [ref=e5550]:
+        - heading "Unsaved Changes" [level=3] [ref=e5551]
+        - button [ref=e5552] [cursor=pointer]:
+          - img [ref=e5553]
+      - separator [ref=e5556]
+      - generic [ref=e5558]: Are you sure you want to close without saving? All unsaved changes will be lost.
+      - generic [ref=e5559]:
+        - button "Discard & Close" [ref=e5560] [cursor=pointer]
+        - button "Continue Editing" [ref=e5561] [cursor=pointer]
+```
+
+# Test source
+
+```ts
+  1   | const { test, expect } = require('@playwright/test');
+  2   | const AttendanceRegularisationModal = require('@pages/timeTracking/modals/attendanceRegularisation.modal');
+  3   | const SessionHelper = require('@utils/helpers/sessionHelper');
+  4   | const TimeTrackingPolicyPage = require('@pages/timeTracking/timeTrackingPolicy.page');
+  5   | const { openPolicy, saveAndReopen } = require('./helpers/regularisationPolicy.helper');
+  6   | 
+  7   | let context;
+  8   | let page;
+  9   | let policy;
+  10  | 
+  11  | test.describe.configure({ mode: 'serial' });
+  12  | 
+  13  | test.beforeAll(async ({ browser }) => {
+  14  |     context = await browser.newContext({ storageState: 'playwright/.auth/user.json' });
+  15  |     page = await context.newPage();
+  16  | });
+  17  | 
+  18  | test.afterAll(async () => {
+  19  |     await context?.close();
+  20  | });
+  21  | 
+  22  | test.beforeEach(() => {
+  23  |     policy = new AttendanceRegularisationModal(page);
+  24  | });
+  25  | 
+  26  | test.afterEach(async () => {
+  27  |     await SessionHelper.dismissBlockingModals(page);
+  28  |     if (policy?.savedPolicyName) {
+  29  |         try {
+  30  |             await new TimeTrackingPolicyPage(page).deletePolicyByExactName(policy.savedPolicyName, policy.savedPolicyUrl);
+  31  |         } catch {
+  32  |             // Ignore if already cleaned up
+  33  |         }
+  34  |         policy.savedPolicyName = null;
+  35  |     }
+  36  | });
+  37  | 
+  38  | test.describe('Attendance Regularisation configuration(PIN-103)', { tag: '@daily-full' }, () => {
+  39  |     test.setTimeout(180_000);
+  40  | 
+  41  |     test('PIN_103_01 PIN_103_02 PIN_103_03 PIN_103_04 PIN_103_06 Defaults, enable/reveal, disable/hide, and unchecked inputs are disabled', async () => {
+  42  |         await openPolicy(page, policy);
+  43  | 
+  44  |         // PIN_103_01: Default state is disabled
+  45  |         await policy.enabled.uncheck();
+  46  |         await expect(policy.enabled).not.toBeChecked();
+  47  | 
+  48  |         // PIN_103_04: Options hide when disabled
+  49  |         for (const rule of ['limit', 'window', 'cutoff', 'reasons']) {
+  50  |             await expect(policy.checkbox(rule)).toBeHidden();
+  51  |         }
+  52  | 
+  53  |         // PIN_103_02: Enable toggle reveals all options
+  54  |         await policy.enabled.check();
+  55  |         await expect(policy.enabled).toBeChecked();
+  56  |         for (const rule of ['limit', 'window', 'cutoff', 'reasons']) {
+  57  |             await expect(policy.checkbox(rule)).toBeVisible();
+  58  |         }
+  59  | 
+  60  |         // PIN_103_03: All options are default unchecked
+  61  |         // PIN_103_06: Inputs are disabled/not allowed until option is checked
+  62  |         await policy.verifyUnrestricted();
+  63  |         await expect(policy.limitInput).toHaveAttribute('placeholder', 'e.g. 2');
+  64  |         await expect(policy.windowInput).toHaveAttribute('placeholder', 'e.g. 10');
+> 65  |         await expect(policy.limitPeriod).toContainText('Week');
+      |                                          ^ Error: expect(locator).toContainText(expected) failed
+  66  |         await expect(policy.cutoffDate).toContainText('10th');
+  67  |     });
+  68  | 
+  69  |     test('PIN_103_05 PIN_103_10 Day validations (1 to 365, no blanks) and cutoff dates (1st to 31st)', async () => {
+  70  |         await openPolicy(page, policy);
+  71  |         for (const rule of ['limit', 'window', 'cutoff']) await policy.setRule(rule, true);
+  72  | 
+  73  |         // Blank validation checks
+  74  |         await policy.limitInput.fill('');
+  75  |         await policy.windowInput.fill('');
+  76  |         await policy.saveButton.click();
+  77  |         await expect(policy.limitError).toBeVisible();
+  78  |         await expect(policy.windowError).toBeVisible();
+  79  |         await expect(policy.modalTitle).toHaveText('Add Time Tracking Policy');
+  80  | 
+  81  |         // Verify numeric bounds: 1 to 365 days
+  82  |         await policy.windowInput.fill('365');
+  83  |         await expect(policy.windowInput).toHaveValue('365');
+  84  |         await policy.limitInput.fill('10');
+  85  |         await expect(policy.limitInput).toHaveValue('10');
+  86  | 
+  87  |         // PIN_103_10: Min 1st and max 31st cutoff dates
+  88  |         await policy.cutoffDate.click();
+  89  |         for (let day = 1; day <= 31; day++) {
+  90  |             const suffix = (day === 1 || day === 21 || day === 31) ? 'st'
+  91  |                 : (day === 2 || day === 22) ? 'nd'
+  92  |                     : (day === 3 || day === 23) ? 'rd' : 'th';
+  93  |             const label = `${day}${suffix}`;
+  94  |             await expect(page.getByRole('option', { name: label, exact: true })).toBeVisible();
+  95  |         }
+  96  |         await page.keyboard.press('Escape');
+  97  |         await expect(page.getByRole('listbox')).toBeHidden();
+  98  | 
+  99  |         // Select boundary options
+  100 |         await policy.choose(policy.cutoffDate, /^1st$/);
+  101 |         await expect(policy.cutoffDate).toContainText('1st');
+  102 |         await policy.choose(policy.cutoffDate, /^31st$/);
+  103 |         await expect(policy.cutoffDate).toContainText('31st');
+  104 |     });
+  105 | 
+  106 |     test('PIN_103_07 PIN_103_13 Configuration saves successfully and persists across refresh', async () => {
+  107 |         await openPolicy(page, policy);
+  108 |         for (const rule of ['limit', 'window', 'cutoff', 'reasons']) await policy.setRule(rule, true);
+  109 |         await policy.limitInput.fill('5');
+  110 |         await policy.choose(policy.limitPeriod, /^Month$/);
+  111 |         await policy.windowInput.fill('15');
+  112 |         await policy.choose(policy.cutoffDate, /^15th$/);
+  113 |         await policy.addReason('Client meeting');
+  114 | 
+  115 |         // Save and verify persistence across reload
+  116 |         await saveAndReopen(page, policy);
+  117 |         await expect(policy.enabled).toBeChecked();
+  118 |         for (const rule of ['limit', 'window', 'cutoff', 'reasons']) {
+  119 |             await expect(policy.checkbox(rule)).toBeChecked();
+  120 |         }
+  121 |         await expect(policy.limitInput).toHaveValue('5');
+  122 |         await expect(policy.limitPeriod).toContainText('Month');
+  123 |         await expect(policy.windowInput).toHaveValue('15');
+  124 |         await expect(policy.cutoffDate).toContainText('15th');
+  125 |         await expect(policy.regularisation.getByText('Client meeting', { exact: true })).toBeVisible();
+  126 | 
+  127 |         // Disable all rules and save again
+  128 |         for (const rule of ['limit', 'window', 'cutoff', 'reasons']) await policy.setRule(rule, false);
+  129 |         await saveAndReopen(page, policy);
+  130 |         await policy.verifyUnrestricted();
+  131 |     });
+  132 | 
+  133 |     test('PIN_103_08 PIN_103_11 Reset and Save options appear on edit, and close warns about unsaved changes', async () => {
+  134 |         await openPolicy(page, policy);
+  135 |         await policy.setRule('window', true);
+  136 |         await policy.windowInput.fill('10');
+  137 | 
+  138 |         // PIN_103_11: Reset and Save buttons appear in action bar on edit
+  139 |         await expect(policy.actionBar).toBeVisible();
+  140 |         await expect(policy.resetButton).toBeVisible();
+  141 |         await expect(policy.saveButton).toBeVisible();
+  142 | 
+  143 |         // PIN_103_08: Close confirmation pop-up on click "X"
+  144 |         const confirmation = await policy.requestClose();
+  145 |         await expect(confirmation.warning).toHaveText(
+  146 |             'Are you sure you want to close without saving? All unsaved changes will be lost.'
+  147 |         );
+  148 |         await expect(confirmation.discardButton).toBeVisible();
+  149 |         await expect(confirmation.continueButton).toBeVisible();
+  150 | 
+  151 |         // Continue editing retains changes
+  152 |         await confirmation.continueEditing();
+  153 |         await expect(policy.regularisation).toBeVisible();
+  154 |         await expect(policy.checkbox('window')).toBeChecked();
+  155 |         await expect(policy.windowInput).toHaveValue('10');
+  156 |     });
+  157 | 
+  158 |     test('PIN_103_09 REG_11 REG_13 Regularisation reasons management (add, uniqueness, delete)', async () => {
+  159 |         await openPolicy(page, policy);
+  160 |         await policy.setRule('reasons', true);
+  161 |         await expect(policy.reasonInput).toBeVisible();
+  162 |         await expect(policy.addReasonButton).toBeVisible();
+  163 | 
+  164 |         // REG_11: Add reasons
+  165 |         await policy.addReason('On-site visit');
+```
